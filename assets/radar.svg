@@ -1,0 +1,58 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .grid { stroke: #ccd3e0; stroke-width: 1; fill: none; }
+      .axis { stroke: #9aa5b1; stroke-width: 1.5; }
+      .poly { fill: rgba(92, 124, 250, 0.25); stroke: #5C7CFA; stroke-width: 3; }
+      .label { font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif; font-size: 14px; fill: #2a2f45; }
+      .title { font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #1f2544; }
+      .tick { font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif; font-size: 10px; fill: #6b7280; }
+      .value { font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif; font-size: 12px; fill: #1f2544; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="28" class="title" text-anchor="middle">P2P-ness Radar (Layer Averages)</text>
+  <text x="300" y="46" class="tick" text-anchor="middle">Structural ≈ 2.83, Operational ≈ 2.80, Cultural ≈ 3.33 (0–5)</text>
+
+  <!-- Center and constants -->
+  <!-- cx=300, cy=300, R=220 -->
+
+  <!-- Grid rings (1..5) -->
+  <circle cx="300" cy="300" r="44" class="grid" />
+  <circle cx="300" cy="300" r="88" class="grid" />
+  <circle cx="300" cy="300" r="132" class="grid" />
+  <circle cx="300" cy="300" r="176" class="grid" />
+  <circle cx="300" cy="300" r="220" class="grid" />
+
+  <!-- Ring labels -->
+  <text x="300" y="300-44-4" class="tick" text-anchor="middle">1</text>
+  <text x="300" y="300-88-4" class="tick" text-anchor="middle">2</text>
+  <text x="300" y="300-132-4" class="tick" text-anchor="middle">3</text>
+  <text x="300" y="300-176-4" class="tick" text-anchor="middle">4</text>
+  <text x="300" y="300-220-4" class="tick" text-anchor="middle">5</text>
+
+  <!-- Axes (at -90°, 30°, 150°) -->
+  <!-- Structural axis (top) -->
+  <line x1="300" y1="300" x2="300" y2="80" class="axis" />
+  <!-- Operational axis (30°) end at R=220 -->
+  <line x1="300" y1="300" x2="516.5" y2="425" class="axis" />
+  <!-- Cultural axis (150°) -->
+  <line x1="300" y1="300" x2="83.5" y2="425" class="axis" />
+
+  <!-- Axis labels at R+30 -->
+  <text x="300" y="60" class="label" text-anchor="middle">Structural</text>
+  <text x="516.5" y="445" class="label" text-anchor="start">Operational</text>
+  <text x="83.5" y="445" class="label" text-anchor="end">Cultural</text>
+
+  <!-- Data polygon points (computed) -->
+  <!-- Structural r=124.52 at -90° -> (300, 175.48) -->
+  <!-- Operational r=123.2 at 30° -> (406.91, 361.6) -->
+  <!-- Cultural r=146.52 at 150° -> (173.11, 373.26) -->
+  <polygon points="300,175.48 406.91,361.6 173.11,373.26" class="poly" />
+
+  <!-- Value labels near vertices -->
+  <text x="300" y="165" class="value" text-anchor="middle">2.83</text>
+  <text x="417" y="361" class="value" text-anchor="start">2.80</text>
+  <text x="163" y="383" class="value" text-anchor="end">3.33</text>
+</svg>
