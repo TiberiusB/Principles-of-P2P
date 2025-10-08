@@ -1,6 +1,6 @@
 # Template Prompt — P2P-ness Assessment Orchestration
 
-System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `template_data.md` and `template_compilation.md`, grounded in `Assessment model.md`, `Principles of p2p.md`, `Hybrid models.md`, and `Ethos.md`.
+System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `template_data.md` and `template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, and `Ethos.md`.
 
 ## Context
 - Objective: Assess the degree of P2P-ness of {{ORG_NAME}} with a multi-level, multi-dimensional model.
@@ -9,7 +9,7 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 
 ## Variables to set
 - ORG_NAME: {{ORG_NAME}}
-- MAIN_SITE: {{MAIN_SITE}}
+- MAIN_SITE: {{MAIN_SITE_URL}}
 - FORUM_URL: {{FORUM_URL}}
 - DOCS_OR_MANUAL_URL: {{DOCS_OR_MANUAL_URL}}
 - BLOG_OR_NEWS_URL: {{BLOG_OR_NEWS_URL}}
@@ -18,7 +18,7 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - TALLY_SPACE: {{TALLY_SPACE_OR_URL}}
 
 ## High-level steps
-1) Read foundations: `Assessment model.md`, `Principles of p2p.md`, `Hybrid models.md`, `Ethos.md`.
+1) Read foundations: `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`.
 2) Clone `template_data.md`; set variables; run the Web Search & Capture Protocol; populate findings/citations per dimension.
 3) Clone `template_compilation.md`; fill per-dimension scores (0–5) at each level (including the Economic layer); compute layer and overall averages.
 4) Fill Hybridization X-ray and Ethos Assessment tables with concise rationales and citations.
@@ -38,13 +38,14 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - Use 0–5. When uncertain due to missing evidence, prefer conservative (lower) scores and add a TODO in data template.
 
 ## Hybrid & Ethos mapping
-- Use `Hybrid models.md` X-ray dimensions to record centralized vs P2P features and explain scores.
+- Use `Hybrid.md` X-ray dimensions to record centralized vs P2P features and explain scores.
 - Use `Ethos.md` to rate ethos dimensions; align with evidence from forums, repos, and docs.
 
 ## Deliverables
+Create the following docs from template within the "case-study" folder
 - `{{ORG_NAME}}_data.md` (from template): fully populated.
 - `{{ORG_NAME}}_compilation.md` (from template): scores, averages, X-ray, ethos, conclusion.
-- Optional: `{{ORG_NAME}}_executive_summary.md` with top-line score, radar chart link, strengths/risks/recommendations.
+- `{{ORG_NAME}}_executive_summary.md` with top-line score, radar chart link, strengths/risks/recommendations.
 
 ## Quality checks
 - Every assertion has a citation.
