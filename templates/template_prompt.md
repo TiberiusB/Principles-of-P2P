@@ -1,5 +1,7 @@
 # Template Prompt — P2P-ness Assessment Orchestration
 
+//Instructions for the user: set AI in Agent mode, add Browser and Web tools, and include OVNwiki and P@Pfoundation sources.
+
 System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `template_data.md` and `template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, and `Ethos.md`.
 
 ## Context
