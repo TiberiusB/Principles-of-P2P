@@ -1,6 +1,6 @@
 # {{ORG_NAME}} — P2P-ness Compilation & Scoring
 
-This document compiles quantitative scores and rationales derived from evidence in `template_data.md`, following `Principles of p2p.md`, plus hybrid analysis (`Hybrid models.md`) and ethos assessment (`Ethos.md`).
+This document compiles quantitative scores and rationales derived from evidence in `template_data.md`, following `Evaluation.md`, plus hybrid analysis (`Hybrid.md`) and ethos assessment (`Ethos.md`).
 
 ## Scoring Scale (0–5)
 - 0 = Absent / contrary to P2P
@@ -61,7 +61,7 @@ Note: If using the 0–3 mapping, translate: 0→0, 1→1–2, 2→3–4, 3→5.
 - Cultural/Ecosystem average:  
 - Overall P2P-ness (simple avg of layer avgs):  
 
-## Hybridization X-ray (per `Hybrid models.md`)
+## Hybridization X-ray (per `Hybrid.md`)
 - Legal existence/entity:
 - Ownership of IP/outputs:
 - Capital structure/funding:

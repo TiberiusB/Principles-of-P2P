@@ -32,7 +32,7 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - Capture governance process (stages, timing), voting mechanisms, legal wrappers, repos/licenses, trademark policy, non-code attribution, identity/sybil controls, ecosystem partnerships.
 - Capture Economic-layer evidence: property/licensing & trademark posture; contribution/value accounting & distributions; funding sources; revenue model & market interface; tokenomics (if any); cost structure & sustainability; economic openness & cost transparency (budgets, cost breakdowns, allocation criteria).
 
-## Scoring guidance (grounded in Principles)
+## Scoring guidance (grounded in Principles from `Evaluation.md`)
 - Structural/Formal: Membership openness; roles & task fluidity; governance distribution; value accounting; legal wrapper; commons infrastructure.
 - Operational/Process: Transparency; coordination; contribution logging; conflict/forking; reputation & accountability.
 - Economic: Property/licensing & commons orientation; contribution & value accounting; funding & capital sources; revenue model & market interface; tokenomics & incentives (if applicable); cost structure & sustainability; economic openness & cost transparency.
@@ -47,7 +47,8 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 Create the following docs from template within the "case-study" folder
 - `{{ORG_NAME}}_data.md` (from template): fully populated.
 - `{{ORG_NAME}}_compilation.md` (from template): scores, averages, X-ray, ethos, conclusion.
-- `{{ORG_NAME}}_executive_summary.md` with top-line score, radar chart link, strengths/risks/recommendations.
+- `{{ORG_NAME}}_executive_summary.md` with top-line score, 
+- radar chart, strengths/risks/recommendations.
 
 ## Quality checks
 - Every assertion has a citation.

@@ -1,6 +1,6 @@
 # {{ORG_NAME}} — Evidence Repository (for P2P-ness Assessment)
 
-Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the evaluation framework in `Principles of p2p.md` (layers × dimensions × levels). Each item should include a short note and source link(s).
+Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the evaluation framework in `Evaluation.md` (layers × dimensions × levels). Each item should include a short note and source link(s).
 
 ## Variables (set these first)
 - ORG_NAME: {{ORG_NAME}}
@@ -44,7 +44,7 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
 
 ## Evaluation Layers and Levels
 
-Layers (per `Principles of p2p.md`):
+Layers (per `Evaluation.md`):
 - Structural/Formal
 - Operational/Process
 - Economic
