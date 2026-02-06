@@ -117,6 +117,12 @@ Note: many of these are already in our Principles or p2p doc (layered approach, 
 * Traditional: employer CVs, titles; contribution hidden behind corporate projects.  
 * Hybrid: corporate PR packages for major contributors while community has separate reputation trails. (Check contributor graphs, authorship metadata.)
 
+**Phenomenological grounding / lived experience**
+
+* P2P: participants report agency, recognition, fairness, and belonging; governance and accounting feel aligned with lived reality.  
+* Traditional: participation feels role-bound, metric-driven, or alienating; meaning and care work are invisible.  
+* Hybrid: formal openness with low felt agency or recognition; participants feel reduced to tokens/metrics. (Look for contributor surveys, onboarding friction logs, exit narratives.)
+
 ### **Ecosystem / external relations**
 
 **Relationship to markets & incumbents**
@@ -168,6 +174,7 @@ Below we expand the X-ray into a longer checklist you can use during a P2P asses
 
 * Public rhetoric vs internal KPIs — mismatch signals hybridization/mission drift. Evidence: internal OKRs vs public mission.  
 * Credit / attribution practices — whether non-paid work is visible and rewarded. Evidence: commit logs, contributor dashboards.
+* Lived experience vs formal structure — when governance is open on paper but participants report low agency, recognition, or belonging. Evidence: surveys, contributor interviews, exit notes.
 
 **Risk & accountability**
 
@@ -233,6 +240,11 @@ Below are common hybrid architectures, their logic, what to watch for and a real
 
 * *Logic*: Community starts as commons, spinouts create companies that then capture revenue/attention. Evidence: spinout announcements, corporate acquisitions of open-source companies (Red Hat/IBM). ([WIRED](https://www.wired.com/story/ibm-buying-open-source-specialist-red-hat-34-billion?utm_source=chatgpt.com))
 
+**Formal decentralization, experiential alienation**
+
+* *Logic*: Governance and contribution systems look peer-based on paper, but participants report low agency, weak recognition, or loss of meaning in practice.  
+* *Watch for*: wide participation metrics with low retention; surveys reporting low trust/recognition; mismatch between official governance and lived coordination.
+
 # Examples (where hybridization is visible)
 
 * **Sensorica / OVN** — explicitly designed as an Open Value Network with open contribution accounting and commons orientation; good example of a high-P2P model you'll want to benchmark. ([wiki.p2pfoundation.net](https://wiki.p2pfoundation.net/Sensorica?utm_source=chatgpt.com))  
@@ -256,6 +268,7 @@ When you run the P2P assessment, augment scores with a “hybridization profile�
 
 8. **Contract signatories**: who signs contracts (foundation vs corp vs unknown) — tells you who has the legal power.  
 9. **Media / PR / governance narratives**: compare public mission vs internal KPIs where possible. *Signal*: public commons rhetoric vs internal revenue KPIs → hybridity/mission drift.
+10. **Lived experience signals**: participant narratives, exit interviews, onboarding friction logs, and survey results on agency/recognition. *Signal*: high formal openness with low felt agency → hybridization pressure.
 
 Use the **two-axis** record per dimension: P2P fidelity (0–5) and Traditional fidelity (0–5). This produces a heatmap: areas where both scores are high \= *hybrid*; where Traditional \>\> P2P \= *captured/legacy*; where P2P \>\> Traditional \= *pure P2P*.
 
@@ -279,6 +292,7 @@ When you evaluate a candidate org, fetch these items first (fast wins to reveal 
 * Token allocation concentrated with founders / investors \> 40%. ([makerdao.com](https://makerdao.com/en/whitepaper/?utm_source=chatgpt.com))  
 * Roadmap and merges dominated by employees of a single company.  
 * Trademark or brand held by a company that can block forks.
+* High formal openness with low reported trust, recognition, or belonging.
 
 # Short summary & suggested next steps
 
