@@ -24,6 +24,12 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
 - Capture in this format under each dimension:
   - Findings: 1–3 bullets, concise, factual
   - Citations: 1–3 links (prefer primary sources)
+- Capture complexity-upgrade evidence:
+  - Founding history, early governance choices, initial asset/token/equity allocation, and persistent admin rights.
+  - Reputation systems, contributor hierarchies, delegation patterns, and potential incumbent lock-in.
+  - Transparency/privacy boundaries: what is public, what is private, and how peer verification avoids surveillance.
+  - Capital influence: investor/donor/sponsor rights, treasury controls, exit pressures, and commons-governance constraints.
+  - Scenario or simulation inputs for contribution accounting, governance thresholds, benefit distribution, and reputation.
 
 ### Query bank (replace {{ORG_NAME}})
 - "site:{{MAIN_SITE_HOST}} governance"; "site:{{FORUM_HOST}} proposal governance process"; "site:{{DOCS_HOST}} governance overview"; "site:github.com {{ORG_NAME}} license"
@@ -66,26 +72,26 @@ For each dimension below, record: Findings + Citations.
 - Findings:
   - 
 - Citations:
-  - 
+  -
 
 ### 1.2 Role & Task Structure
 - Findings:
   - 
 - Citations:
-  - 
+  -
 
 ### 1.3 Governance & Decision-Making
 - Findings:
   - Governance process (discussion → proposal → vote types → ratification), timing (min days), who approves what
   - Voting mechanisms (Snapshot/Tally, 1T1V vs QV), any committees/councils
 - Citations:
-  - 
+  -
 
 ### 1.4 Value Accounting & Rewards / Redistribution
 - Findings:
   - How value/funds are allocated (grants, retro, revenue sharing), transparency of totals
 - Citations:
-  - 
+  -
 
 ### 1.5 Legal / Liability / Financial Structures
 - Findings:
@@ -106,6 +112,7 @@ For each dimension below, record: Findings + Citations.
 ### 2.1 Transparency & Access to Information
 - Findings:
   - Publication of minutes/decisions/budgets; cadence of blog/updates
+  - Privacy-preserving transparency: what can be verified without exposing sensitive personal or deliberative data
 - Citations:
   - 
 
@@ -130,6 +137,7 @@ For each dimension below, record: Findings + Citations.
 ### 2.5 Reputation, Trust & Accountability
 - Findings:
   - Identity/sybil tools (e.g., Passport-like), reputation systems, accountability practices
+  - Reputation capture safeguards: decay/review, appeals, role rotation, contextual reputation, anti-incumbency mechanisms
 - Citations:
   - 
 
@@ -139,9 +147,9 @@ For each dimension below, record: Findings + Citations.
 
 ### 3.1 Property Regime & Licensing (Commons/Nondominium vs Proprietary)
 - Findings:
-  - 
+  -
 - Citations:
-  - 
+  -
 
 ### 3.2 Contribution & Value Accounting / Benefit Distribution
 - Findings:
@@ -152,6 +160,7 @@ For each dimension below, record: Findings + Citations.
 ### 3.3 Funding & Capital Sources
 - Findings:
   - 
+  - Control rights attached to capital, grants, sponsorships, tokens, or revenue dependencies
 - Citations:
   - 
 
@@ -176,6 +185,7 @@ For each dimension below, record: Findings + Citations.
 ### 3.7 Economic Openness & Cost Transparency
 - Findings:
   - 
+  - Whether cost transparency supports peer verification without turning into individual surveillance
 - Citations:
   - 
 
@@ -201,7 +211,14 @@ For each dimension below, record: Findings + Citations.
 - Citations:
   - 
 
-### 4.4 Ecosystem Relations & External Engagement
+### 4.4 Phenomenological Grounding (Lived Experience)
+- Findings:
+  - Participant narratives about agency, recognition, fairness, trust, meaning, belonging, and care work
+  - Mismatches between formal openness and lived experience
+- Citations:
+  -
+
+### 4.5 Ecosystem Relations & External Engagement
 - Findings:
   - Partnerships, federations, interoperability/standards participation
 - Citations:
@@ -228,16 +245,16 @@ For each dimension below, record: Findings + Citations.
 ## 6) Level-specific Observations (to be expanded)
 
 ### Project level
-- 
+-
 
 ### Open-Enterprise level
-- 
+-
 
 ### Network level
-- 
+-
 
 ### Global / inter-network level
-- 
+-
 
 ---
 
@@ -247,3 +264,74 @@ For each dimension below, record: Findings + Citations.
 - Repo licenses audited? Trademark/brand policy published?
 - Non‑code contribution accounting documented?
 - Identity/sybil and accountability linkages documented?
+- Dynamic profile captured instead of relying only on a total score?
+- Path-dependency evidence found (founding choices, early allocations, admin rights, funding dependencies)?
+- Reputation/meritocracy capture risks assessed?
+- Privacy-preserving transparency boundaries documented?
+- Capital subordinated to commons governance, or capital influence still unclear?
+
+---
+
+## 8) Path Dependency & Capture Evidence
+
+### 8.1 Founding Choices and Initial Conditions
+- Findings:
+  - Founders, initial rule-set, first repositories/assets, first legal entity, first governance defaults
+- Citations:
+  -
+
+### 8.2 Early Contributions, Reputation, and Authority
+- Findings:
+  - Whether early contributors gained persistent admin rights, social authority, reputation advantages, tokens, equity, or maintainership
+- Citations:
+  -
+
+### 8.3 Funding, Capital, and Strategic Influence
+- Findings:
+  - Whether funders, investors, donors, sponsors, or treasury controllers can steer strategic priorities
+- Citations:
+  -
+
+### 8.4 Infrastructure and Platform Lock-in
+- Findings:
+  - Dependencies on hosting, wallets, identity systems, repositories, legal wrappers, trademarks, data, or proprietary platforms
+- Citations:
+  -
+
+---
+
+## 9) Complexity Stress Tests
+
+For each major governance, economic, infrastructure, or enterprise-pattern choice, answer briefly.
+
+| Mechanism / Pattern | Feedback loop created | What becomes visible | What becomes hidden | Lock-in risk | Who gains adaptive capacity | Who loses agency | Evidence refs |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+|  |  |  |  |  |  |  |  |
+
+---
+
+## 10) Scenario / Simulation Inputs
+
+### 10.1 Contribution Accounting Scenarios
+- Inputs to collect:
+  - Contribution categories, weights, formulas, review cycles, appeal mechanisms, invisible/care work treatment
+- Evidence:
+  -
+
+### 10.2 Governance Scenarios
+- Inputs to collect:
+  - Quorum rules, delegation, owner/admin powers, emergency powers, fork procedures, founder exit paths
+- Evidence:
+  -
+
+### 10.3 Benefit Redistribution Scenarios
+- Inputs to collect:
+  - Revenue shocks, surplus rules, payout schedules, dispute paths, treasury reserves
+- Evidence:
+  -
+
+### 10.4 Reputation Scenarios
+- Inputs to collect:
+  - Reputation dimensions, decay/review, portability, sanctions, appeals, recovery after failure
+- Evidence:
+  -

@@ -16,6 +16,7 @@ This evaluation framework is extracted from the philosophical and theoretical ap
 * Complexity economics: value is multi-dimensional; contributions are diverse; not all outcomes are predictable; feedback loops important.  
 * Phenomenological grounding: lived experience of agency, recognition, meaning, and trust must align with formal structures and metrics.  
 * OVN / Open Value Network model: open membership; transparency; contribution & value accounting; reputation; shared infrastructure; flexible roles; forking; governance at multiple levels.
+* Complexity upgrade: P2P-ness should be treated as a dynamic, multi-dimensional profile, not as a single static score. The assessment must show feedback loops, path dependencies, lock-in risks, and capture risks alongside scores.
 
 ## **Macro-Layers and Dimensions**
 
@@ -39,6 +40,17 @@ Also, evaluations should be done at multiple **Organizational Levels / Scales**:
 * Open-Enterprise level (a self-contained organization)  
 * Network level (multiple enterprises/projects)  
 * Global / inter-network level
+
+## **Assessment Orientation: Profile Before Score**
+
+The framework may calculate averages for comparison, but the main output should be a **dynamic P2P profile**:
+
+* **Layer profile:** structural, operational, economic, and cultural strengths/gaps.
+* **Level profile:** project, open-enterprise, network, and global/inter-network differences.
+* **Trajectory profile:** whether the organization is moving toward more P2P fidelity, remaining hybrid, or being captured by legacy/centralized structures.
+* **Tension profile:** explicit trade-offs between openness and quality, transparency and privacy, speed and participation, meritocracy and incumbent capture, capital access and commons governance.
+
+A single "P2P-ness" number can still be reported as a secondary summary, but it must never replace the profile. A total score can hide exactly the contradictions that matter most in complex adaptive systems.
 
 ## **Dimensions, Indicators & Rubrics**
 
@@ -65,6 +77,10 @@ Below are the dimensions in each layer, with suggested indicators and how one mi
 | **Conflict Management & Forking** | How disagreements are handled; whether forking (projects splitting) is allowed; mechanisms for mediation, resolution. | Conflict is inevitable; P2P requires safe, fair, and accessible paths for resolving conflict; forking is a safety valve to avoid stagnation or authoritarian drift. | \- Existence of documented conflict resolution policies. \- Existence of mediation / arbitration mechanisms. \- Whether forking is allowed (technical / organizational). \- Whether forking processes preserve or migrate value/contributions. \- How conflicts have been handled in practice historically. | 0 \= no clear policy; conflicts suppressed; no capacity to fork; centralized authority overrides. 5 \= robust policies; forking allowed and supported; conflict resolution accessible; precedents followed. |
 | **Reputation, Trust & Accountability** | Systems or norms for trusting peers; reputation mechanisms; how accountability is enforced or encouraged. | In peer systems, formal power is weaker; trust and reputation are often what ensure reliability and cooperation. Accountability ensures reliability and reduces free-rider problems. | \- Existence of reputation systems (rating, peer review, reputational badges, etc.). \- Norms/expectations of reliability. \- Visibility of past performance. \- Mechanisms for feedback and review. \- Consequences for failing to meet commitments. \- Whether reliability is experienced in daily collaboration. | 0 \= reputation minimal / no feedback; trust weak; broken promises tolerated without consequence. 5 \= strong reputation system; feedback loops; peer review; non-compliance documented and addressed. |
 
+**Privacy-preserving transparency note:** Holoptism should not become surveillance. When scoring transparency, evaluate whether the organization distinguishes public-interest process visibility from unnecessary exposure of personal data, sensitive conflict details, contributor vulnerabilities, or private deliberation. Strong P2P transparency should support peer verification while preserving dignity, autonomy, and contextual privacy.
+
+**Reputation feedback-loop note:** Reputation and meritocracy are not automatically P2P. They can become path-dependent authority systems where early contributors, wealthy actors, or highly visible roles accumulate durable control. Score reputation systems higher when they include contextual reputation, decay or review mechanisms, appeal paths, anti-capture safeguards, and recognition for less visible forms of contribution.
+
 ### Economic Layer
 
 | Dimension | Definition | Why It Matters | Indicators | Sample Rubric (0-5) |
@@ -77,6 +93,8 @@ Below are the dimensions in each layer, with suggested indicators and how one mi
 | **Cost Structure & Sustainability** | Opex/infra costs, runways, ecological/resource costs transparency. | Economic durability without compromising commons; visibility of externalities/ecology. | \- Infra cost disclosures; budgets. \- Eco-impact transparency (energy, hosting, travel). | 0 \= opaque costs/externalities; 5 \= transparent costs, sustainable plan, eco-accounting. |
 | **Economic Openness & Cost Transparency** | Visibility of costs, budgets, grant criteria, and allocation rules (recognizing non-transactional dissemination). | Transparency enables peer verification and reduces rent-seeking. | \- Public budgets and cost breakdowns. \- Clear criteria for allocations. \- Whether cost information is experienced as credible and legitimate. | 0 \= opaque; 5 \= consistently published, auditable economic data. |
 
+**Capital-governance note:** Funding is assessed not only by amount or stability, but by whether capital remains subordinate to commons governance. Grants, field finance, tokens, investment, and service revenue should be evaluated for control rights, exit pressures, veto rights, liquidity preferences, donor capture, and whether capital providers can become de facto architects of the value field.
+
 ### Cultural / Ecosystem / Superstructural Layer
 
 | Dimension | Definition | Why It Matters | Indicators | Sample Rubric (0-5) |
@@ -86,6 +104,56 @@ Below are the dimensions in each layer, with suggested indicators and how one mi
 | **Meaning, Purpose & Identity** | Shared mission, vision; sense of belonging; narratives of P2P; identity across levels. | Strong shared purpose aligns incentives, motivates members, helps resolve conflicts. Identity helps cohesion and resilience. | \- Presence of clear mission / vision statements. \- Member interviews / surveys about alignment with mission. \- Narrative / storytelling practices (blogs, talks, branding). \- Identity across projects vs “enterprise” vs network. \- Whether identity is inclusive / adaptive. \- Whether belonging is experienced rather than merely stated. | 0 \= mission vague or only on paper; members don’t feel connected; identity fragmented. 5 \= mission internalized; strong belonging; identity coherent; identity helps joiners integrate quickly. |
 | **Phenomenological Grounding (Lived Experience)** | Degree to which participants experience agency, recognition, fairness, trust, and meaning as part of everyday participation. | Without phenomenological grounding, formal P2P structures can exist while participants feel alienated; lived experience is a core substrate for peer legitimacy. | \- Participant narratives about agency and recognition. \- Evidence that care work and context-specific contributions are visible. \- Consistency between formal rules and lived practice. \- Signals of belonging and mutual recognition. \- Friction points where people feel reduced to metrics. | 0 \= lived experience ignored; participation feels extractive or alienating. 5 \= participants consistently report agency, recognition, fairness, and meaning aligned with structures. |
 | **External Ecosystem & Relations** | How the organization interacts with external actors: other networks, communities; openness to collaboration; impact; relations to broader commons. | P2P doesn’t exist in isolation; networks, supply / value chains, commons; being embedded in ecosystem enhances resilience, scope, legitimacy. | \- Number & quality of external partnerships / collaborations. \- Whether external contributions are accepted / external actors allowed in. \- Whether learnings / tools / outputs are shared externally (open licence etc). \- Whether the organization contributes back to wider commons. \- Whether ecosystem dependence (supply chains, etc.) is transparent. | 0 \= isolated, closed; no external sharing; collaborations minimal or extractive. 5 \= highly embedded; open to external engagement; outputs shared; ecosystem relationships reciprocal. |
+
+## **Path Dependency and Feedback Analysis**
+
+Every assessment should include a short path-dependency analysis. This is where the evaluator asks how earlier choices shape future options:
+
+* **Founding choices:** who wrote the first rules, held the first assets, controlled the first repositories, or defined the original mission.
+* **Early contribution history:** whether early contributors gained persistent authority, reputation, tokens, equity, admin rights, or social legitimacy.
+* **Funding structure:** whether grants, investors, donors, sponsors, or token allocations bias future priorities.
+* **Infrastructure dependencies:** whether hosting, wallets, legal wrappers, trademarks, data, identity systems, or platforms create lock-in.
+* **Governance defaults:** whether initial emergency powers, owner keys, committees, maintainers, or councils have sunset clauses or review processes.
+
+This section should distinguish **productive path dependence** (shared memory, trust, accumulated capabilities) from **capture-producing path dependence** (incumbency, gatekeeping, irreversible enclosure).
+
+## **Complexity Stress Tests**
+
+For each major organizational pattern, infrastructure choice, governance mechanism, or business model, apply these stress-test questions:
+
+* What feedback loop does this create?
+* What does it make more visible?
+* What does it hide?
+* What could it lock in?
+* Who gains adaptive capacity?
+* Who loses agency?
+* What happens if participation grows by 10x?
+* What happens if funding drops by 50%?
+* What happens if a founding actor exits?
+* What happens if conflict produces a fork?
+
+The goal is not prediction but robustness: the framework should reveal whether a P2P organization can adapt without reverting to hierarchy, enclosure, surveillance, or capital capture.
+
+## **Scenario Modeling and Simulation**
+
+Where evidence permits, evaluators should add lightweight scenarios or simulations for high-risk mechanisms:
+
+* **Contribution accounting:** test whether the value equation over-rewards visible, early, technical, or capital contributions while under-recognizing care, coordination, translation, maintenance, and contextual work.
+* **Governance:** test quorum failure, voter fatigue, collusion, delegate concentration, founder exit, emergency powers, and low-participation decisions.
+* **Benefit redistribution:** test revenue shocks, delayed payouts, unequal access to information, and disputes over contribution weights.
+* **Reputation:** test incumbent lock-in, reputation decay, appeal paths, portability across projects, and recovery after failure.
+
+For early-stage assessments, these may be qualitative scenarios. For mature organizations, they can become agent-based models, spreadsheet simulations, or historical backtests.
+
+## **Use of Enterprise Stack and Other Maps**
+
+Frameworks such as the Enterprise Stack are useful as heuristic maps, not fixed ontologies. They help evaluators notice value-field layers, but they should not force every organization into a rigid taxonomy. When using any stack, matrix, or pattern library:
+
+* treat categories as lenses, not natural laws;
+* record where the case does not fit the map;
+* watch for orchestration language becoming disguised central planning;
+* verify that capital, platforms, and ecosystem roles remain accountable to commons governance.
+
 
 ## **Levels of Scale**
 
@@ -113,10 +181,11 @@ A suggestion for how to turn per-dimension & per-level evaluations into an overa
 
   * **Layer scores** \= average over dimensions in that layer (across levels),  
   * **Level scores** \= average over dimensions across layers for that level,  
-  * **Overall P2P-ness score** \= weighted average of layer and/or level scores.
+  * **Overall P2P-ness score** \= weighted average of layer and/or level scores, reported only as a secondary index.
 
 * In addition to numeric scores, also note **qualitative observations**: what is working well, what is being blocked, what trade-offs are evident.  
 * It may be useful to produce a radar/spider diagram showing scores across dimensions and levels — for visualization and comparative purposes.
+* Always pair averages with a dynamic profile, path-dependency analysis, and complexity stress-test summary.
 
 ## **Interdependencies, Trade-Offs, Tensions**
 
@@ -128,6 +197,9 @@ No organization is perfect in all dimensions. Possible trade-offs:
 * Value distribution fairness vs incentives to attract external funding or investment.  
 * Protocols / standards (which help coordination) vs freedom / flexibility.
 * Formal decentralization vs lived experience of agency, recognition, and belonging.
+* Meritocratic reputation vs path-dependent incumbent capture.
+* Capital access vs commons-governed strategic direction.
+* Holoptism vs surveillance or coercive visibility.
 
 In evaluation, document where tensions exist, how the organization addresses them, and whether the solution leans toward more or less P2P-ness in particular dimensions.
 
@@ -144,6 +216,9 @@ To do empirical evaluation, one can gather data from:
 * Contribution logs: version control, timestamps, commit attribution, tags, etc.  
 * Conflict / fork histories: if projects have forked, how that went.  
 * External collaboration records: partnerships, sharing, open licensing.
+* Historical artifacts: founding documents, early token/equity allocations, initial governance rules, early maintainer lists, archived roadmaps.
+* Privacy and access policies: what is public, what is private, who can inspect sensitive records, and how peer verification works without exposing people unnecessarily.
+* Simulation inputs: value equations, quorum rules, budget assumptions, reputation algorithms, contribution histories, and scenario parameters.
 
 ## **Sample Case Application (Hypothetical)**
 
@@ -180,3 +255,7 @@ After evaluation, the document should include guidance / strategies for organiza
 * Identify “quick wins” vs long-term changes.  
 * Encourage piloting changes at the project level (easier, lower stakes), then scale up.  
 * Document trade-offs and choose consciously how to balance them rather than letting implicit defaults drive structure.  
+* Reduce capture-producing feedback loops: add sunset clauses, role rotation, reputation decay/review, transparent delegation, conflict appeals, and fork-safe contribution portability.
+* Improve transparency without surveillance: publish process, decisions, budgets, and aggregate contribution data while protecting personal privacy and sensitive deliberation.
+* Make capital accountable to commons governance: disclose control rights, funding dependencies, donor/investor influence, treasury rules, and exit constraints.
+* Add scenario modeling before changing contribution accounting, token incentives, governance thresholds, or benefit distribution rules.

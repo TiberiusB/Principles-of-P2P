@@ -12,6 +12,10 @@ This document compiles quantitative scores and rationales derived from evidence 
 
 Note: If using the 0–3 mapping, translate: 0→0, 1→1–2, 2→3–4, 3→5.
 
+## Interpretation Rule: Profile Before Score
+
+The tables below produce a dynamic P2P profile. Layer averages and any overall score are secondary summary signals only. The conclusion must explain tensions, path dependencies, capture risks, and trajectory; do not let a single total score stand in for the assessment.
+
 ## Layer 1: Structural/Formal
 
 | Dimension | Project | Open-Enterprise | Network | Global | Rationale (evidence refs) |
@@ -52,14 +56,45 @@ Note: If using the 0–3 mapping, translate: 0→0, 1→1–2, 2→3–4, 3→5.
 | Values, Norms & Culture |  |  |  |  |  |
 | Learning, Adaptation & Innovation |  |  |  |  |  |
 | Meaning, Purpose & Identity |  |  |  |  |  |
+| Phenomenological Grounding (Lived Experience) |  |  |  |  |  |
 | Ecosystem Relations & External Engagement |  |  |  |  |  |
 
-## Totals
+## Dynamic Profile and Averages
 - Structural average:  
 - Operational average:  
 - Economic average:  
 - Cultural/Ecosystem average:  
-- Overall P2P-ness (simple avg of layer avgs):  
+- Overall P2P-ness index (optional, simple avg of layer avgs):
+- Strongest layer(s):
+- Weakest layer(s):
+- Trajectory: moving toward more P2P / stable hybrid / capture risk / insufficient evidence
+- Main tensions:
+  - Openness vs quality:
+  - Transparency vs privacy:
+  - Meritocracy/reputation vs incumbent capture:
+  - Capital access vs commons governance:
+  - Formal decentralization vs lived agency:
+
+## Path Dependency and Capture Analysis
+| Area | Evidence summary | Productive path dependence | Capture-producing risk | Mitigation / next evidence |
+| ----- | ----- | ----- | ----- | ----- |
+| Founding choices and initial rules |  |  |  |  |
+| Early contribution/reputation history |  |  |  |  |
+| Funding/capital structure |  |  |  |  |
+| Infrastructure/platform dependencies |  |  |  |  |
+| Governance defaults and admin powers |  |  |  |  |
+
+## Complexity Stress Tests
+| Mechanism / Pattern | Feedback loop created | What becomes visible | What becomes hidden | Lock-in risk | Who gains adaptive capacity | Who loses agency | Assessment |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+|  |  |  |  |  |  |  |  |
+
+## Scenario / Simulation Recommendations
+- Contribution accounting scenarios:
+- Governance scenarios:
+- Benefit redistribution scenarios:
+- Reputation scenarios:
+- Highest-priority simulation/backtest:
 
 ## Hybridization X-ray (per `Hybrid.md`)
 - Legal existence/entity:
@@ -72,9 +107,12 @@ Note: If using the 0–3 mapping, translate: 0→0, 1→1–2, 2→3–4, 3→5.
 - Infrastructure control:
 - Roadmap ownership:
 - Trademark/brand control:
+- Privacy-preserving transparency:
+- Capital subordination to commons governance:
+- Reputation/meritocracy capture risk:
 
 Red flags to check:
-- CLA assigning IP centrally; token/equity concentration; roadmap capture by single employer; trademark constraints on forks.
+- CLA assigning IP centrally; token/equity concentration; roadmap capture by single employer; trademark constraints on forks; permanent admin powers without review; reputation systems with no decay/appeal; transparency practices that expose people without improving peer verification; capital providers with strategic vetoes.
 
 ## Ethos Assessment (per `Ethos.md`)
 | Ethos Dimension | Score (0–5) | Short rationale (citations) |
@@ -90,7 +128,8 @@ Red flags to check:
 | Reliability / Trustworthiness |  |  |
 | Mission / Shared Purpose |  |  |
 | Non-domination / Anti-hierarchy |  |  |
+| Phenomenological Grounding |  |  |
 | Quality of Peer Interactions |  |  |
 
 ## Conclusion
-- 3–6 sentences summarizing strengths, hybrid elements, gaps, and overall score.
+- 4–8 sentences summarizing the profile, not just the score: strongest P2P dimensions, weakest/capture-prone dimensions, main feedback loops, privacy/capital/reputation risks, and the priority pathway for improvement.
