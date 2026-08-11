@@ -1,0 +1,3 @@
+# Dependencies for assessment tooling (radar PNG + YAML score sheets).
+matplotlib>=3.8
+PyYAML>=6.0

@@ -1,0 +1,106 @@
+# Machine-readable P2P-ness scores for {{ORG_NAME}}
+# Source of truth for averages / radar. Rationales stay in {{ORG_NAME}}_compilation.md.
+#
+# Cell values: 0–5 (number), NE (not evidenced), or N/A (level out of scope).
+# Never treat NE as 0. Compute with: python3 tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml
+
+org_name: "{{ORG_NAME}}"
+title: "{{ORG_NAME}}"
+assessor: "{{ASSESSOR_NAME_OR_HANDLE}}"
+assessment_date: "{{YYYY-MM-DD}}"
+
+# Which levels are in scope for this assessment (others should be N/A in cells).
+scope_levels:
+  - project
+  # - open_enterprise
+  # - network
+  # - global
+
+layers:
+  structural:
+    label: "Structural / Formal"
+    dimensions:
+      membership:
+        label: "Membership & Entry/Exit"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      roles:
+        label: "Role & Task Structure"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      governance:
+        label: "Governance & Decision-Making"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      value_accounting:
+        label: "Value Accounting & Rewards / Redistribution"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      legal:
+        label: "Legal / Liability / Financial Structures"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      infrastructure:
+        label: "Infrastructure & Commons (incl. plural property-regime map)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+
+  operational:
+    label: "Operational / Process"
+    dimensions:
+      transparency:
+        label: "Transparency & Access to Information"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      coordination:
+        label: "Coordination of Tasks & Workflows (incl. stigmergy)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      contribution_logging:
+        label: "Contribution Logging & Attribution"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      conflict_forking:
+        label: "Conflict Management & Forking"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      reputation:
+        label: "Reputation, Trust & Accountability"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+
+  economic:
+    label: "Economic"
+    dimensions:
+      property_licensing:
+        label: "Property Regime & Licensing"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      benefit_distribution:
+        label: "Contribution & Value Accounting / Benefit Distribution"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      funding:
+        label: "Funding & Capital Sources (incl. capital-vs-resources posture)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      revenue:
+        label: "Revenue Model & Market Interface (incl. disintermediation)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      tokenomics:
+        label: "Tokenomics & Incentives (if applicable)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      cost_sustainability:
+        label: "Cost Structure & Sustainability"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      economic_openness:
+        label: "Economic Openness & Cost Transparency"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+
+  cultural:
+    label: "Cultural / Ecosystem / Superstructural"
+    dimensions:
+      values:
+        label: "Values, Norms & Culture"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      learning:
+        label: "Learning, Adaptation & Innovation (incl. reflexivity)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      meaning:
+        label: "Meaning, Purpose & Identity"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      phenomenological:
+        label: "Phenomenological Grounding (Lived Experience)"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      ecosystem:
+        label: "Ecosystem Relations & External Engagement"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }
+      contextual:
+        label: "Contextual & Ecological Embeddedness"
+        scores: { project: null, open_enterprise: N/A, network: N/A, global: N/A }

@@ -2,13 +2,13 @@
 
 *Instructions for the user: set the AI to Agent mode, ensure you have enabled and authenticated all necessary MCP servers (Context7, GitHub, Sourcegraph), and include OVNwiki ([https://ovn.world/index.php?title=Main_Page](https://ovn.world/index.php?title=Main_Page)) and P2P Foundation ([https://wiki.p2pfoundation.net/index.php/Main_Page](https://wiki.p2pfoundation.net/index.php/Main_Page)) sources.*
 
-System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `template_data.md` and `template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
+System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `templates/template_data.md`, `templates/template_compilation.md`, `templates/template_executive_summary.md`, and `templates/template_scores.yaml`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`. Deterministic scoring, radar, scaffolding, and validation are offloaded to `tools/` (see `tools/README.md`).
 
 ## Context
 
 - Objective: Assess the degree of P2P-ness of {{ORG_NAME}} with a multi-level, multi-dimensional model.
 - Foundations: Use the five foundation documents as the theoretical/methodological basis.
-- Outputs: Filled `{{ORG_NAME}}_data.md` (status-tagged evidence), `{{ORG_NAME}}_compilation.md` (dynamic profile, scores, principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, stress tests, conclusion), optional executive summary.
+- Outputs: Filled `{{ORG_NAME}}_data.md` (status-tagged evidence), `{{ORG_NAME}}_scores.yaml` (machine-readable scores), `{{ORG_NAME}}_compilation.md` (dynamic profile, rationales, principles, hybrid X-ray, stack, stress tests, ethos), and `{{ORG_NAME}}_executive_summary.md` (including radar chart from `tools/compute_scores.py --radar`).
 - Interpretation rule: report a dynamic P2P profile first. Any overall score is a secondary index, not the main finding.
 
 
@@ -40,23 +40,38 @@ To execute this assessment thoroughly, the agent MUST utilize the following tool
 
 1. **Context7 MCP**: Invoke the `context7` MCP server whenever encountering technical infrastructure, libraries, SDKs, or APIs to fetch up-to-date documentation and ensure architectural conclusions are not based on stale training data.
 2. **WebSearch & Browser Automation**: Invoke built-in WebSearch or the `cursor-ide-browser` MCP to perform live searches, visually verify information, interact with complex governance portals (e.g., Snapshot, Tally), and scrape public wiki data (OVN Wiki, P2P Foundation).
-3. **GitHub & Sourcegraph MCPs**: Invoke the `user-github` or `plugin-sourcegraph-cursor-plugin-sourcegraph` MCP servers to dive deep into repository structures, analyze commit history, read smart contracts, and assess the technical implementation of governance/economic models.
+3. **GitHub & Sourcegraph MCPs**: Invoke the `user-github` or `plugin-sourcegraph-cursor-plugin-sourcegraph` MCP servers to dive deep into repository structures, analyze commit history, read smart contracts, and assess the technical implementation of governance/economic models. Optionally supplement with `tools/github_footprint.py` for a deterministic LICENSE/contributor stub.
+4. **Assessment tooling (`tools/`, see `tools/README.md`)** — **required** for scaffolding, averages, radar, and hand-off validation:
+   - `init_assessment.py` — scaffold case-study files from templates (do not hand-clone when this can run).
+   - `{{ORG_NAME}}_scores.yaml` + `compute_scores.py` — **source of truth for numeric scores**; compute layer/level/overall averages excluding `NE`/`N/A`; patch compilation Score Summary; generate radar (`--radar`). **Do not hand-average** when the score sheet is available.
+   - `radar_chart.py` — called via `compute_scores.py --radar`; do **not** use Mermaid for the radar.
+   - `patterns.py` — search the business-model pattern CSV for §0.3 / pattern risk table shortlists.
+   - `validate_assessment.py` — must pass before hand-off.
 
-*Agent Directive*: Do not ask for permission to use these tools if they are available in your catalog. Proactively invoke `GetMcpTools` to discover the schema, then `CallMcpTool` to execute. If a tool fails due to missing authentication, explicitly inform the user to check their MCP configuration.
+*Agent Directive*: Do not ask for permission to use these tools if they are available in your catalog. Proactively invoke `GetMcpTools` to discover the schema, then `CallMcpTool` to execute. If a tool fails due to missing authentication, explicitly inform the user to check their MCP configuration. Run `tools/*.py` via the Shell tool (prefer `.venv/bin/python` after `pip install -r tools/requirements.txt`).
 
 ## High-level steps
 
 1. Read foundations: `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
-2. Clone `template_data.md` as `{{ORG_NAME}}_data.md`; set variables (including SCOPE_LEVELS); run the Web Search & Capture Protocol; fill Section 0 (organizational snapshot, Enterprise Stack positioning, business-model patterns, map misfits).
-3. Populate findings per dimension with Status (`Evidenced` / `Partially evidenced` / `Not evidenced` / `Contradicted`) + Confidence + citations. Fill the plural property-regime map (1.6), path-dependency evidence (incl. 9.5 governance defaults/sunset clauses), and the stress-test inputs.
-4. Where permitted, run the Participant Narratives Module (data Sec. 7): interviews or anonymous survey on agency, recognition, fairness, trust, belonging, care work. If not collected, mark 4.4 `Not evidenced` — never infer lived experience from documents.
-5. Clone `template_compilation.md` as `{{ORG_NAME}}_compilation.md`; fill per-dimension scores (0–5, or `NE`/`N/A`) at each in-scope level, including the Economic layer and Contextual & Ecological Embeddedness; compute layer averages **and** level averages (excluding NE/N/A, noting the basis).
+2. Scaffold with `tools/init_assessment.py` (or reuse existing case-study files). Set variables (including SCOPE_LEVELS). Run the Web Search & Capture Protocol; fill Section 0 in `_data.md` (snapshot, Enterprise Stack, patterns via `tools/patterns.py` as needed, map misfits). Optionally run `tools/github_footprint.py owner/repo --markdown` into §§1.6/2.x/9.
+3. Populate findings per dimension with Status (`Evidenced` / `Partially evidenced` / `Not evidenced` / `Contradicted`) + Confidence + citations. Fill the plural property-regime map (1.6), path-dependency evidence (incl. 9.5), and stress-test inputs.
+4. Where permitted, run the Participant Narratives Module (data Sec. 7). If not collected, mark 4.4 `Not evidenced` — never infer lived experience from documents.
+5. Fill **numeric cells** in `case-study/{{ORG_NAME}}_scores.yaml` (0–5 / `NE` / `N/A`). Fill per-dimension **rationales** in `{{ORG_NAME}}_compilation.md` tables. Then run:
+
+```bash
+.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml \
+  --write-summary case-study/{{ORG_NAME}}_compilation.md \
+  --radar --png-only-fail
+```
+
+Do **not** hand-compute layer/level/overall averages.
 6. Complete the Fundamental Principles Coverage cross-check (8 principles from `Model.md`); explain any strong-average/weak-principle discrepancy.
-7. Complete the two-axis Hybridization X-ray (P2P fidelity + Traditional fidelity per dimension), the hybridization-model match, and red flags.
-8. Complete the Enterprise Stack & pattern analysis: pattern risk table (OVN fit, P2P risks, adaptation rule, capital governance test) and the orchestrator-drift check.
-9. Complete the complexity stress tests **and** the robustness scenario results (participation ×10, funding −50%, founder/keystone exit, contentious fork), then the scenario/simulation recommendations.
+7. Complete the two-axis Hybridization X-ray, hybridization-model match, and red flags.
+8. Complete the Enterprise Stack & pattern analysis (pattern risk table + orchestrator-drift check).
+9. Complete complexity stress tests, robustness scenarios, and scenario/simulation recommendations.
 10. Complete the Ethos Assessment with traditional-baseline contrasts.
-11. Draft a profile-first conclusion (quick wins vs structural changes; reduction-risk check) and (optional) generate the executive summary — with a radar chart of layer averages and the required Economic Model & Migration Path section described under Deliverables.
+11. Draft a profile-first conclusion; generate/fill `{{ORG_NAME}}_executive_summary.md` from `templates/template_executive_summary.md` (embed radar PNG; Economic Model & Migration Path required).
+12. Run `tools/validate_assessment.py {{ORG_NAME}}` and fix any errors before hand-off.
 
 
 
@@ -110,11 +125,37 @@ To execute this assessment thoroughly, the agent MUST utilize the following tool
 
 ## Deliverables
 
-Create the following docs from template within the "case-study" folder:
+Create the following docs from template within the "case-study" folder (prefer `tools/init_assessment.py`):
 
-- `{{ORG_NAME}}_data.md` (from `template_data.md`): fully populated, with status/confidence tags and citations.
-- `{{ORG_NAME}}_compilation.md` (from `template_compilation.md`): dynamic profile, layer and level scores, fundamental principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, path-dependency analysis, stress tests + robustness scenarios, scenario recommendations, ethos assessment, conclusion.
-- `{{ORG_NAME}}_executive_summary.md`: top-line profile, layer/level averages and optional secondary overall index, radar chart/profile, strengths/risks/recommendations, and the Economic Model & Migration Path section specified below.
+- `{{ORG_NAME}}_data.md` (from `templates/template_data.md`): fully populated, with status/confidence tags and citations.
+- `{{ORG_NAME}}_scores.yaml` (from `templates/template_scores.yaml`): **source of truth** for 0–5 / NE / N/A cells.
+- `{{ORG_NAME}}_compilation.md` (from `templates/template_compilation.md`): dynamic profile, dimension rationales, Score Summary **written by `compute_scores.py`**, principles, hybrid X-ray, stack, path-dependency, stress tests, ethos, conclusion.
+- `{{ORG_NAME}}_executive_summary.md` (from `templates/template_executive_summary.md`): top-line profile, layer averages + **radar**, strengths/risks/recommendations, Economic Model & Migration Path.
+- `case-study/assets/{{ORG_NAME}}_layer_radar.png` (+ `.svg`): from `compute_scores.py --radar`.
+
+
+
+### Scores YAML + averages + radar (required)
+
+**Numbers live in** `case-study/{{ORG_NAME}}_scores.yaml`. After filling cells, run:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r tools/requirements.txt
+.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml \
+  --write-summary case-study/{{ORG_NAME}}_compilation.md \
+  --radar --png-only-fail
+```
+
+**Radar location:** `{{ORG_NAME}}_executive_summary.md` → `## Layer averages (radar)`, immediately under the numeric table. Embed:
+
+```markdown
+![Radar chart of {{ORG_NAME}} layer averages](./assets/{{ORG_NAME}}_layer_radar.png)
+```
+
+**Do not use Mermaid** for the radar. Keep the numeric table (and optional ASCII bars) above the image. Full docs: `tools/README.md`.
+
+**Cursor preview tip:** in-tab Preview often fails to show local images (known Cursor bug). Use **Markdown: Open Preview to the Side** (`Ctrl+K` then `V`).
 
 
 
@@ -131,7 +172,7 @@ Synthesize from the compilation's Enterprise Stack & pattern analysis, path-depe
 ## Quality checks
 
 - Every assertion has a citation and a status tag; `NE` cells are never averaged as 0.
-- Layer **and** level averages computed correctly (excluding NE/N/A, basis stated); conclusion matches table values and does not overstate the optional overall index.
+- Layer **and** level averages come from `tools/compute_scores.py` over `{{ORG_NAME}}_scores.yaml` (excluding NE/N/A, basis stated); conclusion matches those values and does not overstate the optional overall index.
 - TODOs for missing items (legal/trademark, governance-portal index, non-code attribution, etc.).
 - Fundamental Principles Coverage table complete; strong-average/weak-principle discrepancies explained.
 - Two-axis hybrid X-ray filled (both axes per dimension); hybridization model(s) identified; red flags answered explicitly (yes/no + evidence).
@@ -139,11 +180,12 @@ Synthesize from the compilation's Enterprise Stack & pattern analysis, path-depe
 - Path-dependency (incl. governance defaults/sunset clauses), privacy, capital-governance, reputation-capture, and scenario sections filled or explicitly marked "not evidenced".
 - Robustness scenarios (10x participation, 50% funding drop, founder exit, fork) answered for governance, treasury, contribution accounting, and infrastructure.
 - Participant narratives collected with consent/anonymity, or 4.4 explicitly marked "not evidenced".
-- If an executive summary is produced, it contains the Economic Model & Migration Path section: current patterns assessed, ideal pattern(s) suggested and justified, and a staged migration path referencing path dependencies, robustness scenarios, and adaptation rules.
+- Executive summary contains Economic Model & Migration Path and a **radar chart image** at `## Layer averages (radar)` (Mermaid not accepted).
+- **`tools/validate_assessment.py {{ORG_NAME}}` exits 0** before hand-off.
 
 
 
 ## Hand-off
 
-- Provide a short summary of key findings, a list of priority recommendations (2–5 items, split into quick wins vs structural changes), and links to all created files.
+- Provide a short summary of key findings, a list of priority recommendations (2–5 items, split into quick wins vs structural changes), and links to all created files (including `_scores.yaml` and the radar PNG).
 

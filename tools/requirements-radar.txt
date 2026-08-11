@@ -1,0 +1,2 @@
+# Deprecated: use tools/requirements.txt (includes matplotlib + PyYAML).
+-r requirements.txt
