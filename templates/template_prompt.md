@@ -1,6 +1,6 @@
 # Template Prompt — P2P-ness Assessment Orchestration
 
-*Instructions for the user: set the AI to Agent mode, enable Browser and Web tools, and include OVNwiki (https://ovn.world/index.php?title=Main_Page) and P2P Foundation (https://wiki.p2pfoundation.net/index.php/Main_Page) sources.*
+*Instructions for the user: set the AI to Agent mode, ensure you have enabled and authenticated all necessary MCP servers (Context7, GitHub, Sourcegraph), and include OVNwiki ([https://ovn.world/index.php?title=Main_Page](https://ovn.world/index.php?title=Main_Page)) and P2P Foundation ([https://wiki.p2pfoundation.net/index.php/Main_Page](https://wiki.p2pfoundation.net/index.php/Main_Page)) sources.*
 
 System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `template_data.md` and `template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
 
@@ -10,6 +10,8 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - Foundations: Use the five foundation documents as the theoretical/methodological basis.
 - Outputs: Filled `{{ORG_NAME}}_data.md` (status-tagged evidence), `{{ORG_NAME}}_compilation.md` (dynamic profile, scores, principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, stress tests, conclusion), optional executive summary.
 - Interpretation rule: report a dynamic P2P profile first. Any overall score is a secondary index, not the main finding.
+
+
 
 ## Variables to set
 
@@ -30,6 +32,18 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - WAYBACK_URLS: {{WAYBACK_URLS — optional; founding-era snapshots}}
 - SECONDARY_RESOURCES: {{SECONDARY_RESOURCES — optional bibliography/URLs specific to this assessment}}
 
+
+
+## Tooling & Execution Harness (Strict Enforcement)
+
+To execute this assessment thoroughly, the agent MUST utilize the following tools dynamically:
+
+1. **Context7 MCP**: Invoke the `context7` MCP server whenever encountering technical infrastructure, libraries, SDKs, or APIs to fetch up-to-date documentation and ensure architectural conclusions are not based on stale training data.
+2. **WebSearch & Browser Automation**: Invoke built-in WebSearch or the `cursor-ide-browser` MCP to perform live searches, visually verify information, interact with complex governance portals (e.g., Snapshot, Tally), and scrape public wiki data (OVN Wiki, P2P Foundation).
+3. **GitHub & Sourcegraph MCPs**: Invoke the `user-github` or `plugin-sourcegraph-cursor-plugin-sourcegraph` MCP servers to dive deep into repository structures, analyze commit history, read smart contracts, and assess the technical implementation of governance/economic models.
+
+*Agent Directive*: Do not ask for permission to use these tools if they are available in your catalog. Proactively invoke `GetMcpTools` to discover the schema, then `CallMcpTool` to execute. If a tool fails due to missing authentication, explicitly inform the user to check their MCP configuration.
+
 ## High-level steps
 
 1. Read foundations: `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
@@ -44,9 +58,12 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 10. Complete the Ethos Assessment with traditional-baseline contrasts.
 11. Draft a profile-first conclusion (quick wins vs structural changes; reduction-risk check) and (optional) generate the executive summary — with a radar chart of layer averages and the required Economic Model & Migration Path section described under Deliverables.
 
+
+
 ## Evidence & search protocol (strict)
 
-- Use your **browser tool** (e.g., `browser_navigate`, `browser_click`, `browser_snapshot`) or Search MCP to perform live searches and verify information when needed, particularly against the OVN Wiki (https://ovn.world/) and P2P Foundation Wiki (https://wiki.p2pfoundation.net/).
+- Use your **browser tool** (e.g., `browser_navigate`, `browser_click`, `browser_snapshot`) or WebSearch tool to perform live searches and verify information when needed, particularly against the OVN Wiki ([https://ovn.world/](https://ovn.world/)) and P2P Foundation Wiki ([https://wiki.p2pfoundation.net/](https://wiki.p2pfoundation.net/)).
+- Use the **GitHub MCP** (`user-github`) and **Sourcegraph MCP** to deeply inspect source code, pull requests, and organizational repositories directly. Use **Context7 MCP** to clarify any technical dependencies.
 - Search in parallel across the org's primary properties (site/forum/docs/blog/GitHub) plus its governance portals.
 - Prefer primary sources; include 1–3 citations for each finding (up to 10 for complex claims); no uncited claims. For volatile pages (roadmaps, governance rules, token allocations), capture a Wayback Machine snapshot as well.
 - Beyond the org's own properties, check: legal registries (OpenCorporates or national equivalents), trademark registries (USPTO/EUIPO), Wayback Machine founding-era pages, GitHub contributor insights (top committers/mergers, email domains), and governance aggregators (DeepDAO, Boardroom) where applicable.
@@ -59,6 +76,8 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - For every major mechanism or enterprise pattern, answer the complexity stress-test questions: feedback loop, visibility, hiddenness, lock-in, adaptive-capacity gain, agency loss — plus the four robustness scenarios.
 - Assessor ethics: respect robots.txt and site terms; collect only public, organization-level content; avoid personal data beyond what the org itself publishes for accountability; obtain informed consent and anonymize all participant narratives. For large-scale tooling options, see `Others/Web-and-Social-Data-Sourcing.md`.
 
+
+
 ## Scoring guidance (grounded in `Evaluation.md`)
 
 - Structural/Formal: Membership openness; roles & task fluidity; governance distribution; value accounting; legal wrapper; commons infrastructure (incl. plural property regimes).
@@ -70,6 +89,8 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - Do not collapse contradictions into an average. Explain tensions between openness/quality, transparency/privacy, meritocracy/capture, capital/commons governance, and formal decentralization/lived agency.
 - Cross-check scores against the 8 fundamental principles from `Model.md`; a high layer average that masks a weak principle must be surfaced, not averaged away.
 
+
+
 ## Hybrid & Ethos mapping
 
 - Use `Hybrid.md`'s X-ray with **two-axis scoring**: P2P fidelity (0–5) and Traditional fidelity (0–5) per dimension, with evidence notes; interpret per Hybrid.md (both high = hybrid; Traditional ≫ P2P = captured/legacy).
@@ -77,11 +98,15 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - Use `Ethos.md` to rate the 14 ethos dimensions; contrast each with the traditional-org baseline; align with evidence from forums, repos, docs, and participant narratives.
 - Add explicit notes for privacy-preserving transparency, capital subordination to commons governance, and reputation/meritocracy capture risk.
 
+
+
 ## Enterprise Stack & pattern analysis
 
 - Treat the Enterprise Stack as a heuristic map, not an ontology. Record the organization's active stack layers and business-model patterns, and explicitly record where the map does **not** fit.
 - For each pattern present, fill the pattern risk table: OVN fit; P2P risks (capture, lock-in, mission drift, governance complexity); adaptation rule; capital governance test.
 - Run the orchestrator-drift check: does any orchestration role become a privileged coordinating center?
+
+
 
 ## Deliverables
 
@@ -91,6 +116,8 @@ Create the following docs from template within the "case-study" folder:
 - `{{ORG_NAME}}_compilation.md` (from `template_compilation.md`): dynamic profile, layer and level scores, fundamental principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, path-dependency analysis, stress tests + robustness scenarios, scenario recommendations, ethos assessment, conclusion.
 - `{{ORG_NAME}}_executive_summary.md`: top-line profile, layer/level averages and optional secondary overall index, radar chart/profile, strengths/risks/recommendations, and the Economic Model & Migration Path section specified below.
 
+
+
 ### Economic Model & Migration Path (required section in the executive summary)
 
 Synthesize from the compilation's Enterprise Stack & pattern analysis, path-dependency table, and stress tests:
@@ -98,6 +125,8 @@ Synthesize from the compilation's Enterprise Stack & pattern analysis, path-depe
 1. **Current economic model(s)/patterns** — assess the business-model patterns the organization actually runs today (from the pattern risk table): OVN fit, capture/lock-in/mission-drift risks, and whether capital remains subordinate to commons governance.
 2. **Ideal model/pattern suggestion** — recommend target pattern(s) from the pattern library in `new-collaborative-entrepreneurship.md` and its semantically richer source `Distributed business model patterns - Models.csv` (including its OVN additions), justified by the organization's layer profile, ethos assessment, mission, and ecosystem position. Treat the pattern library as a heuristic map, not a recipe; state why the suggested pattern fits this organization's context.
 3. **Migration path** — a staged path from the current model to the suggested one: quick wins first (project-level pilots, per `Evaluation.md`'s improvement pathways), then structural changes. Name the path dependencies and lock-ins the migration must navigate (from the path-dependency table), the robustness scenarios the transition must survive (funding −50%, founder/keystone exit, contentious fork), and the adaptation rules that keep openness, transparency, and fair benefit redistribution intact throughout.
+
+
 
 ## Quality checks
 
@@ -112,6 +141,9 @@ Synthesize from the compilation's Enterprise Stack & pattern analysis, path-depe
 - Participant narratives collected with consent/anonymity, or 4.4 explicitly marked "not evidenced".
 - If an executive summary is produced, it contains the Economic Model & Migration Path section: current patterns assessed, ideal pattern(s) suggested and justified, and a staged migration path referencing path dependencies, robustness scenarios, and adaptation rules.
 
+
+
 ## Hand-off
 
 - Provide a short summary of key findings, a list of priority recommendations (2–5 items, split into quick wins vs structural changes), and links to all created files.
+

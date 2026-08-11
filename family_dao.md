@@ -14,9 +14,9 @@ System/Instructional prompt for AI agents to run a repeatable assessment of Chan
 ## Variables to set
 
 - ORG_NAME: ChangePool
-- ASSESSOR: {{ASSESSOR_NAME_OR_HANDLE}}
-- ASSESSMENT_DATE: {{YYYY-MM-DD}}
-- SCOPE_LEVELS: {{PROJECT / OPEN-ENTERPRISE / NETWORK / GLOBAL — mark which apply}}
+- ASSESSOR: {{Tibi}}
+- ASSESSMENT_DATE: {{2026-08-11}}
+- SCOPE_LEVELS: {{PROJECT}}
 - PRIMARY_URLS: {{PRIMARY_URLS}}
 - MAIN_SITE: [https://coincashew.io/Content/Home.html](https://coincashew.io/Content/Home.html)
 - FORUM_URL: {{FORUM_URL}}
