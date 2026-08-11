@@ -10,7 +10,7 @@ Its core claim is that as enterprise moves into deeper shared consequences, gove
 
 This document integrates:
 - The OVN model (`What is an open value network?`, `Economic model`)
-- The distributed patterns spreadsheet (`Distributed economic model patterns`, 60 patterns)
+- The distributed patterns CSV (`Distributed business model patterns - Models.csv`, 60 patterns), which provides the semantically richer base for these models.
 - The Enterprise Stack framing
 
 ### OVN design assumptions used throughout

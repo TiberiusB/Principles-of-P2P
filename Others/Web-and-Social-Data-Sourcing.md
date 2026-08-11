@@ -105,13 +105,14 @@ Purpose: propose practical, resilient ways to gather evidence for `template_data
 ### How this maps to the templates
 
 - `template_data.md` (evidence):
-  - Use Search MCP + SerpAPI/Tavily to discover pages within `MAIN_SITE`, `FORUM_URL`, `DOCS_OR_MANUAL_URL`, `BLOG_OR_NEWS_URL`, `GITHUB_ORG_URL`, `SNAPSHOT_SPACE`, `TALLY_SPACE`.
-  - Use Crawlee/Playwright or Firecrawl to capture page content and citations.
+  - Use Search MCP + SerpAPI/Tavily to discover pages within `MAIN_SITE`, `FORUM_URL`, `DOCS_OR_MANUAL_URL`, `BLOG_OR_NEWS_URL`, `GITHUB_ORG_URL`, and the `GOVERNANCE_PORTALS` (e.g., `SNAPSHOT_SPACE`, `TALLY_SPACE`, Boardroom, DeepDAO).
+  - Use Crawlee/Playwright or Firecrawl to capture page content and citations (plus Wayback Machine snapshots for volatile pages and founding-era evidence).
   - Use official/social APIs or Apify actors for posts, votes, proposals, maintainers.
-  - Use Diffbot/Wikidata/OpenCorporates to enrich org metadata.
+  - Use Diffbot/Wikidata/OpenCorporates to enrich org metadata (legal registry entries feed `REGISTRY_URL`).
+  - Record every finding with the template's Status (`Evidenced` / `Partially evidenced` / `Not evidenced` / `Contradicted`) and Confidence tags, not just citations.
 - `template_compilation.md` (scoring):
-  - Aggregate signals for Structural/Operational/Economic/Cultural layers with explicit citations.
-  - Compute layer averages; capture Hybrid X-ray and Ethos rationales referencing evidence IDs.
+  - Aggregate signals for Structural/Operational/Economic/Cultural layers with explicit citations; respect the `NE`/`N/A` conventions when averaging.
+  - Compute layer and level averages; capture the two-axis Hybrid X-ray (P2P + Traditional fidelity), the Enterprise Stack pattern risk table, robustness scenario results, and Ethos rationales referencing evidence IDs.
 
 ### Proposed suite (integrated, practical stack)
 
@@ -128,12 +129,12 @@ Purpose: propose practical, resilient ways to gather evidence for `template_data
 ### Implementation plan (phased)
 
 1) **Requirements & governance** (1–2 weeks)
-   - Define evidence fields aligned to `template_data.md` (IDs, URLs, selectors, citation text, timestamps).
+   - Define evidence fields aligned to `template_data.md` (IDs, URLs, selectors, citation text, timestamps, plus the Status and Confidence tags required by the template's Evidence Conventions).
    - Approvals for official social APIs; review TOS/robots; document compliance posture.
    - Choose proxy vendor and MCP servers (Fetch, Browser, Search, GitHub; optional Firecrawl/Apify bridges).
 
 2) **MVP collection** (2–3 weeks)
-   - Implement Discovery via Search MCP for each org variable (site/forum/docs/blog/GitHub/Snapshot/Tally).
+   - Implement Discovery via Search MCP for each org variable (site/forum/docs/blog/GitHub/governance portals such as Snapshot/Tally).
    - Build Crawlee + Playwright spider for org properties; add Scrapy for sitemap/static pages.
    - Integrate Apify actors for at least two social networks; store outputs to Postgres/DuckDB.
    - Add Snapshot/Tally API harvesters where relevant; basic Diffbot enrichment for org pages.

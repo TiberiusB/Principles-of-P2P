@@ -1,42 +1,42 @@
-# Template Prompt — P2P-ness Assessment Orchestration
+# Prompt — ChangePool (FamilyDAO) P2P-ness Assessment
 
 *Instructions for the user: set the AI to Agent mode, enable Browser and Web tools, and include OVNwiki (https://ovn.world/index.php?title=Main_Page) and P2P Foundation (https://wiki.p2pfoundation.net/index.php/Main_Page) sources.*
 
-System/Instructional prompt for AI agents to run a repeatable assessment of {{ORG_NAME}} using `template_data.md` and `template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
+System/Instructional prompt for AI agents to run a repeatable assessment of ChangePool using `templates/template_data.md` and `templates/template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
 
 ## Context
 
-- Objective: Assess the degree of P2P-ness of {{ORG_NAME}} with a multi-level, multi-dimensional model.
+- Objective: Assess the degree of P2P-ness of ChangePool with a multi-level, multi-dimensional model.
 - Foundations: Use the five foundation documents as the theoretical/methodological basis.
-- Outputs: Filled `{{ORG_NAME}}_data.md` (status-tagged evidence), `{{ORG_NAME}}_compilation.md` (dynamic profile, scores, principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, stress tests, conclusion), optional executive summary.
+- Outputs: Filled `ChangePool_data.md` (status-tagged evidence), `ChangePool_compilation.md` (dynamic profile, scores, principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, stress tests, conclusion), optional executive summary.
 - Interpretation rule: report a dynamic P2P profile first. Any overall score is a secondary index, not the main finding.
 
 ## Variables to set
 
-- ORG_NAME: {{ORG_NAME}}
+- ORG_NAME: ChangePool
 - ASSESSOR: {{ASSESSOR_NAME_OR_HANDLE}}
 - ASSESSMENT_DATE: {{YYYY-MM-DD}}
 - SCOPE_LEVELS: {{PROJECT / OPEN-ENTERPRISE / NETWORK / GLOBAL — mark which apply}}
 - PRIMARY_URLS: {{PRIMARY_URLS}}
-- MAIN_SITE: {{MAIN_SITE_URL}}
+- MAIN_SITE: [https://coincashew.io/Content/Home.html](https://coincashew.io/Content/Home.html)
 - FORUM_URL: {{FORUM_URL}}
 - DOCS_OR_MANUAL_URL: {{DOCS_OR_MANUAL_URL}}
 - BLOG_OR_NEWS_URL: {{BLOG_OR_NEWS_URL}}
-- GITHUB_ORG_URL: {{GITHUB_ORG_URL}}
+- GITHUB_ORG_URL: [https://github.com/ChangePool/FamilyDAO](https://github.com/ChangePool/FamilyDAO)
 - GOVERNANCE_PORTALS: {{GOVERNANCE_PORTALS — e.g., Snapshot, Tally, Boardroom, DeepDAO, Discourse}}
 - SNAPSHOT_SPACE: {{SNAPSHOT_SPACE_OR_URL — optional}}
 - TALLY_SPACE: {{TALLY_SPACE_OR_URL — optional}}
 - REGISTRY_URL: {{REGISTRY_URL — optional; e.g., OpenCorporates entry}}
 - WAYBACK_URLS: {{WAYBACK_URLS — optional; founding-era snapshots}}
-- SECONDARY_RESOURCES: {{SECONDARY_RESOURCES — optional bibliography/URLs specific to this assessment}}
+- SECONDARY_RESOURCES: see Resources section below.
 
 ## High-level steps
 
 1. Read foundations: `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
-2. Clone `template_data.md` as `{{ORG_NAME}}_data.md`; set variables (including SCOPE_LEVELS); run the Web Search & Capture Protocol; fill Section 0 (organizational snapshot, Enterprise Stack positioning, business-model patterns, map misfits).
+2. Clone `templates/template_data.md` as `case-study/ChangePool_data.md`; set variables (including SCOPE_LEVELS); run the Web Search & Capture Protocol; fill Section 0 (organizational snapshot, Enterprise Stack positioning, business-model patterns, map misfits).
 3. Populate findings per dimension with Status (`Evidenced` / `Partially evidenced` / `Not evidenced` / `Contradicted`) + Confidence + citations. Fill the plural property-regime map (1.6), path-dependency evidence (incl. 9.5 governance defaults/sunset clauses), and the stress-test inputs.
 4. Where permitted, run the Participant Narratives Module (data Sec. 7): interviews or anonymous survey on agency, recognition, fairness, trust, belonging, care work. If not collected, mark 4.4 `Not evidenced` — never infer lived experience from documents.
-5. Clone `template_compilation.md` as `{{ORG_NAME}}_compilation.md`; fill per-dimension scores (0–5, or `NE`/`N/A`) at each in-scope level, including the Economic layer and Contextual & Ecological Embeddedness; compute layer averages **and** level averages (excluding NE/N/A, noting the basis).
+5. Clone `templates/template_compilation.md` as `case-study/ChangePool_compilation.md`; fill per-dimension scores (0–5, or `NE`/`N/A`) at each in-scope level, including the Economic layer and Contextual & Ecological Embeddedness; compute layer averages **and** level averages (excluding NE/N/A, noting the basis).
 6. Complete the Fundamental Principles Coverage cross-check (8 principles from `Model.md`); explain any strong-average/weak-principle discrepancy.
 7. Complete the two-axis Hybridization X-ray (P2P fidelity + Traditional fidelity per dimension), the hybridization-model match, and red flags.
 8. Complete the Enterprise Stack & pattern analysis: pattern risk table (OVN fit, P2P risks, adaptation rule, capital governance test) and the orchestrator-drift check.
@@ -47,17 +47,43 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 ## Evidence & search protocol (strict)
 
 - Use your **browser tool** (e.g., `browser_navigate`, `browser_click`, `browser_snapshot`) or Search MCP to perform live searches and verify information when needed, particularly against the OVN Wiki (https://ovn.world/) and P2P Foundation Wiki (https://wiki.p2pfoundation.net/).
-- Search in parallel across the org's primary properties (site/forum/docs/blog/GitHub) plus its governance portals.
+- Search in parallel across the org's primary properties (site/GitHub above; discover forum/docs/blog if they exist) plus its governance portals.
 - Prefer primary sources; include 1–3 citations for each finding (up to 10 for complex claims); no uncited claims. For volatile pages (roadmaps, governance rules, token allocations), capture a Wayback Machine snapshot as well.
 - Beyond the org's own properties, check: legal registries (OpenCorporates or national equivalents), trademark registries (USPTO/EUIPO), Wayback Machine founding-era pages, GitHub contributor insights (top committers/mergers, email domains), and governance aggregators (DeepDAO, Boardroom) where applicable.
 - Capture governance process (stages, timing), voting mechanisms, legal wrappers, repos/licenses, trademark policy, non-code attribution, identity/sybil controls, ecosystem partnerships.
 - Capture Economic-layer evidence: property/licensing & trademark posture; contribution/value accounting & distributions; funding sources and attached control rights; revenue model & market interface (incl. disintermediation evidence); tokenomics (if any); cost structure & sustainability (incl. ecological costs); economic openness & cost transparency.
 - Capture path-dependency evidence: founding choices, early allocations, persistent admin powers, early contributor authority, funding dependencies, infrastructure lock-in, and governance defaults with/without sunset clauses.
 - Capture reputation/meritocracy risks: incumbent advantage, role concentration, delegation concentration, decay/review/appeal mechanisms.
-- Capture privacy-preserving transparency: what is public, what is private, and how peer verification avoids surveillance or exposure of sensitive personal data.
+- Capture privacy-preserving transparency: what is public, what is private, and how peer verification avoids surveillance or exposure of sensitive personal data. Note: a family-oriented system handles especially sensitive personal data — treat privacy boundaries as a first-class dimension of the assessment.
 - Capture capital-governance evidence: whether capital providers, sponsors, donors, or token/equity holders can steer strategy outside commons governance.
 - For every major mechanism or enterprise pattern, answer the complexity stress-test questions: feedback loop, visibility, hiddenness, lock-in, adaptive-capacity gain, agency loss — plus the four robustness scenarios.
 - Assessor ethics: respect robots.txt and site terms; collect only public, organization-level content; avoid personal data beyond what the org itself publishes for accountability; obtain informed consent and anonymize all participant narratives. For large-scale tooling options, see `Others/Web-and-Social-Data-Sourcing.md`.
+
+## Resources (SECONDARY_RESOURCES)
+
+- **OVN Wiki**: [https://ovn.world/index.php?title=Main_Page](https://ovn.world/index.php?title=Main_Page) (Source for Open Value Network models, economic structures, and contribution accounting)
+- **P2P Foundation Wiki**: [https://wiki.p2pfoundation.net/index.php/Main_Page](https://wiki.p2pfoundation.net/index.php/Main_Page) (Source for peer-to-peer history, culture, commons-based peer production)
+- Ancestry. (2026). Retrieved August 2, 2026, from [https://www.ancestry.com/](https://www.ancestry.com/)
+
+Bowen Center for the Study of the Family. (1975). Retrieved July 7, 2026, from [https://www.thebowencenter.org/](https://www.thebowencenter.org/)
+
+Chainlink. (2026). What Is a 51% Attack? Retrieved July 7, 2026, from [https://chain.link/article/what-is-a-51-attack](https://chain.link/article/what-is-a-51-attack)
+
+Comforting Loss, Celebrating Life. (2026). Retrieved July 26, 2026, from [https://www.bcfunerals.com/](https://www.bcfunerals.com/)
+
+Lent, J. (2026). *Ecocivilization: Making a World That Works For All*. Brooklyn: Melville House.
+
+Memorygram. (2026). On a Mission To Preserve Precious Memories and Legacy. Retrieved August 10, 2026, from [https://memoirs.memorygram.com/](https://memoirs.memorygram.com/)
+
+Multicultural Family Institute. (2023). Standard Symbols for Genograms. Retrieved July 7, 2026, from [https://multiculturalfamily.org/product/genogram-how-to-downloadable-pdf/](https://multiculturalfamily.org/product/genogram-how-to-downloadable-pdf/)
+
+NOĒMA. (2026). We May Be Entering A Second Axial Age. Retrieved July 9, 2026, from [https://www.noemamag.com/we-may-be-entering-a-second-axial-age/](https://www.noemamag.com/we-may-be-entering-a-second-axial-age/)
+
+Remento. A Keepsake Book That Lets You Hear Their Voice Forever. Retrieved August 10, 2026, from [https://www.remento.co/](https://www.remento.co/)
+
+Royal Bank of Canada Wealth Management. (2026). When Should I Consider a Family Office? Retrieved July 7, 2026, from [https://www.rbcwealthmanagement.com/en-ca/insights/when-should-i-consider-a-family-office](https://www.rbcwealthmanagement.com/en-ca/insights/when-should-i-consider-a-family-office)
+
+Storyworth. (2026). Help Them See Their Life in a Whole New Light. Retrieved August 10, 2026, from [https://welcome.storyworth.com/](https://welcome.storyworth.com/)
 
 ## Scoring guidance (grounded in `Evaluation.md`)
 
@@ -87,9 +113,9 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 
 Create the following docs from template within the "case-study" folder:
 
-- `{{ORG_NAME}}_data.md` (from `template_data.md`): fully populated, with status/confidence tags and citations.
-- `{{ORG_NAME}}_compilation.md` (from `template_compilation.md`): dynamic profile, layer and level scores, fundamental principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, path-dependency analysis, stress tests + robustness scenarios, scenario recommendations, ethos assessment, conclusion.
-- `{{ORG_NAME}}_executive_summary.md`: top-line profile, layer/level averages and optional secondary overall index, radar chart/profile, strengths/risks/recommendations, and the Economic Model & Migration Path section specified below.
+- `ChangePool_data.md` (from `templates/template_data.md`): fully populated, with status/confidence tags and citations.
+- `ChangePool_compilation.md` (from `templates/template_compilation.md`): dynamic profile, layer and level scores, fundamental principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, path-dependency analysis, stress tests + robustness scenarios, scenario recommendations, ethos assessment, conclusion.
+- `ChangePool_executive_summary.md`: top-line profile, layer/level averages and optional secondary overall index, radar chart/profile, strengths/risks/recommendations, and the Economic Model & Migration Path section specified below.
 
 ### Economic Model & Migration Path (required section in the executive summary)
 

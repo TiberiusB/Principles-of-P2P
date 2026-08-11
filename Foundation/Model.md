@@ -768,7 +768,7 @@ Scoring System
 * **2 \= Moderate / Partial** → principle implemented, but with structural limitations.  
 * **3 \= Strong / Full** → principle strongly present, well-aligned with P2P ethos.
 
-Each initiative receives a score per principle. A **total score (0–24)** indicates overall P2P-ness.
+Each initiative receives a score per principle. A **total score (0–24)** indicates overall P2P-ness. (In operational use — see `Evaluation.md` and `templates/template_compilation.md` — the total is reported only as a secondary index beneath a dynamic, multi-dimensional profile.)
 
 **Note on DAO pitfalls:** A project can score high on decentralization primitives (token voting, on-chain rules) while scoring low on **phenomenological grounding** if participants experience exclusion, opacity, or misrecognition. The rubric explicitly guards against DAO-style abstraction that treats humans as inputs to a protocol rather than co-constitutive agents in a living system.
 
@@ -889,6 +889,8 @@ We structure the evaluation along **three macro-layers**, each with multiple **d
 1. **Structural/Formal Layer** — the more visible, codified, “hard” elements: roles, governance, legal, formal procedures, infrastructure.  
 2. **Operational/Process Layer** — how things actually get done: workflows, decision-making in practice, value capture & distribution, conflict resolution, dynamics of contributions.  
 3. **Superstructural / Cultural / Ecosystem Layer** — values, norms, identity, reputation, sense of belonging, external relations, adaptation, learning, and **phenomenological fit** (lived experience of agency, recognition, and meaning).
+
+**Note (framework evolution):** the operational framework in `Evaluation.md` and the assessment templates in `templates/` separate the economic dimensions (property regime, funding and capital sources, revenue model, tokenomics, cost structure, economic openness) into a fourth **Economic** macro-layer, and operationalize the principle of **Contextual Embeddedness** (principle 6 in the Fundamental Principles above) as an explicit **Contextual & Ecological Embeddedness** dimension of the cultural layer.
 
 These layers are interdependent: structure constrains and enables processes; processes reinforce or erode norms and culture; culture feeds back into structure (e.g. how rules change, roles evolve) etc.  
 Within each layer we can define specific dimensions. Also, the levels (project / enterprise / network / global) will apply across many of the dimensions: e.g. governance exists at each level, so we can ask about “project-level governance”, “enterprise-level governance”, etc. Below is a suggested set of dimensions.
