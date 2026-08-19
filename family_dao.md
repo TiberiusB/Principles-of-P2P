@@ -1,14 +1,14 @@
 # Prompt — ChangePool (FamilyDAO) P2P-ness Assessment
 
-*Instructions for the user: set the AI to Agent mode, enable Browser and Web tools, and include OVNwiki (https://ovn.world/index.php?title=Main_Page) and P2P Foundation (https://wiki.p2pfoundation.net/index.php/Main_Page) sources.*
+*Instructions for the user: set the AI to Agent mode, ensure you have enabled and authenticated all necessary MCP servers (Context7, GitHub, Sourcegraph), and include OVNwiki (https://ovn.world/index.php?title=Main_Page) and P2P Foundation (https://wiki.p2pfoundation.net/index.php/Main_Page) sources.*
 
-System/Instructional prompt for AI agents to run a repeatable assessment of ChangePool using `templates/template_data.md` and `templates/template_compilation.md`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
+System/Instructional prompt for AI agents to run a repeatable assessment of ChangePool using `templates/template_data.md`, `templates/template_compilation.md`, `templates/template_executive_summary.md`, and `templates/template_scores.yaml`, grounded in `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`. Deterministic scoring, radar, scaffolding, and validation are offloaded to `tools/` (see `tools/README.md`).
 
 ## Context
 
 - Objective: Assess the degree of P2P-ness of ChangePool with a multi-level, multi-dimensional model.
 - Foundations: Use the five foundation documents as the theoretical/methodological basis.
-- Outputs: Filled `ChangePool_data.md` (status-tagged evidence), `ChangePool_compilation.md` (dynamic profile, scores, principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, stress tests, conclusion), optional executive summary.
+- Outputs: Filled `ChangePool_data.md`, `ChangePool_scores.yaml`, `ChangePool_compilation.md`, and `ChangePool_executive_summary.md` (radar via `tools/compute_scores.py --radar`).
 - Interpretation rule: report a dynamic P2P profile first. Any overall score is a secondary index, not the main finding.
 
 ## Variables to set
@@ -30,23 +30,43 @@ System/Instructional prompt for AI agents to run a repeatable assessment of Chan
 - WAYBACK_URLS: {{WAYBACK_URLS — optional; founding-era snapshots}}
 - SECONDARY_RESOURCES: see Resources section below.
 
+## Tooling & Execution Harness (Strict Enforcement)
+
+To execute this assessment thoroughly, the agent MUST utilize the following tools dynamically:
+
+1. **Context7 MCP**: Invoke the `context7` MCP server whenever encountering technical infrastructure, libraries, SDKs, or APIs.
+2. **WebSearch & Browser Automation**: Invoke built-in WebSearch or the `cursor-ide-browser` MCP for live verification (OVN Wiki, P2P Foundation, org properties).
+3. **GitHub & Sourcegraph MCPs**: Deep repo inspection; optionally `tools/github_footprint.py ChangePool/FamilyDAO --markdown` for LICENSE/contributor stubs.
+4. **Assessment tooling (`tools/`, see `tools/README.md`)** — **required**:
+   - `init_assessment.py` — scaffold when starting fresh.
+   - `ChangePool_scores.yaml` + `compute_scores.py` — **source of truth for numbers**; patch Score Summary; `--radar`. Do **not** hand-average.
+   - `patterns.py` — pattern CSV shortlists for §0.3 / pattern risk table.
+   - `validate_assessment.py` — must pass before hand-off.
+
+*Agent Directive*: Do not ask for permission to use these tools if available. Run `tools/*.py` via Shell (prefer `.venv/bin/python` after `pip install -r tools/requirements.txt`).
+
 ## High-level steps
 
-1. Read foundations: `Model.md`, `Evaluation.md`, `Hybrid.md`, `Ethos.md`, `new-collaborative-entrepreneurship.md`, and `Distributed business model patterns - Models.csv`.
-2. Clone `templates/template_data.md` as `case-study/ChangePool_data.md`; set variables (including SCOPE_LEVELS); run the Web Search & Capture Protocol; fill Section 0 (organizational snapshot, Enterprise Stack positioning, business-model patterns, map misfits).
-3. Populate findings per dimension with Status (`Evidenced` / `Partially evidenced` / `Not evidenced` / `Contradicted`) + Confidence + citations. Fill the plural property-regime map (1.6), path-dependency evidence (incl. 9.5 governance defaults/sunset clauses), and the stress-test inputs.
-4. Where permitted, run the Participant Narratives Module (data Sec. 7): interviews or anonymous survey on agency, recognition, fairness, trust, belonging, care work. If not collected, mark 4.4 `Not evidenced` — never infer lived experience from documents.
-5. Clone `templates/template_compilation.md` as `case-study/ChangePool_compilation.md`; fill per-dimension scores (0–5, or `NE`/`N/A`) at each in-scope level, including the Economic layer and Contextual & Ecological Embeddedness; compute layer averages **and** level averages (excluding NE/N/A, noting the basis).
-6. Complete the Fundamental Principles Coverage cross-check (8 principles from `Model.md`); explain any strong-average/weak-principle discrepancy.
-7. Complete the two-axis Hybridization X-ray (P2P fidelity + Traditional fidelity per dimension), the hybridization-model match, and red flags.
-8. Complete the Enterprise Stack & pattern analysis: pattern risk table (OVN fit, P2P risks, adaptation rule, capital governance test) and the orchestrator-drift check.
-9. Complete the complexity stress tests **and** the robustness scenario results (participation ×10, funding −50%, founder/keystone exit, contentious fork), then the scenario/simulation recommendations.
-10. Complete the Ethos Assessment with traditional-baseline contrasts.
-11. Draft a profile-first conclusion (quick wins vs structural changes; reduction-risk check) and (optional) generate the executive summary — with a radar chart of layer averages and the required Economic Model & Migration Path section described under Deliverables.
+1. Read foundations (Model, Evaluation, Hybrid, Ethos, NCE, patterns CSV).
+2. Use existing `case-study/ChangePool_*` files (or `init_assessment.py`). Fill `_data.md` Section 0+; use `patterns.py` / `github_footprint.py` as needed.
+3. Populate findings with Status + Confidence + citations; property-regime map; path dependency; stress-test inputs.
+4. Narratives module or mark 4.4 `Not evidenced`.
+5. Fill `case-study/ChangePool_scores.yaml` cells; rationales in compilation tables; then:
+
+```bash
+.venv/bin/python tools/compute_scores.py case-study/ChangePool_scores.yaml \
+  --write-summary case-study/ChangePool_compilation.md \
+  --radar --png-only-fail
+```
+
+6. Principles coverage; Hybrid X-ray; Enterprise Stack & patterns; stress tests; Ethos.
+7. Executive summary from template (embed radar; Economic Model & Migration Path).
+8. `tools/validate_assessment.py ChangePool` must exit 0.
 
 ## Evidence & search protocol (strict)
 
-- Use your **browser tool** (e.g., `browser_navigate`, `browser_click`, `browser_snapshot`) or Search MCP to perform live searches and verify information when needed, particularly against the OVN Wiki (https://ovn.world/) and P2P Foundation Wiki (https://wiki.p2pfoundation.net/).
+- Use your **browser tool** (e.g., `browser_navigate`, `browser_click`, `browser_snapshot`) or WebSearch tool to perform live searches and verify information when needed, particularly against the OVN Wiki (https://ovn.world/) and P2P Foundation Wiki (https://wiki.p2pfoundation.net/).
+- Use the **GitHub MCP** (`user-github`) and **Sourcegraph MCP** to deeply inspect source code, pull requests, and organizational repositories directly. Use **Context7 MCP** to clarify any technical dependencies.
 - Search in parallel across the org's primary properties (site/GitHub above; discover forum/docs/blog if they exist) plus its governance portals.
 - Prefer primary sources; include 1–3 citations for each finding (up to 10 for complex claims); no uncited claims. For volatile pages (roadmaps, governance rules, token allocations), capture a Wayback Machine snapshot as well.
 - Beyond the org's own properties, check: legal registries (OpenCorporates or national equivalents), trademark registries (USPTO/EUIPO), Wayback Machine founding-era pages, GitHub contributor insights (top committers/mergers, email domains), and governance aggregators (DeepDAO, Boardroom) where applicable.
@@ -111,11 +131,28 @@ Storyworth. (2026). Help Them See Their Life in a Whole New Light. Retrieved Aug
 
 ## Deliverables
 
-Create the following docs from template within the "case-study" folder:
+Create / maintain in `case-study/`:
 
-- `ChangePool_data.md` (from `templates/template_data.md`): fully populated, with status/confidence tags and citations.
-- `ChangePool_compilation.md` (from `templates/template_compilation.md`): dynamic profile, layer and level scores, fundamental principles coverage, two-axis hybrid X-ray, Enterprise Stack & pattern analysis, path-dependency analysis, stress tests + robustness scenarios, scenario recommendations, ethos assessment, conclusion.
-- `ChangePool_executive_summary.md`: top-line profile, layer/level averages and optional secondary overall index, radar chart/profile, strengths/risks/recommendations, and the Economic Model & Migration Path section specified below.
+- `ChangePool_data.md`, `ChangePool_scores.yaml` (**numeric source of truth**), `ChangePool_compilation.md`, `ChangePool_executive_summary.md`
+- `assets/ChangePool_layer_radar.png` (+ `.svg`) via `compute_scores.py --radar`
+
+### Scores YAML + averages + radar (required)
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r tools/requirements.txt
+.venv/bin/python tools/compute_scores.py case-study/ChangePool_scores.yaml \
+  --write-summary case-study/ChangePool_compilation.md \
+  --radar --png-only-fail
+```
+
+Embed under `## Layer averages (radar)`:
+
+```markdown
+![Radar chart of ChangePool layer averages](./assets/ChangePool_layer_radar.png)
+```
+
+Do **not** use Mermaid. Cursor tip: use **Open Preview to the Side** to see the PNG. Docs: `tools/README.md`.
 
 ### Economic Model & Migration Path (required section in the executive summary)
 
@@ -127,17 +164,13 @@ Synthesize from the compilation's Enterprise Stack & pattern analysis, path-depe
 
 ## Quality checks
 
-- Every assertion has a citation and a status tag; `NE` cells are never averaged as 0.
-- Layer **and** level averages computed correctly (excluding NE/N/A, basis stated); conclusion matches table values and does not overstate the optional overall index.
-- TODOs for missing items (legal/trademark, governance-portal index, non-code attribution, etc.).
-- Fundamental Principles Coverage table complete; strong-average/weak-principle discrepancies explained.
-- Two-axis hybrid X-ray filled (both axes per dimension); hybridization model(s) identified; red flags answered explicitly (yes/no + evidence).
-- Enterprise Stack positioning, pattern risk table, misfit notes, and orchestrator-drift check completed.
-- Path-dependency (incl. governance defaults/sunset clauses), privacy, capital-governance, reputation-capture, and scenario sections filled or explicitly marked "not evidenced".
-- Robustness scenarios (10x participation, 50% funding drop, founder exit, fork) answered for governance, treasury, contribution accounting, and infrastructure.
-- Participant narratives collected with consent/anonymity, or 4.4 explicitly marked "not evidenced".
-- If an executive summary is produced, it contains the Economic Model & Migration Path section: current patterns assessed, ideal pattern(s) suggested and justified, and a staged migration path referencing path dependencies, robustness scenarios, and adaptation rules.
+- Status tags + citations; `NE` never averaged as 0.
+- Averages from `compute_scores.py` over `ChangePool_scores.yaml`; conclusion matches.
+- Principles, Hybrid X-ray, stack/patterns, path-dependency, stress tests, ethos complete.
+- Narratives collected or 4.4 `Not evidenced`.
+- Executive summary has Migration Path + radar image.
+- **`tools/validate_assessment.py ChangePool` exits 0** before hand-off.
 
 ## Hand-off
 
-- Provide a short summary of key findings, a list of priority recommendations (2–5 items, split into quick wins vs structural changes), and links to all created files.
+- Short key findings, 2–5 recommendations (quick wins vs structural), links to all created files (including `_scores.yaml` and radar PNG).
