@@ -2,6 +2,9 @@
   "mcpServers": {
     "context7": {
       "url": "https://mcp.context7.com/mcp"
+    },
+    "docs-mcp-server": {
+      "url": "http://127.0.0.1:6280/mcp"
     }
   }
 }
