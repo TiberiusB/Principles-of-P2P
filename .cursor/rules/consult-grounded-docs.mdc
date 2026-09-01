@@ -1,0 +1,41 @@
+---
+description: Consult local Grounded Docs (OVN/P2P/Sensorica wikis) before reasoning about peer production topics
+alwaysApply: true
+---
+
+# Consult Grounded Docs for P2P / OVN topics
+
+When the task involves any of these — **p2p**, **OVN**, **open value network**, **p2p economy**, **networks**, **distributed organizations**, **collaborative entrepreneurship**, **NRP** / **network resource planning**, **NDO** / **nondominium**, **property**, commons-based peer production, contribution accounting, value networks, stigmergy, custodians, exchange firms, or Sensorica — **query the local Docs MCP server before asserting facts**.
+
+Do not rely on training data alone for definitions, history, governance, or who created what.
+
+## Server
+
+Project MCP: `docs-mcp-server` → `http://127.0.0.1:6280/mcp` (Grounded Docs). UI: http://127.0.0.1:6280/
+
+If tools are missing, tell the user to reload MCP in Cursor Settings. Do not install or restart the server unless they ask.
+
+## Workflow
+
+1. `list_libraries` — confirm what is indexed.
+2. `search_docs` with `{ library, query, limit }` — primary source for answers.
+3. `fetch_url` — only when you need one specific page verbatim.
+
+Search **each relevant library** when the question spans organizations and theory:
+
+| Library | Use for |
+|---|---|
+| `ovn wiki` | OVN model, governance, NRP-CAS, NDO, legal structure, history |
+| `p2p wiki` | P2P Foundation concepts, peer production, economy, property |
+| `sensorica` | Sensorica practice, ventures, collaborative entrepreneurship |
+
+Example queries: `"who created the OVN model"`, `"nondominium property"`, `"network resource planning"`, `"collaborative entrepreneurship"`.
+
+## Grounding rules
+
+- Cite the **URL** returned by `search_docs` when stating non-obvious claims.
+- Prefer wiki/indexed content over generic web search for this project's domain.
+- Use **Context7** for software libraries only — not for OVN/P2P doctrine.
+- If the server is down or a library is still indexing, say so; do not fill gaps with invented detail.
+
+Install and ops: see `helpmcp.md` in this repo.
