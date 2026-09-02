@@ -86,6 +86,12 @@ def check_scores_vs_radar(
             errors.append(f"{exec_path.name}: missing Layer averages (radar) section")
         if "## Economic Model & Migration Path" not in et:
             errors.append(f"{exec_path.name}: missing Economic Model & Migration Path")
+        if "## If you want a report like this" not in et:
+            errors.append(f"{exec_path.name}: missing If you want a report like this")
+        if "sensorica.co/ventures/p2p-ness-assesment" not in et:
+            errors.append(
+                f"{exec_path.name}: missing Sensorica P2P-ness assessment URL"
+            )
 
     # Compilation score summary consistency (approximate)
     comp = ROOT / "case-study" / f"{org}_compilation.md"
@@ -178,6 +184,8 @@ def main(argv: list[str] | None = None) -> int:
             "## Fundamental Principles Coverage",
             "## Hybridization X-ray",
             "## Ethos Assessment",
+            "## Truth assessment",
+            "## Value theory",
             "## Conclusion",
         ],
         errors,

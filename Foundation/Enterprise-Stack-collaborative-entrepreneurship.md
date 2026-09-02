@@ -1,5 +1,7 @@
 # Collaborative Entrepreneurship: OVN x Enterprise Stack
 
+Alias: this file was previously cited as `new-collaborative-entrepreneurship.md`. Use `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` going forward.
+
 ## Short summary of "The Enterprise Stack" (Indy Johar)
 
 The essay argues that entrepreneurship must move beyond a narrow product/service lens and be understood as **value-field formation**.  

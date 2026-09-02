@@ -9,7 +9,8 @@ Example:
     --date 2026-08-11 \\
     --scope project \\
     --main-site https://coincashew.io/Content/Home.html \\
-    --github https://github.com/ChangePool/FamilyDAO
+    --github https://github.com/ChangePool/FamilyDAO \\
+    --register assessment
 """
 
 from __future__ import annotations
@@ -58,6 +59,12 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--docs", default="")
     p.add_argument("--blog", default="")
     p.add_argument("--force", action="store_true", help="Overwrite existing case-study files")
+    p.add_argument(
+        "--register",
+        choices=["assessment", "collaborative"],
+        default="assessment",
+        help="REPORT_REGISTER: terse assessment (default) or Holons-style collaborative invitation",
+    )
     args = p.parse_args(argv)
 
     org = args.org
@@ -109,6 +116,7 @@ def main(argv: list[str] | None = None) -> int:
             continue
         text = src.read_text(encoding="utf-8")
         text = replace_vars(text, mapping)
+        text = text.replace("{{assessment | collaborative}}", args.register)
         if src_name == "template_scores.yaml":
             # Rewrite scope_levels block from --scope
             scope_block = "scope_levels:\n" + "\n".join(f"  - {s}" for s in scopes) + "\n"

@@ -9,11 +9,10 @@ The main output is a **dynamic P2P profile** (tensions, path dependencies, captu
 
 | Path                         | Role                                                                                               |
 | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| `[Foundation/](Foundation/)` | Theory & method: Model, Evaluation, Hybrid, Ethos, collaborative entrepreneurship, pattern library |
+| `[Foundation/](Foundation/)` | Theory & method: Model, Evaluation, Hybrid, Ethos, Enterprise Stack, pattern library, plus Truth / Value / data-sourcing |
 | `[templates/](templates/)`   | Blank assessment artifacts + orchestration prompt                                                  |
 | `[tools/](tools/)`           | Scaffolding, score averages, radar charts, validation, GitHub/pattern helpers                      |
-| `[case-study/](case-study/)` | Completed assessments (e.g. ChangePool / FamilyDAO)                                                |
-| `[Others/](Others/)`         | Supporting notes (data sourcing, epistemology)                                                     |
+| `[case-study/](case-study/)` | Completed assessments (e.g. ChangePool / FamilyDAO, Holons)                                        |
 | `[assets/](assets/)`         | Framework improvement notes and related assets                                                     |
 
 
@@ -25,8 +24,11 @@ The main output is a **dynamic P2P profile** (tensions, path dependencies, captu
 2. `[Foundation/Evaluation.md](Foundation/Evaluation.md)` — layers × dimensions × levels, scoring conventions (`0–5` / `NE` / `N/A`)
 3. `[Foundation/Hybrid.md](Foundation/Hybrid.md)` — two-axis hybridization X-ray (P2P vs traditional fidelity)
 4. `[Foundation/Ethos.md](Foundation/Ethos.md)` — 14 ethos dimensions
-5. `[Foundation/new-collaborative-entrepreneurship.md](Foundation/new-collaborative-entrepreneurship.md)` — Enterprise Stack (heuristic map)
+5. `[Foundation/Enterprise-Stack-collaborative-entrepreneurship.md](Foundation/Enterprise-Stack-collaborative-entrepreneurship.md)` — Enterprise Stack (heuristic map). Formerly cited as `new-collaborative-entrepreneurship.md`.
 6. `[Foundation/Distributed business model patterns - Models.csv](Foundation/Distributed%20business%20model%20patterns%20-%20Models.csv)` — pattern library
+7. `[Foundation/Others/Truth.md](Foundation/Others/Truth.md)` — how organizations assess truth; computational models (required qualitative section)
+8. `[Foundation/Others/Value.md](Foundation/Others/Value.md)` — how organizations define and redistribute value (required qualitative section)
+9. `[Foundation/Others/Web-and-Social-Data-Sourcing.md](Foundation/Others/Web-and-Social-Data-Sourcing.md)` — assessor ethics and large-scale sourcing
 
 
 
@@ -53,8 +55,11 @@ python3 -m venv .venv
   --date 2026-08-11 \
   --scope project \
   --main-site https://example.org \
-  --github https://github.com/acme/dao
+  --github https://github.com/acme/dao \
+  --register assessment
 ```
+
+`--register` is `assessment` (default, terse executive summary) or `collaborative` (Holons-style invitation report). Agents also select `collaborative` when the organization is Open Value Network (OVN)–adjacent.
 
 This creates under `case-study/`:
 
@@ -71,7 +76,7 @@ This creates under `case-study/`:
 1. Fill evidence in `_data.md` (Status + Confidence + citations on every finding).
 2. Optionally: `tools/github_footprint.py owner/repo --markdown` and `tools/patterns.py search "…"`.
 3. Enter scores in `_scores.yaml`; write dimension **rationales** in `_compilation.md` tables.
-4. Author Dynamic Profile, principles narrative, Hybrid X-ray, Ethos, stress tests, executive summary.
+4. Author Dynamic Profile, principles narrative, Hybrid X-ray, Ethos, **Truth assessment**, **Value theory**, stress tests, executive summary.
 
 Use an agent with `[templates/template_prompt.md](templates/template_prompt.md)` (copy/adapt variables), or a filled prompt such as `[family_dao.md](family_dao.md)`. Recommended MCP context: GitHub, Context7, browser; also OVN Wiki and P2P Foundation.
 

@@ -23,11 +23,11 @@ Prefer `.venv/bin/python tools/...` so radar PNG generation works.
 
 | Script | Role |
 | ----- | ----- |
-| `init_assessment.py` | Scaffold `case-study/{ORG}_*.md` + `_scores.yaml` + `assets/` from templates |
+| `init_assessment.py` | Scaffold `case-study/{ORG}_*.md` + `_scores.yaml` + `assets/` from templates. `--register assessment\|collaborative` (default `assessment`) writes `REPORT_REGISTER` into the four files. |
 | `compute_scores.py` | Averages from `_scores.yaml` (excludes `NE`/`N/A`); patch Score Summary; call radar |
 | `radar_chart.py` | Layer-average radar PNG/SVG (do **not** use Mermaid) |
-| `validate_assessment.py` | Quality gates before hand-off |
-| `github_footprint.py` | Public GitHub LICENSE / contributors / bus-factor stub for data §§1.6–2.x / 9 |
+| `validate_assessment.py` | Quality gates before hand-off (includes Truth / Value compilation headings) |
+| `github_footprint.py` | Public GitHub LICENSE / contributors / stewardship-concentration stub for data §§1.6–2.x / 9 |
 | `patterns.py` | Search `Foundation/Distributed business model patterns - Models.csv` |
 | `scorelib.py` | Shared YAML load + averaging (imported by compute/validate) |
 
@@ -43,8 +43,13 @@ Prefer `.venv/bin/python tools/...` so radar PNG generation works.
   --date 2026-08-11 \
   --scope project \
   --main-site https://example.org \
-  --github https://github.com/acme/dao
+  --github https://github.com/acme/dao \
+  --register assessment
 ```
+
+`--register` is `assessment` (default, terse executive summary) or `collaborative` (Holons-style invitation report). The agent also selects `collaborative` when the organization is Open Value Network (OVN)–adjacent. The value is written into `REPORT_REGISTER` placeholders in the four scaffolded files.
+
+Foundations for every assessment include `Foundation/Others/Truth.md` and `Foundation/Others/Value.md` (required qualitative sections; no new YAML score cells). Data-sourcing ethics: `Foundation/Others/Web-and-Social-Data-Sourcing.md`. Enterprise Stack path: `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md`.
 
 Creates (unless present; `--force` overwrites):
 
@@ -76,7 +81,7 @@ This:
 2. Patches `## Score Summary (secondary signals)` in the compilation
 3. Runs `radar_chart.py` into `case-study/assets/{ORG}_layer_radar.{png,svg}`
 
-Rationales, Dynamic Profile, Hybrid X-ray, Ethos, and Migration Path remain authored in markdown.
+Rationales, Dynamic Profile, Hybrid X-ray, Ethos, Truth assessment, Value theory, and Migration Path remain authored in markdown.
 
 ---
 
@@ -113,7 +118,7 @@ Embed under `## Layer averages (radar)` in the executive summary:
 .venv/bin/python tools/validate_assessment.py ChangePool --strict
 ```
 
-Checks: required deliverable files/sections, scores YAML computable (no null cells), radar asset present and linked from executive summary, Economic Model & Migration Path section, rough consistency between YAML averages and compilation Score Summary. Exit `1` on errors (`--strict` also fails on warnings).
+Checks: required deliverable files/sections (compilation must include `## Truth assessment` and `## Value theory` heading prefixes), scores YAML computable (no null cells), radar asset present and linked from executive summary, Economic Model & Migration Path section, **If you want a report like this** with the Sensorica assessment URL, rough consistency between YAML averages and compilation Score Summary. Does **not** require an invitation letter (that is `collaborative` register only). Exit `1` on errors (`--strict` also fails on warnings).
 
 ---
 
@@ -138,5 +143,5 @@ Prefer the GitHub MCP when authenticated; `github_footprint.py` is the determini
 2. Gather evidence into `_data.md` (optionally `github_footprint` / `patterns`)
 3. Fill **scores only** in `_scores.yaml` + rationales in `_compilation.md` tables
 4. `compute_scores … --write-summary … --radar`
-5. Author Dynamic Profile, principles narrative, Hybrid, Ethos, executive summary + Migration Path
+5. Author Dynamic Profile, principles narrative, Hybrid, Ethos, Truth assessment, Value theory, executive summary + Migration Path
 6. Embed radar PNG; `validate_assessment` must pass before hand-off

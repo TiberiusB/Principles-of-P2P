@@ -2,7 +2,7 @@ This analysis draws from:
 
 - OVN wiki pages on [Complexity](http://ovn.world/index.php?title=Complexity), [Economic model](https://ovn.world/index.php?title=Economic_model), and [Allocation](https://ovn.world/index.php?title=Allocation).
 - Santa Fe Institute / W. Brian Arthur framing of complexity economics as the study of the economy as an evolving, adaptive ecology rather than an equilibrium machine: [SFI article](https://www.santafe.edu/news-center/news/sfnm-arthur-complexity-economics).
-- The `Principles-of-P2P` repository, especially `Foundation/Model.md`, `Foundation/Ethos.md`, `Foundation/Evaluation.md`, and `new-collaborative-entrepreneurship.md`: [GitHub repo](https://github.com/TiberiusB/Principles-of-P2P).
+- The `Principles-of-P2P` repository, especially `Foundation/Model.md`, `Foundation/Ethos.md`, `Foundation/Evaluation.md`, and `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md`: [GitHub repo](https://github.com/TiberiusB/Principles-of-P2P).
 - Indy Johar's Enterprise Stack essay, which the collaborative entrepreneurship paper responds to: [The Enterprise Stack](https://indyjohar.substack.com/p/the-enterprise-stack-reframing-entrepreneurship).
 - P2P Foundation discussion around peer collaboration principles: [Talk:Core Peer-2-Peer Collaboration Principles](https://wiki.p2pfoundation.net/Talk:Core_Peer-2-Peer_Collaboration_Principles).
 
@@ -59,7 +59,7 @@ The P2P framework should avoid treating "P2P-ness" as a single score. Complexity
 
 ## 5. Analysis Of The Collaborative Entrepreneurship Paper
 
-The main paper in the repository, `new-collaborative-entrepreneurship.md`, maps 60 business model patterns onto Indy Johar's Enterprise Stack and contextualizes them for OVN/P2P.
+The main paper in the repository, `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md`, maps 60 business model patterns onto Indy Johar's Enterprise Stack and contextualizes them for OVN/P2P.
 
 ### Where It Aligns With Complexity Economics
 
@@ -181,7 +181,7 @@ These recommendations are operationalized across the framework rather than left 
 - **Path dependency:** `Foundation/Evaluation.md` defines the analysis; `templates/template_data.md` Sec. 9 captures the evidence (founding choices, early authority, capital structure, infrastructure lock-in, governance defaults and sunset clauses); `templates/template_compilation.md` turns it into the Path Dependency and Capture Analysis table distinguishing productive from capture-producing dependence.
 - **Reputation/meritocracy capture:** `Foundation/Evaluation.md` carries the reputation feedback-loop note; `templates/template_data.md` Sec. 2.5 requires evidence on decay/review, appeals, role concentration, and incumbent lock-in; the reputation scenario inputs in Sec. 11.4 feed the compilation's recommendations.
 - **Privacy-preserving transparency:** `Foundation/Evaluation.md` carries the holoptism-vs-surveillance note; `templates/template_data.md` Sec. 2.1/3.7 distinguish peer verification from surveillance or unnecessary personal exposure, and the assessor is bound by the same ethics (Evidence Conventions; Participant Narratives Module consent rules).
-- **Enterprise Stack as heuristic:** `Foundation/new-collaborative-entrepreneurship.md` states the stack is a heuristic map, not a fixed ontology, and adds stress-test columns to the pattern spreadsheet guidance; `templates/template_data.md` Sec. 0 records stack positioning, business-model patterns, and explicit map misfits; `templates/template_compilation.md` adds the pattern risk table (OVN fit, P2P risks, adaptation rule, capital governance test) and the orchestrator-drift check.
+- **Enterprise Stack as heuristic:** `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` states the stack is a heuristic map, not a fixed ontology, and adds stress-test columns to the pattern spreadsheet guidance; `templates/template_data.md` Sec. 0 records stack positioning, business-model patterns, and explicit map misfits; `templates/template_compilation.md` adds the pattern risk table (OVN fit, P2P risks, adaptation rule, capital governance test) and the orchestrator-drift check.
 - **Complexity stress tests:** `Foundation/Evaluation.md` defines the six mechanism questions plus the four robustness scenarios (10x participation, 50% funding drop, founder exit, fork); both are implemented in `templates/template_data.md` Sec. 10 and in the stress-test section of `templates/template_compilation.md`.
 - **Capital subordinate to commons governance:** `Foundation/Evaluation.md` carries the capital-governance note; `templates/template_data.md` Sec. 3.3/9.3 capture control rights and funding influence; the compilation's pattern risk table applies the capital governance test per pattern; the executive summary's Economic Model & Migration Path section (specified in `templates/template_prompt.md`) uses it to justify the recommended target model.
 - **Scenario modeling:** `Foundation/Evaluation.md` provides the scenario guidance; `templates/template_data.md` Sec. 11 collects simulation inputs (contribution accounting, governance, benefit redistribution, reputation); `templates/template_compilation.md` issues scenario/simulation recommendations, and the executive summary's migration path must state which robustness scenarios the transition must survive.

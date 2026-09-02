@@ -7,6 +7,7 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
 - ASSESSOR: {{ASSESSOR_NAME_OR_HANDLE}}
 - ASSESSMENT_DATE: {{YYYY-MM-DD}}
 - SCOPE_LEVELS: {{PROJECT / OPEN-ENTERPRISE / NETWORK / GLOBAL — mark which apply; others are N/A}}
+- REPORT_REGISTER: {{assessment | collaborative}}
 - PRIMARY_URLS: {{PRIMARY_URLS}}
 - MAIN_SITE: {{MAIN_SITE_URL}}
 - FORUM_URL: {{FORUM_URL}}
@@ -27,7 +28,7 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
   - `Evidenced` — claim supported by at least one primary source.
   - `Partially evidenced` — some support, but incomplete or indirect.
   - `Not evidenced` — looked for, not found. **This is not a negative finding.**
-  - `Contradicted` — sources conflict, or official claims conflict with observed practice. Record both sides.
+  - `Contradicted` — sources conflict on **facts**, or official claims conflict with observed practice. Record both sides. Dual GNU Affero General Public License (AGPL) + commercial + Contributor License Agreement (CLA) is usually a copyfair / Peer Production License pattern, not an automatic contradiction.
 - **Confidence** (required): `High` | `Medium` | `Low`.
 - **Citations**: 1–3 public URLs per finding; prefer primary sources. For volatile pages (roadmaps, governance rules, token allocations), also capture a Wayback Machine snapshot link.
 - Absence of evidence is not evidence of absence: `Not evidenced` items become TODOs in the checklist, not zeros in scoring.
@@ -35,7 +36,7 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
 ## Method: Web Search & Capture Protocol
 - Run parallel searches across:
   - Official site, forum/governance, docs/handbook/manual, blog/newsroom
-  - GitHub org (repos, LICENSE, CONTRIBUTING, governance files, contributor insights)
+  - GitHub **organization** (sibling repos, LICENSE, CONTRIBUTING, governance files, contributor insights — not only one repository)
   - Governance portals (Snapshot/Tally/Boardroom/DeepDAO or equivalent), foundation filings, whitepapers
   - Registries and archives: OpenCorporates (legal entities, directors), trademark registries (USPTO/EUIPO), Wayback Machine (founding-era pages, earlier governance rules), GitHub contribution graphs
 - Use a consistent citation style: include the public URL for every claim.
@@ -48,7 +49,7 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
   - Transparency/privacy boundaries: what is public, what is private, and how peer verification avoids surveillance.
   - Capital influence: investor/donor/sponsor rights, treasury controls, exit pressures, and commons-governance constraints.
   - Scenario or simulation inputs for contribution accounting, governance thresholds, benefit distribution, and reputation.
-- Assessor ethics: respect robots.txt and site terms of service; collect only public, organization-level content; do not collect personal data beyond what the organization itself publishes for accountability purposes; practice the same privacy-preserving transparency the framework demands. For tooling options at scale, see `Others/Web-and-Social-Data-Sourcing.md`.
+- Assessor ethics: respect robots.txt and site terms of service; collect only public, organization-level content; do not collect personal data beyond what the organization itself publishes for accountability purposes; practice the same privacy-preserving transparency the framework demands. For tooling options at scale, see `Foundation/Others/Web-and-Social-Data-Sourcing.md`.
 
 ### Query bank (replace {{ORG_NAME}})
 - "site:{{MAIN_SITE_HOST}} governance"; "site:{{FORUM_HOST}} proposal governance process"; "site:{{DOCS_HOST}} governance overview"; "site:github.com {{ORG_NAME}} license"
@@ -74,7 +75,7 @@ Purpose: Collect verifiable data and links about {{ORG_NAME}}, organized by the 
 
 ## 0) Organizational Snapshot & Enterprise Stack Positioning
 
-Anchor: `new-collaborative-entrepreneurship.md` (Enterprise Stack as **heuristic map, not fixed ontology**). Record where the organization operates, and just as importantly, where it does not fit the map.
+Anchor: `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` (Enterprise Stack as **heuristic map, not fixed ontology**). Record where the organization operates, and just as importantly, where it does not fit the map.
 
 ### 0.1 Snapshot
 - One-paragraph description; founding date; founders; declared mission; current scale (contributors, users, budget/treasury).
@@ -99,7 +100,7 @@ Mark each layer: `Active` | `Emerging` | `Absent`, with evidence.
 | Mission Cascade | MC |  |  |
 
 ### 0.3 Business-model patterns present
-From the pattern library in `new-collaborative-entrepreneurship.md` and its semantically richer source `Distributed business model patterns - Models.csv` (60 patterns + OVN additions), list the patterns the organization actually runs (e.g., Open Source, Crowdfunding, Revenue Sharing, Freemium, Lock-in, Orchestrator, Subscription).
+From the pattern library in `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` and its semantically richer source `Foundation/Distributed business model patterns - Models.csv` (60 patterns + OVN additions), list the patterns the organization actually runs (e.g., Open Source, Crowdfunding, Revenue Sharing, Freemium, Lock-in, Orchestrator, Subscription).
 
 | Pattern | Where observed | Evidence |
 | ----- | ----- | ----- |
@@ -242,6 +243,18 @@ Property-regime map (per `Model.md`: P2P economies combine *plural* property reg
 
 ### 3.2 Contribution & Value Accounting / Benefit Distribution
 - Findings:
+  - What counts as a contribution; what is logged vs appreciated; who may update weights; whether a pie-chart travels with forks; whether capital is a contribution type or a governor
+  -
+- Citations:
+  -
+
+### 3.2b Value theory
+Anchor: `Foundation/Others/Value.md`; Open Value Network (OVN) wiki [Value](https://ovn.world/index.php?title=Value), [Benefit](https://ovn.world/index.php?title=Benefit), [Allocation](https://ovn.world/index.php?title=Allocation).
+- Findings:
+  - Value as benefit / contribution types / allocation over time — not market price
+  - Whether a “value equation” is used as a worth-meter (retired in Sensorica practice) or as benefit redistribution over a logged contribution graph
+  - License reciprocity: copyfair / Peer Production License vs OVN license
+  - Status + Confidence
   -
 - Citations:
   -
@@ -343,6 +356,17 @@ Anchors: `Model.md`, principle of Contextual Embeddedness; `Evaluation.md`, Cult
 
 ### 5.2 Additional Tooling/Stacks
 - Findings:
+  -
+- Citations:
+  -
+
+### 5.3 Truth model (computational)
+Anchor: `Foundation/Others/Truth.md` Assessor use box; [Computational model](https://ovn.world/index.php?title=Computational_model); [Truth](https://ovn.world/index.php?title=Truth).
+- Findings:
+  - Claimed social/economic reality vs computational substrate (authority, ERP single version, blockchain consensus, Gun-CRDT, Holochain, stigmergy, agent-centric validation)
+  - Mapping onto the OVN spectrum (finite-state machine / smart contract → stigmergy / multi-agent system → holonic)
+  - Mismatches (e.g. holonic mission + chain-as-governor)
+  - Status + Confidence
   -
 - Citations:
   -

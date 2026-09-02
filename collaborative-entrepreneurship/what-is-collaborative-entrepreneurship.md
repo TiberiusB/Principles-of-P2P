@@ -159,7 +159,7 @@ The collaborative entrepreneur is the person who:
 - **stewards** stigmergic signals, contribution accounting, and governance so the venture remains open under pressure;
 - **interfaces** with markets, states, labs, and capital without letting those interfaces become the center.
 
-In Johar's language, this is closer to **value-field formation** than to product/service founding. In OVN language, it is **field stewardship without a privileged coordinating center**. "Orchestrator" is a dangerous word here: it easily slides back into command. See `Foundation/new-collaborative-entrepreneurship.md`.
+In Johar's language, this is closer to **value-field formation** than to product/service founding. In OVN language, it is **field stewardship without a privileged coordinating center**. "Orchestrator" is a dangerous word here: it easily slides back into command. See `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md`.
 
 Contributors are also collaborative entrepreneurs at smaller grain. The founder is not a residual claimant. Everyone who invests without a wage is playing an entrepreneurial role.
 
@@ -246,7 +246,7 @@ Since around 2021 (Greens for Good), Sensorica distinguishes **market distributi
 
 ### 5.8 Patterns, not a single business-model canvas
 
-Native practice maps ~60 classical business-model patterns onto OVN ethics and, later, onto Johar's Enterprise Stack (product → mission cascade) as a **heuristic**, not an ontology. High-fit patterns include open source, open business, peer-to-peer, revenue sharing tied to CAS, prosumer, crowdsourcing. Anti-patterns or high-risk patterns include lock-in, hidden revenue, ungoverned two-sided markets, field finance that makes capital the meta-governor. See `Foundation/new-collaborative-entrepreneurship.md` and the [distributed patterns spreadsheet](https://docs.google.com/spreadsheets/d/1J_TfGXqWmeRDpiSMTKoI1nK1JH7CAFzJnVofpFG992k/edit).
+Native practice maps ~60 classical business-model patterns onto OVN ethics and, later, onto Johar's Enterprise Stack (product → mission cascade) as a **heuristic**, not an ontology. High-fit patterns include open source, open business, peer-to-peer, revenue sharing tied to CAS, prosumer, crowdsourcing. Anti-patterns or high-risk patterns include lock-in, hidden revenue, ungoverned two-sided markets, field finance that makes capital the meta-governor. See `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` and the [distributed patterns spreadsheet](https://docs.google.com/spreadsheets/d/1J_TfGXqWmeRDpiSMTKoI1nK1JH7CAFzJnVofpFG992k/edit).
 
 Every pattern should be read with complexity stress tests: What feedback loop does it create? What does it make visible or hide? What could lock in? Who gains adaptive capacity? Who loses agency? Does finance stay subordinate to commons governance?
 
@@ -481,7 +481,7 @@ Collaborative entrepreneurship is Sensorica's name for entrepreneurial agency in
 - Drive folder [Collaborative Entrepreneurship program](https://drive.google.com/drive/folders/1ANHJzUxq9v0FAgebe4P8T_nWg8ZFTQa4), especially Program Manual Parts 1–8 and the [coordination doc](https://docs.google.com/document/d/1DW0yutNk-XIQVlDeGBiZoE_T3cXnYE_zPWmQUVNELss/edit)
 - [SENSORICA blog](https://sensoricablog.blogspot.com/) (HealthNet, complexity-driven development, nondominium, fractal composability)
 - [Multitude Project](https://multitudeproject.blogspot.com/) (CAS, cosmo-localism, developmental pathologies of open communities)
-- This repo: `Foundation/Model.md`, `Foundation/Ethos.md`, `Foundation/Hybrid.md`, `Foundation/new-collaborative-entrepreneurship.md`, `assets/improvements.md`
+- This repo: `Foundation/Model.md`, `Foundation/Ethos.md`, `Foundation/Hybrid.md`, `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md`, `assets/improvements.md`
 
 
 

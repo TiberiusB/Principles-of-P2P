@@ -1,11 +1,12 @@
 # {{ORG_NAME}} — P2P-ness Compilation & Scoring
 
-This document compiles quantitative scores and rationales derived from evidence in `{{ORG_NAME}}_data.md`, following `Evaluation.md` (layers × dimensions × levels), `Model.md` (fundamental principles), `Hybrid.md` (two-axis hybridization X-ray), `Ethos.md` (ethos dimensions), and `new-collaborative-entrepreneurship.md` (Enterprise Stack / pattern analysis).
+This document compiles quantitative scores and rationales derived from evidence in `{{ORG_NAME}}_data.md`, following `Foundation/Evaluation.md` (layers × dimensions × levels), `Foundation/Model.md` (fundamental principles), `Foundation/Hybrid.md` (two-axis hybridization X-ray), `Foundation/Ethos.md` (ethos dimensions), `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` (Enterprise Stack / pattern analysis), `Foundation/Others/Truth.md`, and `Foundation/Others/Value.md`.
 
 - ORG_NAME: {{ORG_NAME}}
 - ASSESSOR: {{ASSESSOR_NAME_OR_HANDLE}}
 - ASSESSMENT_DATE: {{YYYY-MM-DD}}
 - SCOPE_LEVELS: {{PROJECT / OPEN-ENTERPRISE / NETWORK / GLOBAL — which apply}}
+- REPORT_REGISTER: {{assessment | collaborative}}
 - Evidence repository: `{{ORG_NAME}}_data.md`
 
 ## Scoring Scale (0–5) and Conventions
@@ -44,7 +45,7 @@ The main output is a **dynamic P2P profile**. Layer/level averages and any overa
 - **Main tensions**:
   - Openness vs quality:
   - Transparency vs privacy:
-  - Meritocracy/reputation vs incumbent capture:
+  - Meritocracy/reputation vs stewardship concentration (treat commit or role concentration as stewardship, not a moral “bus factor”):
   - Capital access vs commons governance:
   - Formal decentralization vs lived agency:
 
@@ -77,7 +78,7 @@ The main output is a **dynamic P2P profile**. Layer/level averages and any overa
 
 | Dimension | Project | Open-Enterprise | Network | Global | Rationale (evidence refs + status) |
 | ----- | ----- | ----- | ----- | ----- | ----- |
-| Property Regime & Licensing |  |  |  |  |  |
+| Property Regime & Licensing (copyfair / Peer Production License if dual AGPL+commercial+CLA unless facts actually conflict) |  |  |  |  |  |
 | Contribution & Value Accounting / Benefit Distribution |  |  |  |  |  |
 | Funding & Capital Sources (incl. capital-vs-resources posture) |  |  |  |  |  |
 | Revenue Model & Market Interface (incl. disintermediation) |  |  |  |  |  |
@@ -124,7 +125,7 @@ The main output is a **dynamic P2P profile**. Layer/level averages and any overa
 
 Synthesize a score per principle from the contributing dimensions. If a layer average is strong but a principle is weak (or vice versa), explain the discrepancy in the conclusion. Layer averages above come from `tools/compute_scores.py` over `{{ORG_NAME}}_scores.yaml`.
 
-| Fundamental principle | Contributing dimensions (this document) | Score (0–5 / NE) | Evidence summary & gaps |
+| Fundamental principle | Contributing dimensions (this document) | Score (0–5; NE = not evidenced) | Evidence summary & gaps |
 | ----- | ----- | ----- | ----- |
 | 1. Commons Orientation | 1.6, 3.1, Ethos: Stewardship |  |  |
 | 2. Open Participation & Voluntary Contribution | 1.1, 1.2, Ethos: Openness |  |  |
@@ -169,7 +170,7 @@ Two-axis scoring: rate **both** P2P fidelity (0–5) and Traditional fidelity (0
 
 ---
 
-## Enterprise Stack & Pattern Analysis (per `new-collaborative-entrepreneurship.md` and `Distributed business model patterns - Models.csv`)
+## Enterprise Stack & Pattern Analysis (per `Foundation/Enterprise-Stack-collaborative-entrepreneurship.md` and `Foundation/Distributed business model patterns - Models.csv`)
 
 The Enterprise Stack is a heuristic map, not a fixed ontology. Record misfits rather than forcing them.
 
@@ -234,7 +235,7 @@ For each scenario, state whether the organization adapts or reverts to hierarchy
 
 ## Ethos Assessment (per `Ethos.md`)
 
-| Ethos Dimension | Score (0–5 / NE) | Short rationale (citations) | Traditional baseline contrast |
+| Ethos Dimension | Score (0–5; NE = not evidenced) | Short rationale (citations) | Traditional baseline contrast |
 | ----- | ----- | ----- | ----- |
 | Openness / Access |  |  |  |
 | Transparency |  |  |  |
@@ -253,9 +254,35 @@ For each scenario, state whether the organization adapts or reverts to hierarchy
 
 ---
 
+## Truth assessment and computational model
+
+Anchor: `Foundation/Others/Truth.md`; [Computational model](https://ovn.world/index.php?title=Computational_model); [Truth](https://ovn.world/index.php?title=Truth). Blockchain consensus is not the only peer-to-peer truth model.
+
+| Claimed social / economic reality | Computational substrate | Spectrum position (FSM / smart contract → stigmergy / MAS → holonic) | Mismatch note |
+| ----- | ----- | ----- | ----- |
+|  | authority / ERP / chain / Gun-CRDT / Holochain / stigmergy / other |  |  |
+
+- Narrative (required; short in `assessment` register, fuller in `collaborative`): what model of truth the organization uses, and whether the substrate matches the mission.
+
+---
+
+## Value theory and benefit redistribution
+
+Anchor: `Foundation/Others/Value.md`; [Value](https://ovn.world/index.php?title=Value); [Benefit](https://ovn.world/index.php?title=Benefit); [Allocation](https://ovn.world/index.php?title=Allocation); [OVN license](https://ovn.world/index.php?title=OVN_license).
+
+| What is valued | How logged | How shared | License reciprocity |
+| ----- | ----- | ----- | ----- |
+|  |  |  | copyfair / PPL / OVN license / other |
+
+- Pie-chart / fork note: does a benefit share travel with forks, or reset?
+- Capital note: is capital a contribution type or a governor?
+- Narrative (required; short in `assessment` register, fuller in `collaborative`).
+
+---
+
 ## Conclusion
 
 - 4–8 sentences summarizing the **profile**, not just the score: strongest P2P dimensions, weakest/capture-prone dimensions, main feedback loops, privacy/capital/reputation risks, trajectory (including disintermediation direction), and the priority pathway for improvement.
 - Explain any discrepancy between strong layer averages and weak fundamental-principle coverage.
-- Split improvement pathways into **quick wins** (project-level, low-stakes pilots) vs **structural changes** (governance defaults, capital accountability, property regimes).
+- Split improvement pathways: in `assessment` register, **quick wins** vs **structural changes**; in `collaborative` register, **near-term conversations** vs **structural patterns to consider** (invitations, not command verbs).
 - Reduction-risk check (per `improvements.md`): confirm the assessment did not collapse multidimensional contribution into a scalar, did not treat the Enterprise Stack as an ontology, and did not mistake orchestration language for distributed coordination.

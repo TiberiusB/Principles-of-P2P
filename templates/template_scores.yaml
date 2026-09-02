@@ -1,5 +1,6 @@
 # Machine-readable P2P-ness scores for {{ORG_NAME}}
 # Source of truth for averages / radar. Rationales stay in {{ORG_NAME}}_compilation.md.
+# REPORT_REGISTER: {{assessment | collaborative}}
 #
 # Cell values: 0–5 (number), NE (not evidenced), or N/A (level out of scope).
 # Never treat NE as 0. Compute with: python3 tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml

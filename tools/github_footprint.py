@@ -2,7 +2,7 @@
 """Probe a public GitHub user/org or repo for commons-footprint evidence stubs.
 
 Uses the unauthenticated GitHub API (60 req/hr). Prefer the GitHub MCP when
-authenticated; this script is a deterministic fallback for LICENSE / bus-factor signals.
+authenticated; this script is a deterministic fallback for LICENSE / stewardship-concentration signals.
 
 Example:
   python3 tools/github_footprint.py ChangePool
@@ -116,7 +116,7 @@ def to_markdown(payload: dict[str, Any]) -> str:
             f"- CONTRIBUTING present: **{'yes' if c.get('has_contributing') else 'no'}**",
             f"- Stars / forks / open issues: {c.get('stargazers')} / {c.get('forks')} / {c.get('open_issues')}",
             f"- Contributors (top): {c.get('contributors')}",
-            f"- Bus-factor hint: **{c.get('bus_factor_hint')}**",
+            f"- Stewardship-concentration hint: **{c.get('bus_factor_hint')}**",
             f"- Root files: {', '.join(c.get('root_files') or [])}",
             "",
             "*Paste into data §1.6 / §2.2 / §9; add Status + Confidence + your reading.*",

@@ -16,6 +16,8 @@ This evaluation framework is extracted from the philosophical and theoretical ap
 - Complexity economics: value is multi-dimensional; contributions are diverse; not all outcomes are predictable; feedback loops important.  
 - Phenomenological grounding: lived experience of agency, recognition, meaning, and trust must align with formal structures and metrics.  
 - OVN / Open Value Network model: open membership; transparency; contribution & value accounting; reputation; shared infrastructure; flexible roles; forking; governance at multiple levels.
+- **Truth:** how the organization establishes what is the case — authority, a single enterprise ledger, blockchain consensus, stigmergy, or agent-centric validation. See `Foundation/Others/Truth.md` and the OVN [Computational model](https://ovn.world/index.php?title=Computational_model) and [Truth](https://ovn.world/index.php?title=Truth) pages. Blockchain consensus is **one** P2P truth model, not the only one; holonic and stigmergic systems use different epistemologies. Assessors must map the claimed social reality onto the computational substrate and flag mismatches (for example a holonic mission governed as a finite-state machine).
+- **Value:** how the organization defines contribution, logs it, and redistributes benefit — not market price alone. See `Foundation/Others/Value.md` and OVN pages on value, benefit, and allocation. These questions inform Economic and Structural scores (especially 1.4 and 3.1–3.2); they are not a separate YAML axis.
 - Complexity upgrade: P2P-ness should be treated as a dynamic, multi-dimensional profile, not as a single static score. The assessment must show feedback loops, path dependencies, lock-in risks, and capture risks alongside scores.
 
 

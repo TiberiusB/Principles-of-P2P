@@ -1,3 +1,18 @@
+# Assessor use (read this first)
+
+This file is a literature review of how economic organizations assess truth. For a P2P-ness assessment, do **not** treat it as optional background. Fill the compilation section **Truth assessment and computational model** and data `### 5.3 Truth model (computational)`.
+
+Required moves:
+
+1. Name the organization’s **computational model of truth**: hierarchical authority, enterprise resource planning (ERP) “single version of the truth,” blockchain / smart-contract consensus, stigmergy (traces in a shared environment), or agent-centric validation (for example Holochain source chains).
+2. Map that model onto the OVN [Computational model](https://ovn.world/index.php?title=Computational_model) spectrum: finite-state machine (FSM) and smart contracts (row 6) → actors → swarm / stigmergy (row 13) → multi-agent systems (row 14) → holonic digital ecosystems (row 16).
+3. **Flag mismatches.** A holonic or living-organization mission governed as a distributed FSM (on-chain splitters, token votes as the model of community life) is a mismatch. Local-first sync (for example a conflict-free replicated data type graph) is not the same as agent-centric validation.
+4. Cross-read [Truth](https://ovn.world/index.php?title=Truth) on ovn.world: consensus truth (“everyone agrees one state”) is not the same as valid action against shared rules.
+
+Blockchain consensus is one P2P truth model, not the only one. These answers inform infrastructure and governance scores; they are not a new YAML axis.
+
+---
+
 Here’s a deep dive into the literature on **truth assessment models in economic organizations** — how organizations conceptualize, process, and act upon information in order to align with reality, under uncertainty and complexity.
 
 ## **🔎 Collective Insight: Truth Assessment in Economics**
