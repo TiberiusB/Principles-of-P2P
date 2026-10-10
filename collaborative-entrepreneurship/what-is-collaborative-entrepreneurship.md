@@ -426,11 +426,15 @@ These are not a curriculum of case studies. They are existence proofs of differe
 
 ## 11. A compact contrast: two recipes for a prototype
 
-**Traditional recipe.** Own or rent the box. Raise cash. Hire. Assign IP to the company. Pay wages (risk leaves the worker). Sell product. Residual to equity holders.
+**Traditional recipe**. Own or rent the box. Raise cash. Hire. Assign IP to the company. Pay wages (risk leaves the worker). Sell product. Residual to equity holders.
 
-**Collaborative recipe.** Publish the context of work. Crowdsource what can be crowdsourced. Share space and tools. Log heterogeneous contributions at resource level. Validate in the open. Keep deliverables commons-licensed. Share risk. If there is revenue, redistribute by the published algorithm and feed the network infrastructure. If there is no commodity, disseminate the design and find livelihood in services, support, or complementary ventures. Legal persons at the edge, not the core.
+**Collaborative recipe**. Publish the context of work. Crowdsource what can be crowdsourced.   
 
-The second recipe is harder socially and informationally, and cheaper in cash. It is the only recipe that stays coherent with p2p when the problem is **too complex for a firm to hold**.
+Share space and tools. Log heterogeneous contributions at resource level. Validate in the open. Keep deliverables commons-licensed. Share risk. If there is revenue, redistribute by the published algorithm and feed the network infrastructure. If there is no commodity, disseminate the design and find livelihood in services, support, or complementary ventures. Legal persons at the edge, not the core.
+
+ 
+
+The second recipe may seem harder socially and informationally, and cheaper in cash. It is the only recipe that stays coherent with p2p when the problem is too complex for a firm to hold.
 
 ---
 
@@ -454,7 +458,7 @@ Those materials already exist in draft in Drive (coordination doc, program struc
 
 ## 13. One-paragraph version
 
-Collaborative entrepreneurship is Sensorica's name for entrepreneurial agency inside an Open Value Network: people who seed and steward **open ventures** — permissionless, transparent, forkable contexts of work that produce commons and, where needed, exchange value — by attracting excess capacity, coordinating through stigmergy and light planning, accounting for contributions without turning peers into employees, and redistributing benefits through published rules. It lives in a p2p / CBPP economy, uses plural property (including nondominium), and keeps legal firms as revocable interfaces. It exists because industrial organizations cannot process the complexity of contemporary inter-agent problems; the practice is therefore not "nicer business," but the human skill of growing complexity-processing economic fields without capturing them.
+*Collaborative entrepreneurship* is Sensorica's name for entrepreneurial agency inside an Open Value Network: people who seed and steward ***open ventures*** (permissionless, transparent, forkable contexts of work that produce commons and, where needed, exchange value) by attracting excess capacity, coordinating through stigmergy and light planning, accounting for contributions without turning peers into employees, and redistributing benefits through published rules. It lives in a p2p / CBPP economy, uses plural property (including nondominium), and keeps legal firms as revocable interfaces. It exists because industrial organizations cannot process the complexity of contemporary inter-agent problems; the practice is therefore not "nicer business," but the human skill of growing complexity-processing economic fields without capturing them.
 
 ---
 
