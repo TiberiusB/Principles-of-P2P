@@ -32,7 +32,7 @@ System/Instructional prompt for AI agents to run a repeatable assessment of {{OR
 - WAYBACK_URLS: {{WAYBACK_URLS — optional; founding-era snapshots}}
 - SECONDARY_RESOURCES: {{SECONDARY_RESOURCES — optional bibliography/URLs specific to this assessment}}
 
-**REPORT_REGISTER rule:** `assessment` is the default (terse executive summary). Use `collaborative` when the user sets it **or** when the organization is Open Value Network (OVN)–adjacent (shared vocabulary such as holon, membrane, value equation, Resources-Events-Agents, federation, Nondominium; Sensorica / ovn.world lineage; or an explicit invitation to partner). Worked example of `collaborative`: `case-study/Holons_executive_summary.md`.
+**REPORT_REGISTER rule:** `assessment` is the default (terse executive summary). Use `collaborative` when the user sets it **or** when the organization is Open Value Network (OVN)–adjacent (shared vocabulary such as holon, membrane, value equation, Resources-Events-Agents, federation, Nondominium; Sensorica / ovn.world lineage; or an explicit invitation to partner). Worked example of `collaborative`: `case-study/Holons/Holons_executive_summary.md`.
 
 ## Tooling & Execution Harness (Strict Enforcement)
 
@@ -57,11 +57,11 @@ To execute this assessment thoroughly, the agent MUST utilize the following tool
 2. Scaffold with `tools/init_assessment.py` (or reuse existing case-study files). Set variables (including SCOPE_LEVELS and REPORT_REGISTER). Run the Web Search & Capture Protocol; fill Section 0 in `_data.md` (snapshot, Enterprise Stack, patterns via `tools/patterns.py` as needed, map misfits). Run GitHub **org** inspection plus optionally `tools/github_footprint.py owner/repo --markdown` into §§1.6/2.x/9.
 3. Populate findings per dimension with Status (`Evidenced` / `Partially evidenced` / `Not evidenced` / `Contradicted`) + Confidence + citations. Fill the plural property-regime map (1.6), value theory (3.2 / 3.2b), truth model (5.3), path-dependency evidence (incl. 9.5), and stress-test inputs.
 4. Where permitted, run the Participant Narratives Module (data Sec. 7). If not collected, mark 4.4 `Not evidenced` — never infer lived experience from documents.
-5. Fill **numeric cells** in `case-study/{{ORG_NAME}}_scores.yaml` (0–5 / `NE` / `N/A`). Fill per-dimension **rationales** in `{{ORG_NAME}}_compilation.md` tables. Then run:
+5. Fill **numeric cells** in `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml` (0–5 / `NE` / `N/A`). Fill per-dimension **rationales** in `case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md` tables. Then run:
 
 ```bash
-.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml \
-  --write-summary case-study/{{ORG_NAME}}_compilation.md \
+.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml \
+  --write-summary case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md \
   --radar --png-only-fail
 ```
 
@@ -144,25 +144,25 @@ Keep the executive summary terse (profile table, bullets, short migration path).
 
 Create the following docs from template within the "case-study" folder (prefer `tools/init_assessment.py`):
 
-- `{{ORG_NAME}}_data.md` (from `templates/template_data.md`): fully populated, with status/confidence tags and citations.
-- `{{ORG_NAME}}_scores.yaml` (from `templates/template_scores.yaml`): **source of truth** for 0–5 / NE / N/A cells.
-- `{{ORG_NAME}}_compilation.md` (from `templates/template_compilation.md`): dynamic profile, dimension rationales, Score Summary **written by `compute_scores.py`**, principles, hybrid X-ray, stack, path-dependency, stress tests, ethos, Truth, Value, conclusion.
-- `{{ORG_NAME}}_executive_summary.md` (from `templates/template_executive_summary.md`): top-line profile, layer averages + **radar**, strengths/risks/recommendations, Economic Model & Migration Path.
-- `case-study/assets/{{ORG_NAME}}_layer_radar.png` (+ `.svg`): from `compute_scores.py --radar`.
+- `case-study/{{ORG_NAME}}/{{ORG_NAME}}_data.md` (from `templates/template_data.md`): fully populated, with status/confidence tags and citations.
+- `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml` (from `templates/template_scores.yaml`): **source of truth** for 0–5 / NE / N/A cells.
+- `case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md` (from `templates/template_compilation.md`): dynamic profile, dimension rationales, Score Summary **written by `compute_scores.py`**, principles, hybrid X-ray, stack, path-dependency, stress tests, ethos, Truth, Value, conclusion.
+- `case-study/{{ORG_NAME}}/{{ORG_NAME}}_executive_summary.md` (from `templates/template_executive_summary.md`): top-line profile, layer averages + **radar**, strengths/risks/recommendations, Economic Model & Migration Path.
+- `case-study/{{ORG_NAME}}/assets/{{ORG_NAME}}_layer_radar.png` (+ `.svg`): from `compute_scores.py --radar`.
 
 ### Scores YAML + averages + radar (required)
 
-**Numbers live in** `case-study/{{ORG_NAME}}_scores.yaml`. After filling cells, run:
+**Numbers live in** `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml`. After filling cells, run:
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r tools/requirements.txt
-.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml \
-  --write-summary case-study/{{ORG_NAME}}_compilation.md \
+.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml \
+  --write-summary case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md \
   --radar --png-only-fail
 ```
 
-**Radar location:** `{{ORG_NAME}}_executive_summary.md` → `## Layer averages (radar)`, immediately under the numeric table. Embed:
+**Radar location:** `case-study/{{ORG_NAME}}/{{ORG_NAME}}_executive_summary.md` → `## Layer averages (radar)`, immediately under the numeric table. Embed:
 
 ```markdown
 ![Radar chart of {{ORG_NAME}} layer averages](./assets/{{ORG_NAME}}_layer_radar.png)
@@ -183,7 +183,7 @@ Synthesize from the compilation's Enterprise Stack & pattern analysis, path-depe
 ## Quality checks
 
 - Every assertion has a citation and a status tag; `NE` cells are never averaged as 0.
-- Layer **and** level averages come from `tools/compute_scores.py` over `{{ORG_NAME}}_scores.yaml` (excluding NE/N/A, basis stated); conclusion matches those values and does not overstate the optional overall index.
+- Layer **and** level averages come from `tools/compute_scores.py` over `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml` (excluding NE/N/A, basis stated); conclusion matches those values and does not overstate the optional overall index.
 - TODOs for missing items (legal/trademark, governance-portal index, non-code attribution, etc.).
 - Fundamental Principles Coverage table complete; strong-average/weak-principle discrepancies explained.
 - Two-axis hybrid X-ray filled (both axes per dimension); hybridization model(s) identified; red flags answered explicitly (yes/no + evidence).

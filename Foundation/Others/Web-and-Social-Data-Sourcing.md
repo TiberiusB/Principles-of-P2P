@@ -163,8 +163,8 @@ Purpose: propose practical, resilient ways to gather evidence for `template_data
 
 ### Deliverables alignment
 
-- A repeatable pipeline that populates `case-study/{{ORG_NAME}}_data.md` with cited evidence.
-- A companion `case-study/{{ORG_NAME}}_compilation.md` with computed scores, X-ray, and ethos tables.
+- A repeatable pipeline that populates `case-study/{{ORG_NAME}}/{{ORG_NAME}}_data.md` with cited evidence.
+- A companion `case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md` with computed scores, X-ray, and ethos tables.
 - Optional executive summary and charts, using stored aggregates.
 
 

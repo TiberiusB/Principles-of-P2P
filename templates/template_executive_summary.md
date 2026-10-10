@@ -51,13 +51,13 @@ Structural   ...
 
 ### Radar chart (required — produce with `tools/compute_scores.py --radar`)
 
-**Do not use Mermaid.** Numbers come from `case-study/{{ORG_NAME}}_scores.yaml`. After filling scores:
+**Do not use Mermaid.** Numbers come from `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml`. After filling scores:
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r tools/requirements.txt
-.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml \
-  --write-summary case-study/{{ORG_NAME}}_compilation.md \
+.venv/bin/python tools/compute_scores.py case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml \
+  --write-summary case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md \
   --radar --png-only-fail
 ```
 

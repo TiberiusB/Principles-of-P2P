@@ -21,7 +21,7 @@ This document compiles quantitative scores and rationales derived from evidence 
 Conventions:
 - `NE` = not evidenced. Never average `NE` as 0; exclude the cell and flag it as a TODO in the data repository. Absence of evidence is not evidence of absence.
 - `N/A` = level out of scope for this organization (per SCOPE_LEVELS). Exclude from averages.
-- **Numeric source of truth:** `case-study/{{ORG_NAME}}_scores.yaml`. After editing cells, run `tools/compute_scores.py` to refresh this document's Score Summary and the radar chart. Mirror cell values into the layer tables below for human-readable rationales; do not hand-average.
+- **Numeric source of truth:** `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml`. After editing cells, run `tools/compute_scores.py` to refresh this document's Score Summary and the radar chart. Mirror cell values into the layer tables below for human-readable rationales; do not hand-average.
 - If using the 0–3 mapping from `Model.md`'s benchmark rubric, translate: 0→0, 1→1–2, 2→3–4, 3→5.
 - When uncertain despite some evidence, prefer conservative (lower) scores and say why in the rationale.
 - Do not collapse contradictions into an average. Explain tensions in the profile.
@@ -101,8 +101,8 @@ The main output is a **dynamic P2P profile**. Layer/level averages and any overa
 
 ## Score Summary (secondary signals)
 
-> **Do not hand-edit averages.** Fill `case-study/{{ORG_NAME}}_scores.yaml`, then run:
-> `python3 tools/compute_scores.py case-study/{{ORG_NAME}}_scores.yaml --write-summary case-study/{{ORG_NAME}}_compilation.md --radar`
+> **Do not hand-edit averages.** Fill `case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml`, then run:
+> `python3 tools/compute_scores.py case-study/{{ORG_NAME}}/{{ORG_NAME}}_scores.yaml --write-summary case-study/{{ORG_NAME}}/{{ORG_NAME}}_compilation.md --radar`
 > That command replaces this section and writes the radar asset.
 
 - Structural average:
@@ -186,7 +186,7 @@ For each business-model pattern identified in data Sec. 0.3:
 | ----- | ----- | ----- | ----- | ----- | ----- |
 |  |  |  |  |  |  |
 
-The completed pattern analysis, together with the path-dependency table and stress tests below, feeds the Economic Model & Migration Path section of `{{ORG_NAME}}_executive_summary.md` (see `templates/template_prompt.md` → Deliverables). The compilation Score Summary is generated from `{{ORG_NAME}}_scores.yaml` via `tools/compute_scores.py`, which also feeds `tools/radar_chart.py` for the executive summary radar image.
+The completed pattern analysis, together with the path-dependency table and stress tests below, feeds the Economic Model & Migration Path section of `{{ORG_NAME}}_executive_summary.md` in this case-study folder (see `templates/template_prompt.md` → Deliverables). The compilation Score Summary is generated from `{{ORG_NAME}}_scores.yaml` via `tools/compute_scores.py`, which also feeds `tools/radar_chart.py` for the executive summary radar image.
 
 ---
 

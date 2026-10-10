@@ -12,7 +12,7 @@ The main output is a **dynamic P2P profile** (tensions, path dependencies, captu
 | `[Foundation/](Foundation/)` | Theory & method: Model, Evaluation, Hybrid, Ethos, Enterprise Stack, pattern library, plus Truth / Value / data-sourcing |
 | `[templates/](templates/)`   | Blank assessment artifacts + orchestration prompt                                                  |
 | `[tools/](tools/)`           | Scaffolding, score averages, radar charts, validation, GitHub/pattern helpers                      |
-| `[case-study/](case-study/)` | Completed assessments (e.g. ChangePool / FamilyDAO, Holons)                                        |
+| `[case-study/](case-study/)` | Completed assessments, one folder per case study (e.g. `case-study/Flowsta/`)                       |
 | `[assets/](assets/)`         | Framework improvement notes and related assets                                                     |
 
 
@@ -61,13 +61,13 @@ python3 -m venv .venv
 
 `--register` is `assessment` (default, terse executive summary) or `collaborative` (Holons-style invitation report). Agents also select `collaborative` when the organization is Open Value Network (OVN)–adjacent.
 
-This creates under `case-study/`:
+This creates under `case-study/AcmeDAO/`:
 
 - `AcmeDAO_data.md` — evidence repository
 - `AcmeDAO_scores.yaml` — **numeric source of truth** (0–5 / `NE` / `N/A`)
 - `AcmeDAO_compilation.md` — profile, rationales, hybrid, ethos, …
 - `AcmeDAO_executive_summary.md` — short profile + radar + migration path
-- `assets/` — radar images land here
+- `assets/` — radar images for this case study
 
 
 
@@ -83,8 +83,8 @@ Use an agent with `[templates/template_prompt.md](templates/template_prompt.md)`
 ### 4. Compute averages + radar (mechanical)
 
 ```bash
-.venv/bin/python tools/compute_scores.py case-study/AcmeDAO_scores.yaml \
-  --write-summary case-study/AcmeDAO_compilation.md \
+.venv/bin/python tools/compute_scores.py case-study/AcmeDAO/AcmeDAO_scores.yaml \
+  --write-summary case-study/AcmeDAO/AcmeDAO_compilation.md \
   --radar --png-only-fail
 ```
 
@@ -116,10 +116,10 @@ Interpretation rule: **profile before score.** See `Foundation/Evaluation.md`.
 | Template                                                                             | Becomes                                          |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------ |
 | `[templates/template_prompt.md](templates/template_prompt.md)`                       | Org-specific agent prompt (e.g. `family_dao.md`) |
-| `[templates/template_data.md](templates/template_data.md)`                           | `case-study/{ORG}_data.md`                       |
-| `[templates/template_scores.yaml](templates/template_scores.yaml)`                   | `case-study/{ORG}_scores.yaml`                   |
-| `[templates/template_compilation.md](templates/template_compilation.md)`             | `case-study/{ORG}_compilation.md`                |
-| `[templates/template_executive_summary.md](templates/template_executive_summary.md)` | `case-study/{ORG}_executive_summary.md`          |
+| `[templates/template_data.md](templates/template_data.md)`                           | `case-study/{ORG}/{ORG}_data.md`                       |
+| `[templates/template_scores.yaml](templates/template_scores.yaml)`                   | `case-study/{ORG}/{ORG}_scores.yaml`                   |
+| `[templates/template_compilation.md](templates/template_compilation.md)`             | `case-study/{ORG}/{ORG}_compilation.md`                |
+| `[templates/template_executive_summary.md](templates/template_executive_summary.md)` | `case-study/{ORG}/{ORG}_executive_summary.md`          |
 
 
 
@@ -128,11 +128,11 @@ Interpretation rule: **profile before score.** See `Foundation/Evaluation.md`.
 
 **ChangePool (FamilyDAO)** — proposal-stage Cardano-adjacent project:
 
-- Evidence: `[case-study/ChangePool_data.md](case-study/ChangePool_data.md)`
-- Scores: `[case-study/ChangePool_scores.yaml](case-study/ChangePool_scores.yaml)`
-- Compilation: `[case-study/ChangePool_compilation.md](case-study/ChangePool_compilation.md)`
-- Executive summary: `[case-study/ChangePool_executive_summary.md](case-study/ChangePool_executive_summary.md)`
-- Radar: `[case-study/assets/ChangePool_layer_radar.png](case-study/assets/ChangePool_layer_radar.png)`
+- Evidence: `[case-study/ChangePool/ChangePool_data.md](case-study/ChangePool/ChangePool_data.md)`
+- Scores: `[case-study/ChangePool/ChangePool_scores.yaml](case-study/ChangePool/ChangePool_scores.yaml)`
+- Compilation: `[case-study/ChangePool/ChangePool_compilation.md](case-study/ChangePool/ChangePool_compilation.md)`
+- Executive summary: `[case-study/ChangePool/ChangePool_executive_summary.md](case-study/ChangePool/ChangePool_executive_summary.md)`
+- Radar: `[case-study/ChangePool/assets/ChangePool_layer_radar.png](case-study/ChangePool/assets/ChangePool_layer_radar.png)`
 - Prompt used: `[family_dao.md](family_dao.md)`
 
 
@@ -146,4 +146,4 @@ Interpretation rule: **profile before score.** See `Foundation/Evaluation.md`.
 
 ## License / contribution
 
-This repository is a living methodology. Improve foundations carefully (see `[assets/improvements.md](assets/improvements.md)`); add case studies under `case-study/` without overwriting the current example unless intentional.
+This repository is a living methodology. Improve foundations carefully (see `[assets/improvements.md](assets/improvements.md)`); add each case study under its own `case-study/{ORG}/` folder without overwriting another case unless intentional.

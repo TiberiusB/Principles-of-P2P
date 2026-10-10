@@ -2,8 +2,8 @@
 """Compute layer/level/overall averages from a scores YAML; optionally update radar + docs.
 
 Example:
-  python3 tools/compute_scores.py case-study/ChangePool_scores.yaml \\
-    --write-summary case-study/ChangePool_compilation.md \\
+  python3 tools/compute_scores.py case-study/ChangePool/ChangePool_scores.yaml \\
+    --write-summary case-study/ChangePool/ChangePool_compilation.md \\
     --radar --png-only-fail \\
     --print-json
 """
@@ -45,8 +45,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument(
         "--radar-out",
         type=Path,
-        default=ROOT / "case-study" / "assets",
-        help="Radar output directory",
+        default=None,
+        help="Radar output directory (default: sibling assets/ directory beside scores YAML)",
     )
     p.add_argument(
         "--png-only-fail",
@@ -111,6 +111,7 @@ def main(argv: list[str] | None = None) -> int:
         ):
             print("error: cannot build radar — missing layer average(s)", file=sys.stderr)
             return 2
+        radar_out = args.radar_out or (args.scores_yaml.resolve().parent / "assets")
         cmd = [
             sys.executable,
             str(ROOT / "tools" / "radar_chart.py"),
@@ -129,7 +130,7 @@ def main(argv: list[str] | None = None) -> int:
             "--overall",
             str(summary.overall),
             "--out",
-            str(args.radar_out),
+            str(radar_out),
         ]
         if args.png_only_fail:
             cmd.append("--png-only-fail")

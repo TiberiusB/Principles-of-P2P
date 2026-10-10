@@ -23,7 +23,7 @@ Prefer `.venv/bin/python tools/...` so radar PNG generation works.
 
 | Script | Role |
 | ----- | ----- |
-| `init_assessment.py` | Scaffold `case-study/{ORG}_*.md` + `_scores.yaml` + `assets/` from templates. `--register assessment\|collaborative` (default `assessment`) writes `REPORT_REGISTER` into the four files. |
+| `init_assessment.py` | Scaffold `case-study/{ORG}/{ORG}_*.md` + `case-study/{ORG}/assets/` from templates. `--register assessment\|collaborative` (default `assessment`) writes `REPORT_REGISTER` into the four files. |
 | `compute_scores.py` | Averages from `_scores.yaml` (excludes `NE`/`N/A`); patch Score Summary; call radar |
 | `radar_chart.py` | Layer-average radar PNG/SVG (do **not** use Mermaid) |
 | `validate_assessment.py` | Quality gates before hand-off (includes Truth / Value compilation headings) |
@@ -53,23 +53,23 @@ Foundations for every assessment include `Foundation/Others/Truth.md` and `Found
 
 Creates (unless present; `--force` overwrites):
 
-- `case-study/AcmeDAO_data.md`
-- `case-study/AcmeDAO_compilation.md`
-- `case-study/AcmeDAO_executive_summary.md`
-- `case-study/AcmeDAO_scores.yaml`
-- `case-study/assets/`
+- `case-study/AcmeDAO/AcmeDAO_data.md`
+- `case-study/AcmeDAO/AcmeDAO_compilation.md`
+- `case-study/AcmeDAO/AcmeDAO_executive_summary.md`
+- `case-study/AcmeDAO/AcmeDAO_scores.yaml`
+- `case-study/AcmeDAO/assets/`
 
 ---
 
 ## 2. Score sheet + `compute_scores.py`
 
-**Source of truth for numbers:** `case-study/{ORG}_scores.yaml` (from `templates/template_scores.yaml`).
+**Source of truth for numbers:** `case-study/{ORG}/{ORG}_scores.yaml` (from `templates/template_scores.yaml`).
 
 Cell values: `0`–`5`, `NE`, or `N/A`. Never encode “not evidenced” as `0`.
 
 ```bash
-.venv/bin/python tools/compute_scores.py case-study/ChangePool_scores.yaml \
-  --write-summary case-study/ChangePool_compilation.md \
+.venv/bin/python tools/compute_scores.py case-study/ChangePool/ChangePool_scores.yaml \
+  --write-summary case-study/ChangePool/ChangePool_compilation.md \
   --radar \
   --png-only-fail \
   --print-json
@@ -79,7 +79,7 @@ This:
 
 1. Prints the Score Summary block (layer / level / overall + basis counts)
 2. Patches `## Score Summary (secondary signals)` in the compilation
-3. Runs `radar_chart.py` into `case-study/assets/{ORG}_layer_radar.{png,svg}`
+3. Runs `radar_chart.py` into `case-study/{ORG}/assets/{ORG}_layer_radar.{png,svg}` by default
 
 Rationales, Dynamic Profile, Hybrid X-ray, Ethos, Truth assessment, Value theory, and Migration Path remain authored in markdown.
 
@@ -95,7 +95,7 @@ Used by `compute_scores.py --radar`, or standalone:
   --title "ChangePool FamilyDAO" \
   --structural 0.3 --operational 1.2 --economic 1.0 --cultural 3.0 \
   --overall 1.4 \
-  --out case-study/assets/ \
+  --out case-study/ChangePool/assets/ \
   --png-only-fail
 ```
 

@@ -10,7 +10,7 @@ Example:
     --title "ChangePool FamilyDAO" \\
     --structural 0.3 --operational 1.2 --economic 1.0 --cultural 3.0 \\
     --overall 1.4 \\
-    --out case-study/assets/
+    --out case-study/ChangePool/assets/
 """
 
 from __future__ import annotations
@@ -193,8 +193,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument(
         "--out",
         type=Path,
-        default=Path("case-study/assets"),
-        help="Output directory (created if missing)",
+        default=None,
+        help="Output directory (default: case-study/{org}/assets; created if missing)",
     )
     p.add_argument(
         "--png-only-fail",
@@ -213,7 +213,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"error: {name} score {v} out of range 0–{MAX_R}", file=sys.stderr)
             return 2
 
-    out_dir = args.out
+    out_dir = args.out or Path("case-study") / args.org / "assets"
     out_dir.mkdir(parents=True, exist_ok=True)
     stem = f"{args.org}_layer_radar"
     svg_path = out_dir / f"{stem}.svg"

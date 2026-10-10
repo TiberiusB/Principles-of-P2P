@@ -4,6 +4,9 @@
 Example:
   python3 tools/validate_assessment.py ChangePool
   python3 tools/validate_assessment.py ChangePool --strict
+
+Case studies are expected under case-study/{org}/. During migration, the
+validator also accepts the older flat case-study/{org}_*.md layout.
 """
 
 from __future__ import annotations
@@ -57,17 +60,25 @@ def check_data_findings(text: str, warnings: list[str]) -> None:
             pass
 
 
+def case_dir_for_org(org: str) -> Path:
+    nested = ROOT / "case-study" / org
+    if nested.exists():
+        return nested
+    return ROOT / "case-study"
+
+
 def check_scores_vs_radar(
     org: str,
+    case_dir: Path,
     summary,
     errors: list[str],
     warnings: list[str],
 ) -> None:
-    png = ROOT / "case-study" / "assets" / f"{org}_layer_radar.png"
-    svg = ROOT / "case-study" / "assets" / f"{org}_layer_radar.svg"
+    png = case_dir / "assets" / f"{org}_layer_radar.png"
+    svg = case_dir / "assets" / f"{org}_layer_radar.svg"
     if not png.exists() and not svg.exists():
         errors.append(
-            f"missing radar image: expected case-study/assets/{org}_layer_radar.png "
+            f"missing radar image: expected {png.relative_to(ROOT)} "
             "(or .svg). Run compute_scores.py --radar"
         )
     elif not png.exists():
@@ -75,7 +86,7 @@ def check_scores_vs_radar(
             f"radar PNG missing ({svg.name} present). Cursor preview prefers PNG."
         )
 
-    exec_path = ROOT / "case-study" / f"{org}_executive_summary.md"
+    exec_path = case_dir / f"{org}_executive_summary.md"
     if exec_path.exists():
         et = exec_path.read_text(encoding="utf-8")
         if f"{org}_layer_radar.png" not in et and f"{org}_layer_radar.svg" not in et:
@@ -94,7 +105,7 @@ def check_scores_vs_radar(
             )
 
     # Compilation score summary consistency (approximate)
-    comp = ROOT / "case-study" / f"{org}_compilation.md"
+    comp = case_dir / f"{org}_compilation.md"
     if comp.exists() and summary.overall is not None:
         ct = comp.read_text(encoding="utf-8")
         for key, label in [
@@ -124,7 +135,7 @@ def check_scores_vs_radar(
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("org", help="Org slug (case-study/{org}_*)")
+    p.add_argument("org", help="Org slug (case-study/{org}/{org}_*)")
     p.add_argument(
         "--strict",
         action="store_true",
@@ -132,13 +143,14 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = p.parse_args(argv)
     org = args.org
+    case_dir = case_dir_for_org(org)
     errors: list[str] = []
     warnings: list[str] = []
 
-    data_p = ROOT / "case-study" / f"{org}_data.md"
-    comp_p = ROOT / "case-study" / f"{org}_compilation.md"
-    exec_p = ROOT / "case-study" / f"{org}_executive_summary.md"
-    scores_p = ROOT / "case-study" / f"{org}_scores.yaml"
+    data_p = case_dir / f"{org}_data.md"
+    comp_p = case_dir / f"{org}_compilation.md"
+    exec_p = case_dir / f"{org}_executive_summary.md"
+    scores_p = case_dir / f"{org}_scores.yaml"
 
     for path, label in [
         (data_p, "data"),
@@ -206,7 +218,7 @@ def main(argv: list[str] | None = None) -> int:
             errors.append(f"scores YAML: {e}")
 
     if summary:
-        check_scores_vs_radar(org, summary, errors, warnings)
+        check_scores_vs_radar(org, case_dir, summary, errors, warnings)
 
     print(f"validate_assessment: {org}")
     if errors:

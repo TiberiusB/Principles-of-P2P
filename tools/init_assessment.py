@@ -11,6 +11,8 @@ Example:
     --main-site https://coincashew.io/Content/Home.html \\
     --github https://github.com/ChangePool/FamilyDAO \\
     --register assessment
+
+Creates files under case-study/ChangePool/.
 """
 
 from __future__ import annotations
@@ -101,8 +103,9 @@ def main(argv: list[str] | None = None) -> int:
         "SECONDARY_RESOURCES — optional bibliography/URLs specific to this assessment": "{{SECONDARY_RESOURCES}}",
     }
 
-    CASE.mkdir(parents=True, exist_ok=True)
-    (CASE / "assets").mkdir(parents=True, exist_ok=True)
+    case_dir = CASE / org
+    case_dir.mkdir(parents=True, exist_ok=True)
+    (case_dir / "assets").mkdir(parents=True, exist_ok=True)
 
     written = []
     for src_name, dst_pattern in FILES:
@@ -110,7 +113,7 @@ def main(argv: list[str] | None = None) -> int:
         if not src.exists():
             print(f"error: missing template {src}", file=sys.stderr)
             return 2
-        dst = CASE / dst_pattern.format(org=org)
+        dst = case_dir / dst_pattern.format(org=org)
         if dst.exists() and not args.force:
             print(f"skip (exists): {dst}  (use --force to overwrite)")
             continue
@@ -143,13 +146,13 @@ def main(argv: list[str] | None = None) -> int:
     print("Scaffolded:")
     for path in written:
         print(f"  {path.relative_to(ROOT)}")
-    print(f"  { (CASE / 'assets').relative_to(ROOT) }/")
+    print(f"  { (case_dir / 'assets').relative_to(ROOT) }/")
     print(
         "\nNext:\n"
-        f"  1. Fill evidence in case-study/{org}_data.md\n"
-        f"  2. Fill numeric cells in case-study/{org}_scores.yaml (0–5 / NE / N/A)\n"
-        f"  3. python3 tools/compute_scores.py case-study/{org}_scores.yaml "
-        f"--write-summary case-study/{org}_compilation.md --radar\n"
+        f"  1. Fill evidence in case-study/{org}/{org}_data.md\n"
+        f"  2. Fill numeric cells in case-study/{org}/{org}_scores.yaml (0–5 / NE / N/A)\n"
+        f"  3. python3 tools/compute_scores.py case-study/{org}/{org}_scores.yaml "
+        f"--write-summary case-study/{org}/{org}_compilation.md --radar\n"
         f"  4. Write narratives in compilation + executive summary\n"
         f"  5. python3 tools/validate_assessment.py {org}"
     )

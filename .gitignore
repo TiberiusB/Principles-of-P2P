@@ -1,5 +1,6 @@
 .venv/
 .venv-radar/
+.pydeps/
 __pycache__/
 *.pyc
 .pytest_cache/
