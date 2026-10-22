@@ -31,6 +31,15 @@ Search **each relevant library** when the question spans organizations and theor
 
 Example queries: `"who created the OVN model"`, `"nondominium property"`, `"network resource planning"`, `"collaborative entrepreneurship"`.
 
+## Local case-study corpus (read it; it is gitignored)
+
+`case-study/` is listed in `.gitignore`, so its contents are **untracked and invisible to tracked-file searches**. Tools that respect ignore files (ripgrep by default, and some search tools) will silently return nothing from it. That folder is primary material, not scratch space.
+
+- When a task touches an organization already assessed here, **read its case-study folder first**: `_data.md` (status-tagged evidence), `_compilation.md`, `_scores.yaml`, `_executive_summary.md`, plus any `suggestions-to-*.md` and analysis notes.
+- Current folders: `Flowsta`, `YourOwnAI`, `Nondominium`, `Holons`, `REPAIRE`. `case-study/Nondominium/nondominium-economic model.md` is the reference for NDO economics, OVN license floors, custodians, and sponsor-versus-contributor relations.
+- To search it, pass `--no-ignore` to ripgrep, or list the directory and read files directly. Do not conclude that material is absent because a default search missed it.
+- Treat prior case studies as evidence about those organizations and as worked examples of register and structure — not as doctrine. Doctrine still comes from the wikis.
+
 ## Grounding rules
 
 - Cite the **URL** returned by `search_docs` when stating non-obvious claims.

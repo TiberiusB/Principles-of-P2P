@@ -8,7 +8,9 @@ Primary pages: [Value](https://ovn.world/index.php?title=Value), [Benefit](https
 
 In Open Value Network (OVN) practice, **value is not market price**. People experience value; the network logs **contributions** (time, care, materials, money, knowledge, reputation work) and redistributes **benefits** (revenue, access to governance, use of shared resources) according to a social contract.
 
-Sensorica now says **contribution accounting**, not “value accounting.” The older phrase **value equation** is retired in practice because it sounds like a meter of a person’s worth. The living idea is a **benefit redistribution algorithm**: a dimension-reduction operator over a **logged contribution graph**, often shown as a pie-chart (fluid equity). The algorithm is a social agreement, not a discovery of objective worth.
+Sensorica now says **contribution accounting**, not “value accounting.” The older phrase **value equation** is retired in practice because it sounds like a meter of a person’s worth. The living idea is a **benefit redistribution algorithm**: a dimension-reduction operator over a **logged contribution graph**, often shown as a pie-chart. The algorithm is a social agreement, not a discovery of objective worth.
+
+The rights and capacities that result are called [fluid participation attributions](https://ovn.world/index.php?title=Fluid_participation_attributions). The earlier phrase **fluid equity** was retired in September 2026 because "equity" imports corporate ownership, shares, securities, and secondary-market associations. The underlying question is not how much of the company each person owns, but how each participant's contribution affects their participation in the evolving network. When scoring, prefer **contribution accounting**, **benefit redistribution**, and **contribution-derived participation**; treat an assessed organization's use of "fluid equity" as dated vocabulary rather than as a different model.
 
 Allocation, on the OVN wiki, is not only “who gets what.” It is who engages where, when, how, and with what effects — a time-dependent relation, not a static assignment.
 

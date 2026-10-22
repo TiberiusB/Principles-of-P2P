@@ -101,6 +101,7 @@ Keep the executive summary terse (profile table, bullets, short migration path).
 
 ## Evidence & search protocol (strict)
 
+- Read existing material under `case-study/` first. That folder is **gitignored**, so ripgrep and ignore-respecting search tools return nothing from it by default — open the folders directly or pass `--no-ignore`. A missed search is not evidence of absence. Prior assessments (`Flowsta`, `YourOwnAI`, `Nondominium`, `Holons`, `REPAIRE`) are both evidence about those organizations and worked examples of register.
 - Use your **browser tool** (e.g., `browser_navigate`, `browser_click`, `browser_snapshot`) or WebSearch tool to perform live searches and verify information when needed, particularly against the OVN Wiki ([https://ovn.world/](https://ovn.world/)) and P2P Foundation Wiki ([https://wiki.p2pfoundation.net/](https://wiki.p2pfoundation.net/)).
 - Use the **GitHub MCP** (`user-github`) and **Sourcegraph MCP** to deeply inspect source code, pull requests, and organizational repositories directly. Use **Context7 MCP** to clarify any technical dependencies.
 - Search in parallel across the org's primary properties (site/forum/docs/blog/GitHub) plus its governance portals.
