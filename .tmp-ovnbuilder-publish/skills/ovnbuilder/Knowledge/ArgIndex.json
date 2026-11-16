@@ -1,0 +1,1004 @@
+{
+  "schema_version": 1,
+  "knowledge_version": "1.1.0",
+  "generated_at": "2026-11-07",
+  "authority_order": [
+    "ovn_wiki",
+    "living_praxis",
+    "sensorica_site",
+    "complementary",
+    "archived"
+  ],
+  "concepts": [
+    {
+      "id": "ovn.definition",
+      "title": "What is an Open Value Network",
+      "layer": "doctrine",
+      "aliases": [
+        "OVN",
+        "open value network",
+        "value network"
+      ],
+      "summary": "De facto transnational organizational framework for peer production; open/permissionless participation; contribution-related benefits.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "What is an open value network?",
+          "url": "https://ovn.world/index.php?title=What_is_an_open_value_network%3F",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "complementary",
+          "title": "Open Value Network (p2p Foundation)",
+          "url": "https://wiki.p2pfoundation.net/Open_Value_Network",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.definition.md",
+      "workflows": [
+        "Orient",
+        "BootstrapNetwork",
+        "DiagnoseOvnness"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.critical_path",
+        "ovn.economic_model",
+        "ovn.sensorica_precursor"
+      ]
+    },
+    {
+      "id": "ovn.critical_path",
+      "title": "Critical Path (6 Cs)",
+      "layer": "doctrine",
+      "aliases": [
+        "Cause",
+        "Capital",
+        "Currency",
+        "Credibility",
+        "Community",
+        "Conjugation"
+      ],
+      "summary": "Initial conditions for a living value network — Cause, Capital, Currency, Credibility, Community, Conjugation.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Critical Path",
+          "url": "https://ovn.world/index.php?title=Critical_Path",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.critical_path.md",
+      "workflows": [
+        "AssessReadiness",
+        "BootstrapNetwork"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.definition"
+      ]
+    },
+    {
+      "id": "ovn.sensorica_precursor",
+      "title": "Sensorica as historical precursor and living help destination",
+      "layer": "praxis",
+      "aliases": [
+        "Sensorica"
+      ],
+      "summary": "Reference living OVN practice; cite for history and help, not as required user brand.",
+      "sources": [
+        {
+          "type": "sensorica_site",
+          "title": "Sensorica home",
+          "url": "https://www.sensorica.co/",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "complementary",
+          "title": "Sensorica (p2p Foundation)",
+          "url": "https://wiki.p2pfoundation.net/Sensorica",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "ovn_wiki",
+          "title": "Sensorica",
+          "url": "https://ovn.world/index.php?title=Sensorica",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "Orient"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.definition"
+      ]
+    },
+    {
+      "id": "ovn.venture",
+      "title": "Venture",
+      "layer": "doctrine",
+      "aliases": [
+        "open enterprise",
+        "collaborative venture"
+      ],
+      "summary": "For-benefit open enterprise / work context within network governance; types include product/service, social, ecosystem services.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Venture",
+          "url": "https://ovn.world/index.php?title=Venture",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "sensorica_site",
+          "title": "Help for ventures",
+          "url": "https://www.sensorica.co/stewarding/help/venture-help",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.venture.md",
+      "workflows": [
+        "CreateVenture",
+        "KickstartVenture",
+        "GenerateTemplatePack"
+      ],
+      "templates": [
+        "VentureGovernanceEndogenous.md",
+        "VentureGovernanceService.md",
+        "VentureFolderSkeleton.md"
+      ],
+      "related": [
+        "ovn.project",
+        "ovn.custodian",
+        "ovn.exchange_firm"
+      ]
+    },
+    {
+      "id": "ovn.project",
+      "title": "Project (vs Venture)",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Distinguish from Venture per OVN wiki; do not conflate.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Project",
+          "url": "https://ovn.world/index.php?title=Project",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "CreateVenture",
+        "Orient"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.venture"
+      ]
+    },
+    {
+      "id": "ovn.custodian",
+      "title": "Custodian",
+      "layer": "doctrine",
+      "aliases": [
+        "trust",
+        "nondominium custodian"
+      ],
+      "summary": "Peripheral legal role — property/nondominium, liability, asset trust, transactions, referee vs exchange firms.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Custodian",
+          "url": "https://ovn.world/index.php?title=Custodian",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "living_praxis",
+          "title": "(S) TEMPLATE - CUSTODIAN agreement for ventures",
+          "url": "https://docs.google.com/document/d/1y_RpapJktqcDIMapRpnT6-a_F0UqeOqBuChxNVKK1ks/edit",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.custodian.md",
+      "workflows": [
+        "SetupCustodianAndExchange",
+        "DesignGovernance",
+        "GenerateTemplatePack"
+      ],
+      "templates": [
+        "CustodianAgreement.md",
+        "DigitalAssetCustodianAgreement.md"
+      ],
+      "related": [
+        "ovn.nondominium",
+        "ovn.exchange_firm",
+        "ovn.legal_structure"
+      ]
+    },
+    {
+      "id": "ovn.exchange_firm",
+      "title": "Exchange firm",
+      "layer": "doctrine",
+      "aliases": [
+        "market interface"
+      ],
+      "summary": "Peripheral commercial entity absorbing market liability; shares benefits with contributors per agreement with custodian/network.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Exchange firm",
+          "url": "https://ovn.world/index.php?title=Exchange_firm",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "living_praxis",
+          "title": "(S) TEMPLATE - Business plan for Exchange Firm",
+          "url": "https://docs.google.com/document/d/1Fq9kPQFCC0R6lV4nm4qsH_LBdC_4t_PqISMMuW5e-PI/edit",
+          "as_of": "2026-10-31",
+          "notes": "Agreement TEMPLATE URL missing from governance page — gap"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "SetupCustodianAndExchange",
+        "GenerateTemplatePack"
+      ],
+      "templates": [
+        "ExchangeFirmAgreement.md"
+      ],
+      "related": [
+        "ovn.custodian",
+        "ovn.legal_structure"
+      ]
+    },
+    {
+      "id": "ovn.digital_environment",
+      "title": "Digital environment principles",
+      "layer": "doctrine",
+      "aliases": [
+        "stigmergic environment"
+      ],
+      "summary": "Transparency, openness, horizontal/vertical visibility and mobility, stigmergy.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Digital environment",
+          "url": "https://ovn.world/index.php?title=Digital_environment",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "sensorica_site",
+          "title": "Digital environment",
+          "url": "https://www.sensorica.co/stewarding/environment",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DesignDigitalEnvironment",
+        "BootstrapNetwork"
+      ],
+      "templates": [
+        "DigitalAssetCustodianAgreement.md"
+      ],
+      "related": [
+        "ovn.infrastructure_modules",
+        "ovn.stigmergy"
+      ]
+    },
+    {
+      "id": "ovn.stigmergy",
+      "title": "Stigmergy",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Coordination via traces in shared environment; Sensorica balances stigmergy with light planning.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Stigmergy",
+          "url": "https://ovn.world/index.php?title=Stigmergy",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "ovn_wiki",
+          "title": "Planning",
+          "url": "https://ovn.world/index.php?title=Planning",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "KickstartVenture",
+        "DesignDigitalEnvironment"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.planning",
+        "ovn.digital_environment"
+      ]
+    },
+    {
+      "id": "ovn.planning",
+      "title": "Planning vs stigmergy",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Planning suits predictable processes; creative OVN work uses stigmergy with experienced guidance as efficiency/opportunity-cost balance.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Planning",
+          "url": "https://ovn.world/index.php?title=Planning",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "KickstartVenture"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.stigmergy"
+      ]
+    },
+    {
+      "id": "ovn.nrp_cas",
+      "title": "NRP-CAS capability family",
+      "layer": "doctrine",
+      "aliases": [
+        "NRP",
+        "CAS",
+        "contribution accounting system"
+      ],
+      "summary": "Network resource planning + contribution accounting — feature family, not a mandated product.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "NRP-CAS",
+          "url": "https://ovn.world/index.php?title=NRP-CAS",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "living_praxis",
+          "title": "(S) TEMPLATE - CAS and Benefit Redistribution - no NRP",
+          "url": "https://docs.google.com/spreadsheets/d/1FGVAArL0rO_gn32g6pSJO04I0nOcvubGnj2kUz7aIbw/edit",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DesignContributionAccounting",
+        "DesignBenefitRedistribution",
+        "DesignDigitalEnvironment"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.benefit_redistribution",
+        "ovn.contribution"
+      ]
+    },
+    {
+      "id": "ovn.benefit_redistribution",
+      "title": "Benefit redistribution algorithm",
+      "layer": "doctrine",
+      "aliases": [
+        "value equation (dated)",
+        "benefits distribution"
+      ],
+      "summary": "Social agreement mapping logged contributions to benefits; prefer current vocabulary over retired \"value equation\".",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Benefit redistribution algorithm",
+          "url": "https://ovn.world/index.php?title=Benefit_redistribution_algorithm",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DesignBenefitRedistribution",
+        "DiagnoseOvnness"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.contribution",
+        "ovn.nrp_cas"
+      ]
+    },
+    {
+      "id": "ovn.contribution",
+      "title": "Contribution accounting",
+      "layer": "doctrine",
+      "aliases": [
+        "value accounting (dated)"
+      ],
+      "summary": "Log and evaluate diverse contribution types in venture/process context.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Contribution accounting",
+          "url": "https://ovn.world/index.php?title=Contribution_accounting",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DesignContributionAccounting",
+        "DiagnoseOvnness"
+      ],
+      "templates": [
+        "ContributionAcknowledgment.md",
+        "CashContributionAgreement.md"
+      ],
+      "related": [
+        "ovn.benefit_redistribution"
+      ]
+    },
+    {
+      "id": "ovn.nondominium",
+      "title": "Nondominium",
+      "layer": "doctrine",
+      "aliases": [
+        "peer property"
+      ],
+      "summary": "Shared assets not exclusively owned; often via custodian trust returning use rights under rules.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Nondominium",
+          "url": "https://ovn.world/index.php?title=Nondominium",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "complementary",
+          "title": "Nondominium (p2p Foundation)",
+          "url": "https://wiki.p2pfoundation.net/Nondominium",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "SetupCustodianAndExchange",
+        "DiagnoseOvnness"
+      ],
+      "templates": [
+        "CustodianAgreement.md",
+        "CofundingEquipmentAgreement.md"
+      ],
+      "related": [
+        "ovn.custodian",
+        "ovn.commons",
+        "ovn.fourth_sector"
+      ]
+    },
+    {
+      "id": "ovn.fourth_sector",
+      "title": "Fourth sector",
+      "layer": "doctrine",
+      "aliases": [
+        "4th sector",
+        "fourth sector",
+        "p2p sector"
+      ],
+      "summary": "Orthogonal socioeconomic sector for p2p / open / collaborative practice — nondominium property, collaborative entrepreneurs, stigmergic governance; not subsumed under private, public, or solidarity (3rd) sectors.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Fourth sector",
+          "url": "https://ovn.world/index.php?title=Fourth_sector",
+          "as_of": "2026-11-07"
+        },
+        {
+          "type": "living_praxis",
+          "title": "Fourth Sector rationale - Sensorica (Inspiration)",
+          "url": "https://docs.google.com/document/d/1RPZzvrLx1yy3_HeTYk7dhxyRnNmIk0O6GRC8zRBqbf4/edit",
+          "as_of": "2026-11-07"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.fourth_sector.md",
+      "workflows": [
+        "Orient",
+        "CollaborativeEntrepreneurship",
+        "SetupCustodianAndExchange",
+        "DiagnoseOvnness",
+        "DesignGovernance"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.nondominium",
+        "ovn.economic_model",
+        "ovn.definition",
+        "ovn.commons",
+        "ce.enterprise_stack",
+        "ce.pattern_library"
+      ]
+    },
+    {
+      "id": "ovn.governance",
+      "title": "OVN governance levels",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Network-of-networks, network, venture, local; custodian/exchange mandates; portable CAS/reputation protocols.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Governance",
+          "url": "https://ovn.world/index.php?title=Governance",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "sensorica_site",
+          "title": "Governance",
+          "url": "https://www.sensorica.co/stewarding/governance",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "living_praxis",
+          "title": "OVN Governance Canvas",
+          "url": "https://docs.google.com/document/d/1Br2njH59B2_FSRM2SB1E-8gzqUpUnHGgDrGu6_auV98/edit",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DesignGovernance",
+        "BootstrapNetwork",
+        "GenerateTemplatePack"
+      ],
+      "templates": [
+        "BrandRules.md"
+      ],
+      "related": [
+        "ovn.legal_structure",
+        "ovn.custodian"
+      ]
+    },
+    {
+      "id": "ovn.brand_rules_praxis",
+      "title": "Brand / name use rules (praxis)",
+      "layer": "praxis",
+      "aliases": [],
+      "summary": "Generalize from Sensorica brand rules; custodian of brand; affiliate and exchange-firm use constraints.",
+      "sources": [
+        {
+          "type": "living_praxis",
+          "title": "Network rules for use of the Sensorica brand",
+          "url": "https://docs.google.com/document/d/1WmWVNIevA7-wSpPsvHNJEO0O0rVcR7AsimBESUg4zgw/pub",
+          "as_of": "2026-10-31",
+          "access": "pub_ok"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "GenerateTemplatePack",
+        "DesignGovernance"
+      ],
+      "templates": [
+        "BrandRules.md"
+      ],
+      "related": [
+        "ovn.governance",
+        "ovn.custodian"
+      ]
+    },
+    {
+      "id": "ovn.infrastructure_reciprocity",
+      "title": "Infrastructure reciprocity (5% rule praxis)",
+      "layer": "doctrine",
+      "aliases": [
+        "5% rule"
+      ],
+      "summary": "Ventures generating tangible benefits contribute to shared infrastructure; Sensorica 5% is praxis pattern — cite as example not universal law unless wiki states otherwise.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "5% rule",
+          "url": "https://ovn.world/index.php?title=5%25_rule",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "BootstrapNetwork",
+        "CreateVenture",
+        "DesignBenefitRedistribution"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.venture",
+        "ovn.economic_model"
+      ]
+    },
+    {
+      "id": "ovn.legal_structure",
+      "title": "Legal structure (peripheral entities)",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Informal/de facto network with peripheral custodian and exchange firms; illustrative Quebec non-registered association — not portable without counsel.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Legal structure",
+          "url": "https://ovn.world/index.php?title=Legal_structure",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "SetupCustodianAndExchange",
+        "Orient"
+      ],
+      "templates": [
+        "CustodianAgreement.md",
+        "ExchangeFirmAgreement.md"
+      ],
+      "related": [
+        "ovn.custodian",
+        "ovn.exchange_firm"
+      ]
+    },
+    {
+      "id": "ovn.infrastructure_modules",
+      "title": "Infrastructure feature modules",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Capability families (profile, communication, CAS, process management, governance, etc.) — features not vendors.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Infrastructure",
+          "url": "https://ovn.world/index.php?title=Infrastructure",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DesignDigitalEnvironment",
+        "ToolSelection"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.digital_environment",
+        "ovn.nrp_cas"
+      ]
+    },
+    {
+      "id": "ce.enterprise_stack",
+      "title": "Enterprise Stack (heuristic)",
+      "layer": "entrepreneurship",
+      "aliases": [
+        "P S O VC VT PL E CM MC"
+      ],
+      "summary": "Value-field layers as map not ontology; apply six OVN checks.",
+      "sources": [
+        {
+          "type": "local",
+          "title": "Enterprise-Stack-collaborative-entrepreneurship.md",
+          "path": "Principles-of-P2P/Foundation/Enterprise-Stack-collaborative-entrepreneurship.md",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "CollaborativeEntrepreneurship"
+      ],
+      "templates": [],
+      "related": [
+        "ce.pattern_library"
+      ]
+    },
+    {
+      "id": "ce.pattern_library",
+      "title": "Distributed business model patterns",
+      "layer": "entrepreneurship",
+      "aliases": [],
+      "summary": "~60 patterns with p2p adaptations; OVN fit/risk/adaptation rules.",
+      "sources": [
+        {
+          "type": "local",
+          "title": "Distributed business model patterns - Models.csv",
+          "path": "Principles-of-P2P/Foundation/Distributed business model patterns - Models.csv",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "living_praxis",
+          "title": "Distributed economic models patterns (sheet)",
+          "url": "https://docs.google.com/spreadsheets/d/1J_TfGXqWmeRDpiSMTKoI1nK1JH7CAFzJnVofpFG992k/edit",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "CollaborativeEntrepreneurship"
+      ],
+      "templates": [],
+      "related": [
+        "ce.enterprise_stack"
+      ]
+    },
+    {
+      "id": "eval.layers",
+      "title": "P2P-ness evaluation framework",
+      "layer": "evaluation",
+      "aliases": [
+        "DiagnoseOvnness"
+      ],
+      "summary": "Four macro-layers; profile-first; path dependency; stress tests.",
+      "sources": [
+        {
+          "type": "local",
+          "title": "Evaluation.md",
+          "path": "Principles-of-P2P/Foundation/Evaluation.md",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DiagnoseOvnness"
+      ],
+      "templates": [],
+      "related": [
+        "eval.truth_value_bridge",
+        "eval.ethos"
+      ]
+    },
+    {
+      "id": "eval.truth_value_bridge",
+      "title": "Truth and Value assessor bridges",
+      "layer": "evaluation",
+      "aliases": [],
+      "summary": "SHOULD cross-checks — computational truth model; contribution/benefit questions — not separate scored axes.",
+      "sources": [
+        {
+          "type": "local",
+          "title": "Truth.md",
+          "path": "Principles-of-P2P/Foundation/Others/Truth.md",
+          "as_of": "2026-10-31"
+        },
+        {
+          "type": "local",
+          "title": "Value.md",
+          "path": "Principles-of-P2P/Foundation/Others/Value.md",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DiagnoseOvnness"
+      ],
+      "templates": [],
+      "related": [
+        "eval.layers"
+      ]
+    },
+    {
+      "id": "eval.ethos",
+      "title": "Ethos dimensions",
+      "layer": "evaluation",
+      "aliases": [],
+      "summary": "Cultural-layer cross-check dimensions for DiagnoseOvnness.",
+      "sources": [
+        {
+          "type": "local",
+          "title": "Ethos.md",
+          "path": "Principles-of-P2P/Foundation/Ethos.md",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "DiagnoseOvnness"
+      ],
+      "templates": [],
+      "related": [
+        "eval.layers"
+      ]
+    },
+    {
+      "id": "help.ovn_support",
+      "title": "Sensorica OVN support (accredited human help)",
+      "layer": "praxis",
+      "aliases": [
+        "OVN consulting",
+        "human help"
+      ],
+      "summary": "Primary help desk for humans with OVN implementation experience.",
+      "sources": [
+        {
+          "type": "sensorica_site",
+          "title": "OVN support",
+          "url": "https://www.sensorica.co/products/ovn-support",
+          "as_of": "2026-11-03"
+        }
+      ],
+      "excerpt": "Excerpts/help.ovn_support.md",
+      "workflows": [
+        "Orient",
+        "BootstrapNetwork",
+        "SetupCustodianAndExchange",
+        "GenerateTemplatePack"
+      ],
+      "templates": [],
+      "related": [
+        "help.open_badges_trust",
+        "ovn.sensorica_precursor"
+      ]
+    },
+    {
+      "id": "help.open_badges_trust",
+      "title": "Open Badges trust pattern for OVN skills",
+      "layer": "praxis",
+      "aliases": [
+        "Open Badges",
+        "verifiable credentials"
+      ],
+      "summary": "Prefer helpers with verifiable Open Badge assertions of OVN contribution/facilitation experience.",
+      "sources": [
+        {
+          "type": "living_praxis",
+          "title": "Example Open Badge assertion",
+          "url": "https://badges.parchment.ca/public/assertions/T18t206jRwC2BsCrhBRWGQ",
+          "as_of": "2020-02-19"
+        }
+      ],
+      "excerpt": "Excerpts/help.open_badges_trust.md",
+      "workflows": [
+        "Orient",
+        "SetupCustodianAndExchange"
+      ],
+      "templates": [],
+      "related": [
+        "help.ovn_support"
+      ]
+    },
+    {
+      "id": "ovn.work_package_planning",
+      "title": "Venture planning by work package",
+      "layer": "praxis",
+      "aliases": [
+        "Capacity",
+        "Deliverables",
+        "Dissemination",
+        "Process"
+      ],
+      "summary": "Four work-package axes for venture planning aligned with PEP Master folder skeleton.",
+      "sources": [
+        {
+          "type": "living_praxis",
+          "title": "TEMPLATE Venture planning by workpakage",
+          "url": "https://docs.google.com/drawings/d/1Ol_MMpIaFL3PRmgso4eO_Vc8Cmo_UdquArTZjLGQb8k/edit",
+          "as_of": "2025-05-28"
+        },
+        {
+          "type": "living_praxis",
+          "title": "(S) TEMPLATE - Venture main doc",
+          "url": "https://docs.google.com/document/d/1nMrdwysCPKlk6ixc_zqHtaa2G1_7Ym1DC39OdOfXsDg/edit",
+          "as_of": "2026-11-03"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.work_package_planning.md",
+      "workflows": [
+        "CreateVenture",
+        "KickstartVenture"
+      ],
+      "templates": [
+        "VentureFolderSkeleton.md"
+      ],
+      "related": [
+        "ovn.venture"
+      ]
+    },
+    {
+      "id": "ovn.economic_model",
+      "title": "OVN economic model",
+      "layer": "doctrine",
+      "aliases": [],
+      "summary": "Process → contribution log → evaluation → benefits; infrastructure reciprocity as pattern.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Economic model",
+          "url": "https://ovn.world/index.php?title=Economic_model",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": "Excerpts/ovn.economic_model.md",
+      "workflows": [
+        "Orient",
+        "CollaborativeEntrepreneurship",
+        "DesignBenefitRedistribution"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.benefit_redistribution",
+        "ovn.contribution"
+      ]
+    },
+    {
+      "id": "ovn.commons",
+      "title": "Commons",
+      "layer": "doctrine",
+      "aliases": [
+        "pool of shareables"
+      ],
+      "summary": "Shared resources governed for continued access and non-capture.",
+      "sources": [
+        {
+          "type": "ovn_wiki",
+          "title": "Commons",
+          "url": "https://ovn.world/index.php?title=Commons",
+          "as_of": "2026-10-31"
+        }
+      ],
+      "excerpt": null,
+      "workflows": [
+        "SetupCustodianAndExchange",
+        "DiagnoseOvnness"
+      ],
+      "templates": [],
+      "related": [
+        "ovn.nondominium"
+      ]
+    }
+  ],
+  "canonical_ventures": {
+    "primary_skeleton": "pep_master",
+    "ventures": [
+      {
+        "id": "pep_master",
+        "name": "PEP Master",
+        "role": "canonical_skeleton",
+        "folder_id": "1KR67141B0U4VnRqkEUU_Ub0at_4kCjas",
+        "url": "https://drive.google.com/drive/folders/1KR67141B0U4VnRqkEUU_Ub0at_4kCjas",
+        "main_doc_id": "1YVeItJfzeVWhFwVNh25J0InrjnJk7x9n1Gmze6UdwdU"
+      },
+      {
+        "id": "greens_for_good",
+        "name": "Greens for Good",
+        "role": "supporting_example",
+        "folder_id": "1sIcOEjfTiBAKNQ4r21F7EjxHERHIWZBd",
+        "url": "https://drive.google.com/drive/folders/1sIcOEjfTiBAKNQ4r21F7EjxHERHIWZBd",
+        "main_doc_id": "1Ub8a1o0re-rTRfaX0z2dPQ_vF_a-zF0xfV2grbEuiW4"
+      },
+      {
+        "id": "nondominium",
+        "name": "Nondominium",
+        "role": "supporting_example",
+        "folder_id": "1HWpR4V56KzIkCzqxRhFON2LT5sRl8q8S",
+        "url": "https://drive.google.com/drive/folders/1HWpR4V56KzIkCzqxRhFON2LT5sRl8q8S",
+        "main_doc_id": "1q5VuUZEvKMskef6eM1IfHDupHVxKcqf7WyYNrsS-jZA"
+      }
+    ],
+    "dropped_as_templates": [
+      "diy_ordroid_laptop",
+      "familydao",
+      "healthnet"
+    ]
+  },
+  "gaps": [
+    {
+      "id": "gap.exchange_firm_agreement_template",
+      "severity": "P0",
+      "status": "todo_stub",
+      "description": "No Exchange firm agreement TEMPLATE exists yet (confirmed 2026-11-03). Ship TODO stub only; optional interim pointer to Business plan for Exchange Firm.",
+      "blocks": [
+        "ExchangeFirmAgreement.md full legal text"
+      ]
+    },
+    {
+      "id": "gap.cash_contribution_template",
+      "severity": "P0",
+      "status": "resolved_by_derivation",
+      "description": "Derive CashContributionAgreement from Contribution Acknowledgement (1Husqozad7wLzES5UG-Rfd5oDzJvXzG8RjEzUuv2KxTg).",
+      "resolved_by": "research/CashContribution-Derivation.md"
+    },
+    {
+      "id": "gap.digital_spaces_list",
+      "severity": "P1",
+      "description": "Official list of digital spaces mentioned on environment page — exact link TBD.",
+      "blocks": []
+    }
+  ]
+}

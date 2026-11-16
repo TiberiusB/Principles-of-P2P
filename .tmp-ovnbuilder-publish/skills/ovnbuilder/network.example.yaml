@@ -1,0 +1,26 @@
+# network.yaml — Layer C instance config
+schema_version: 1
+network:
+  name: ""
+  short_name: ""
+  mission: ""
+  jurisdiction: ""
+  disclaimer_locale: en
+  help_destinations:
+    - name: OVN wiki
+      url: https://ovn.world/
+    - name: Sensorica (living precursor practice)
+      url: https://www.sensorica.co/
+    - name: OVN support (accredited human help)
+      url: https://www.sensorica.co/products/ovn-support
+    - name: Affiliates
+      url: https://www.sensorica.co/ecosystem/affiliates
+tool_stack:
+  classes: []
+  notes: ""
+roles:
+  custodian_entity: ""
+  exchange_firms: []
+preferences:
+  venture_default_openness: open_transparent
+  infrastructure_reciprocity_note: ""

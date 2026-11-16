@@ -1,0 +1,181 @@
+[
+  {
+    "batch": "01",
+    "n": 1,
+    "paths": [
+      "skills/ovnbuilder/BusinessModelPatterns.json"
+    ]
+  },
+  {
+    "batch": "02",
+    "n": 1,
+    "paths": [
+      "skills/ovnbuilder/BusinessModelPatterns.md"
+    ]
+  },
+  {
+    "batch": "03",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/CHANGELOG.md",
+      "skills/ovnbuilder/CollaborativeEntrepreneurship.md",
+      "skills/ovnbuilder/CriticalPath.md",
+      "skills/ovnbuilder/EvaluationFramework.md",
+      "skills/ovnbuilder/Examples.md",
+      "skills/ovnbuilder/Fixtures/ToyNetwork/README.md"
+    ]
+  },
+  {
+    "batch": "04",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Fixtures/ToyNetwork/ce-patterns.md",
+      "skills/ovnbuilder/Fixtures/ToyNetwork/critical-path-scorecard.md",
+      "skills/ovnbuilder/Fixtures/ToyNetwork/network.yaml",
+      "skills/ovnbuilder/Fixtures/ToyNetwork/orient-brief.md",
+      "skills/ovnbuilder/Fixtures/ToyNetwork/ovnness-profile.md",
+      "skills/ovnbuilder/Fixtures/ToyNetwork/template-pack-index.md"
+    ]
+  },
+  {
+    "batch": "05",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Fixtures/ToyNetwork/venture-brief.md",
+      "skills/ovnbuilder/FourthSector.md",
+      "skills/ovnbuilder/GovernanceLevels.md",
+      "skills/ovnbuilder/HelpHumans.md",
+      "skills/ovnbuilder/HumanEscalation.md",
+      "skills/ovnbuilder/InfrastructureFeatures.md"
+    ]
+  },
+  {
+    "batch": "06",
+    "n": 1,
+    "paths": [
+      "skills/ovnbuilder/Knowledge/ArgIndex.json"
+    ]
+  },
+  {
+    "batch": "07",
+    "n": 1,
+    "paths": [
+      "skills/ovnbuilder/Knowledge/ArgIndex.yaml"
+    ]
+  },
+  {
+    "batch": "08",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Knowledge/Excerpts/help.open_badges_trust.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/help.ovn_support.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.critical_path.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.custodian.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.definition.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.economic_model.md"
+    ]
+  },
+  {
+    "batch": "09",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.fourth_sector.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.venture.md",
+      "skills/ovnbuilder/Knowledge/Excerpts/ovn.work_package_planning.md",
+      "skills/ovnbuilder/Knowledge/README.md",
+      "skills/ovnbuilder/Knowledge/UpdateProtocol.md",
+      "skills/ovnbuilder/Knowledge/VERSION"
+    ]
+  },
+  {
+    "batch": "10",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/LICENSE",
+      "skills/ovnbuilder/Language.md",
+      "skills/ovnbuilder/Principles.md",
+      "skills/ovnbuilder/SKILL.md",
+      "skills/ovnbuilder/SourceAuthority.md",
+      "skills/ovnbuilder/Templates/BrandRules.md"
+    ]
+  },
+  {
+    "batch": "11",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Templates/CasBenefitNotes.md",
+      "skills/ovnbuilder/Templates/CashContributionAgreement.md",
+      "skills/ovnbuilder/Templates/Catalog.md",
+      "skills/ovnbuilder/Templates/CofundingEquipmentAgreement.md",
+      "skills/ovnbuilder/Templates/ContributionAcknowledgment.md",
+      "skills/ovnbuilder/Templates/ContributionSelfOrgNotes.md"
+    ]
+  },
+  {
+    "batch": "12",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Templates/CustodianAgreement.md",
+      "skills/ovnbuilder/Templates/DigitalAssetCustodianAgreement.md",
+      "skills/ovnbuilder/Templates/ExchangeFirmAgreement.md",
+      "skills/ovnbuilder/Templates/FundingProposal.md",
+      "skills/ovnbuilder/Templates/GovernanceCanvas.md",
+      "skills/ovnbuilder/Templates/GrantFundingAlchemyNotes.md"
+    ]
+  },
+  {
+    "batch": "13",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Templates/PaperStudyReportProposal.md",
+      "skills/ovnbuilder/Templates/RoomForPlanning.md",
+      "skills/ovnbuilder/Templates/VentureCommunications.md",
+      "skills/ovnbuilder/Templates/VentureFolderSkeleton.md",
+      "skills/ovnbuilder/Templates/VentureGovernanceEndogenous.md",
+      "skills/ovnbuilder/Templates/VentureGovernanceService.md"
+    ]
+  },
+  {
+    "batch": "14",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Templates/VirtualInfrastructureCustodianAgreement.md",
+      "skills/ovnbuilder/Templates/_Disclaimer.partial.md",
+      "skills/ovnbuilder/ToolSelection.md",
+      "skills/ovnbuilder/WorkPackagePlanning.md",
+      "skills/ovnbuilder/Workflows/AssessReadiness.md",
+      "skills/ovnbuilder/Workflows/BootstrapNetwork.md"
+    ]
+  },
+  {
+    "batch": "15",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Workflows/CollaborativeEntrepreneurship.md",
+      "skills/ovnbuilder/Workflows/CreateVenture.md",
+      "skills/ovnbuilder/Workflows/DesignBenefitRedistribution.md",
+      "skills/ovnbuilder/Workflows/DesignContributionAccounting.md",
+      "skills/ovnbuilder/Workflows/DesignDigitalEnvironment.md",
+      "skills/ovnbuilder/Workflows/DesignGovernance.md"
+    ]
+  },
+  {
+    "batch": "16",
+    "n": 6,
+    "paths": [
+      "skills/ovnbuilder/Workflows/DiagnoseOvnness.md",
+      "skills/ovnbuilder/Workflows/GenerateTemplatePack.md",
+      "skills/ovnbuilder/Workflows/KickstartVenture.md",
+      "skills/ovnbuilder/Workflows/Orient.md",
+      "skills/ovnbuilder/Workflows/SetupCustodianAndExchange.md",
+      "skills/ovnbuilder/network.example.yaml"
+    ]
+  },
+  {
+    "batch": "17",
+    "n": 1,
+    "paths": [
+      "README.md"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+schema_version: 1
+network:
+  name: Heliograph Collective
+  short_name: Heliograph
+  mission: Open sensing hardware and data commons for community environmental monitoring
+  jurisdiction: ""
+  disclaimer_locale: en
+  help_destinations:
+    - name: OVN support
+      url: https://www.sensorica.co/products/ovn-support
+roles:
+  custodian_entity: ""
+  exchange_firms: []
+preferences:
+  venture_default_openness: open_transparent
+  infrastructure_reciprocity_note: "Considering 5% praxis pattern — not adopted yet"
